@@ -2,4 +2,39 @@
 title: "About"
 ---
 
-About this site
+```{=html}
+<div class="about-intro">
+<img src="img/profile.jpg" width="300" height="300" alt="Al Bahits Annef" style="display: block; margin: 0 auto;">
+  <div class="bio">
+    <p>MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.</p>
+    <p>My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. 
+    <p>Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions.</p>
+  </div>
+</div>
+```
+
+## Research Interest
+
+I work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See my work on the [Research](research.qmd) page.
+
+## Background
+
+- **Graduate Student, Economic Development**, [Graduate School of International Development, Nagoya University](https://www4.gsid.nagoya-u.ac.jp/en/), under [Prof. Christian Otchia](http://profs.provost.nagoya-u.ac.jp/html/100010239_ja.html). MEXT Scholar, 2024–2027.
+- **Associate Project Manager**, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.
+- **Communications consultancy**, [Maverick Indonesia](https://maverick.co.id/), [2022-2023]. Improved how businesses are perceived by the public across different sectors.
+- **Bachelor of International Relations**, [Universitas Pembangunan Nasional Veteran Jakarta](https://www.upnvj.ac.id/en.html), [2018-2022], Outstanding Student Award (2020).
+
+## Community & Leadership
+
+- **Chairman**, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025
+- **Vice President**, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020
+
+## Contact
+
+```{=html}
+<div class="about-contact d-flex justify-content-center gap-4">
+  <a href="mailto:albahitsannef@gmail.com"><i class="bi bi-envelope"></i> Personal Email</a>
+  <a href="mailto:annef.al.bahits.p4@s.mail.nagoya-u.ac.jp"><i class="bi bi-envelope"></i> University Email</a>
+  <a class="cv" href="files/cv.pdf" target="_blank">Download CV ↗</a>
+</div>
+```

@@ -1,1 +1,156 @@
-/* css styles */
+/* =========================================================
+   0. Palette
+   ========================================================= */
+:root {
+  --navy: #1B365D;
+  --blue: #005A9C;
+  --sky:  #60C1E5;
+  --ice:  #A0E0EF;
+}
+html { scroll-behavior: smooth; }
+
+/* =========================================================
+   1. Global: headings, links, navbar, footer
+   ========================================================= */
+h1.title { color: var(--navy); font-weight: 700; }
+main.content h2 { color: var(--navy); border-bottom: 2px solid var(--sky);
+                  padding-bottom: .3rem; margin-top: 2.2rem; }
+main.content strong { color: var(--navy); }
+main.content li::marker { color: var(--blue); }
+main.content p a, main.content li a { color: var(--blue); text-decoration-color: var(--sky); }
+main.content p a:hover, main.content li a:hover { color: var(--navy); }
+
+.navbar .nav-link:hover { color: var(--ice) !important; }
+.nav-footer { background: var(--navy); color: #fff; border-top: 4px solid var(--sky); }
+.nav-footer a { color: var(--ice); }
+
+/* =========================================================
+   2. Home: hero
+   ========================================================= */
+.hero {
+  min-height: 88vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  color: #fff; padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+}
+.hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 700;
+           margin: 0 0 1rem; color: #fff; border: none; }
+.hero .tagline { font-size: clamp(1.2rem, 2.8vw, 1.8rem); margin: 0 0 1rem; color: var(--ice); }
+.hero .affil   { font-size: 1.1rem; max-width: 62ch; margin: 0 0 .8rem;
+                 line-height: 1.5; opacity: .95; }
+.hero .status  { font-size: .95rem; max-width: 78ch; margin: 0; line-height: 1.5;
+                 color: var(--ice); opacity: .85;
+                 background: none; padding: 0; border-radius: 0; }
+
+/* wrap between roles, not mid-phrase */
+.hero .affil span, .hero .status span { white-space: nowrap; }
+@media (max-width: 576px) {
+  .hero .affil span, .hero .status span { white-space: normal; }
+}
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap;
+             justify-content: center; margin-top: 2rem; }
+.hero a.hero-btn { padding: .9rem 1.8rem; text-decoration: none; font-weight: 600;
+                   letter-spacing: .05em; text-transform: uppercase; }
+.hero a.hero-btn.green { background: var(--sky); color: var(--navy); }
+.hero a.hero-btn.ghost { border: 1px solid var(--ice); color: var(--ice); }
+.hero a.hero-btn.blue  { background: var(--blue); color: #fff; border: 1px solid var(--sky); }
+.hero a.scroll-cue { margin-top: 3rem; color: var(--ice); text-decoration: none; }
+
+/* =========================================================
+   3. Home: shared band rhythm (Featured + Contact)
+   ========================================================= */
+.featured, .contact { width: 100%; box-sizing: border-box;
+                      padding: 4rem 1.5rem; text-align: center; }
+.featured h2, .contact h2 { text-align: center !important; border: none !important;
+                            padding: 0 !important; margin: 0 0 1.8rem !important; }
+
+/* Featured */
+.featured { background: #f4f7fb; }
+.featured h2 { color: var(--navy); }
+.feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+             gap: 1.5rem; max-width: 820px; margin: 0 auto; }
+.feat-card { display: flex; flex-direction: column; background: #fff; text-align: left;
+             border: 1px solid #dfe7f1; border-radius: 8px; overflow: hidden;
+             color: inherit; text-decoration: none;
+             transition: box-shadow .2s, transform .2s; }
+.feat-card:hover { box-shadow: 0 6px 18px rgba(27,54,93,.15); transform: translateY(-2px); }
+.feat-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+                 object-position: top; background: var(--ice); }
+.feat-body { padding: 1rem 1.1rem 1.2rem; }
+.feat-body h3 { font-size: 1.05rem; line-height: 1.35; margin: .6rem 0 .4rem;
+                color: var(--navy); border: none; }
+.feat-card:hover h3 { color: var(--blue); }
+.feat-body p { font-size: .92rem; color: #444; margin: 0; }
+
+/* Contact */
+.contact { background: var(--navy); color: #fff; border-top: 4px solid var(--sky); }
+.contact h2 { color: #fff; }
+.contact-links { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+.contact-links a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .55rem 1.1rem; border: 1px solid var(--ice); border-radius: 6px;
+  color: var(--ice); text-decoration: none;
+}
+.contact-links a:hover { background: var(--ice); color: var(--navy); }
+
+/* logo icons (ORCID, Pexels) via mask so they take the text color */
+.icon {
+  display: inline-block; width: 1.1em; height: 1.1em; background-color: currentColor;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: contain;     mask-size: contain;
+  -webkit-mask-position: center;  mask-position: center;
+}
+.i-orcid  { -webkit-mask-image: url(img/icons/orcid.svg);  mask-image: url(img/icons/orcid.svg); }
+.i-pexels { -webkit-mask-image: url(img/icons/pexels.svg); mask-image: url(img/icons/pexels.svg); }
+
+/* =========================================================
+   4. About
+   ========================================================= */
+.about-intro { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+               margin-bottom: 2rem; }
+.about-intro img { width: 160px; height: 160px; object-fit: cover; border-radius: 50%;
+                   border: 3px solid var(--sky); flex-shrink: 0; }
+.about-intro .bio { flex: 1; min-width: 260px; }
+
+.about-contact { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+.about-contact a { padding: .55rem 1.1rem; border: 1px solid var(--blue);
+                   border-radius: 6px; color: var(--blue); text-decoration: none; }
+.about-contact a:hover { background: var(--blue); color: #fff; }
+.about-contact a.cv { background: var(--blue); color: #fff; }
+
+/* =========================================================
+   5. Research, Opinion: pills and entry lists
+   ========================================================= */
+.jump { display: flex; flex-wrap: wrap; gap: .6rem; margin: .5rem 0 1.5rem; }
+.jump a { padding: .4rem 1rem; border-radius: 999px; background: var(--ice);
+          color: var(--navy); text-decoration: none; font-weight: 600; font-size: .9rem; }
+.jump a:hover { background: var(--navy); color: #fff; }
+
+.pub { display: flex; gap: 1.2rem; padding: 1.1rem 0; border-bottom: 1px solid #e3e9f1; }
+.pub-year { flex: 0 0 3.5rem; font-weight: 700; color: var(--blue); }
+.pub-year.wide { flex: 0 0 5.5rem; }
+.pub-title { font-weight: 600; color: var(--navy); font-size: 1.05rem; }
+.pub-title a { color: var(--navy); text-decoration: none; }
+.pub-title a:hover { color: var(--blue); text-decoration: underline; }
+.pub-authors, .pub-venue { font-size: .95rem; color: #444; }
+.pub-links { margin-top: .5rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+.pub-links a { padding: .2rem .7rem; border: 1px solid var(--blue); border-radius: 5px;
+               font-size: .85rem; color: var(--blue); text-decoration: none; }
+.pub-links a:hover { background: var(--blue); color: #fff; }
+
+.pub-title .status { display: inline-block; padding: .1rem .6rem; border-radius: 999px;
+                     background: var(--sky); color: var(--navy); font-size: .75rem;
+                     font-weight: 600; margin-left: .5rem; }
+.outlet { display: inline-block; padding: .1rem .6rem; border-radius: 999px;
+          background: var(--ice); color: var(--navy); font-size: .75rem; font-weight: 600; }
+
+@media (max-width: 576px) { .pub { flex-direction: column; gap: .3rem; } }
+
+/* =========================================================
+   6. Digest and Projects cards (Quarto listing grid)
+   ========================================================= */
+.quarto-grid-item { border: 1px solid #dfe7f1; border-radius: 8px; transition: box-shadow .2s; }
+.quarto-grid-item:hover { box-shadow: 0 6px 18px rgba(27,54,93,.15); }
+.quarto-grid-item .listing-title { color: var(--navy); font-weight: 700; }
+.quarto-grid-item .listing-category { background: var(--ice); color: var(--navy); border: none; }

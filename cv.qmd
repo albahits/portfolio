@@ -1,5 +1,17 @@
 ---
-title: "cv"
+title: "CV"
 ---
 
-Coming soon.
+```{=html}
+<p>Your download should start automatically. If it doesn't, <a href="files/cv.pdf" download="CV_Your-Name.pdf">click here</a>.</p>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var a = document.createElement('a');
+    a.href = 'files/cv.pdf';
+    a.download = 'CV_Al Bahits Annef.pdf';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+</script>
+```

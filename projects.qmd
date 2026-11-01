@@ -1,5 +1,17 @@
 ---
-title: "projects"
+title: "Projects"
+listing:
+  id: projects
+  contents: projects
+  type: grid
+  sort: "date desc"
+  fields: [image, title, description, date, categories]
+  grid-columns: 2
+  image-height: 180px
+  max-description-length: 180
 ---
 
-Coming soon.
+Side projects at the intersection of data, economics and policy.
+
+::: {#projects}
+:::

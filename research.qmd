@@ -1,5 +1,70 @@
 ---
-title: "research"
+title: "Research"
+listing:
+  id: digest
+  contents: digest
+  type: grid
+  sort: "date desc"
+  fields: [image, title, description, date, categories]
+  grid-columns: 2
+  image-height: 180px
+  max-description-length: 180
 ---
 
-Coming soon.
+```{=html}
+<div class="jump">
+  <a href="#articles">Peer-Reviewed Articles</a>
+  <a href="#working-papers">Working Papers</a>
+  <a href="#digest-section">Digest</a>
+</div>
+```
+
+## Peer-Reviewed Articles {#articles}
+
+```{=html}
+<div class="pub">
+  <div class="pub-year">July, 2026</div>
+  <div class="pub-body">
+    <div class="pub-title">Too crowded to grow? Luminosity-based evidence on village cooperative finance in Indonesia</div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong>, Rusli Abdulah, Bangkit A. A. Wiryawan</div>
+    <div class="pub-venue"><em>International Journal of Social Economics</em></div>
+    <div class="pub-links">
+      <a href="https://doi.org/10.1108/IJSE-11-2025-1107" target="_blank">DOI ↗</a>
+      <a href="digest/cooperatives/index.html">Digest</a>
+    </div>
+  </div>
+</div>
+<!-- Notes: copy the whole .pub block for each additional article -->
+```
+
+## Working Papers {#working-papers}
+
+```{=html}
+<div class="pub">
+  <div class="pub-year">2026</div>
+  <div class="pub-body">
+    <div class="pub-title">GenAI Impact on Formal Jobs: Evidence from Indonesia<span class="status">Work in progress</span></div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong></div>
+    <div class="pub-links">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7108818" target="_blank">SSRN ↗</a>
+      <a href="digest/gen-ai-labor/index.html">Digest</a>
+    </div>
+  </div>
+</div>
+<div class="pub">
+  <div class="pub-year">2026</div>
+  <div class="pub-body">
+    <div class="pub-title">Corruption Does Not Occur in a Vacuum: Firm Bribery, Institutional Quality, and Management Role<span class="status">Work in progress</span></div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong></div>
+    <div class="pub-links">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6956239" target="_blank">SSRN ↗</a>
+    </div>
+</div>
+```
+
+## Digest {#digest-section}
+
+Plain-language summaries of my research: the question, the evidence and why it matters.
+
+::: {#digest}
+:::

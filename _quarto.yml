@@ -15,8 +15,6 @@ website:
         href: projects.qmd
       - text: "Opinions"
         href: opinions.qmd
-      - text: "Hobbies"
-        href: hobbies.qmd
       - text: "CV"
         href: cv.qmd
 
@@ -24,7 +22,6 @@ website:
       - text: "ID"
         href: id/index.qmd
   page-footer: "© 2026 Al Bahits Annef"
-
 
 format:
   html:
