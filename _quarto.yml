@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "Al Bahits Annef"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "Opinions"
+        href: opinions.qmd
+      - text: "Hobbies"
+        href: hobbies.qmd
+      - text: "CV"
+        href: cv.qmd
+
+    right: 
+      - text: "ID"
+        href: id/index.qmd
+  page-footer: "© 2026 Al Bahits Annef"
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
