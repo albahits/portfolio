@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://albahits.github.io/portfolio/research.html</loc>
-    <lastmod>2026-11-01T02:36:21.640Z</lastmod>
+    <lastmod>2026-11-01T05:13:11.482Z</lastmod>
   </url>
   <url>
-    <loc>https://albahits.github.io/portfolio/opinions.html</loc>
-    <lastmod>2026-11-01T02:36:21.639Z</lastmod>
+    <loc>https://albahits.github.io/portfolio/projects/ai-score/index.html</loc>
+    <lastmod>2026-11-01T06:04:08.824Z</lastmod>
   </url>
   <url>
-    <loc>https://albahits.github.io/portfolio/id/index.html</loc>
-    <lastmod>2026-11-01T02:36:21.637Z</lastmod>
-  </url>
-  <url>
-    <loc>https://albahits.github.io/portfolio/cv.html</loc>
-    <lastmod>2026-11-01T02:36:21.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://albahits.github.io/portfolio/about.html</loc>
-    <lastmod>2026-11-01T02:36:21.634Z</lastmod>
+    <loc>https://albahits.github.io/portfolio/index.html</loc>
+    <lastmod>2026-11-01T06:06:14.423Z</lastmod>
   </url>
   <url>
     <loc>https://albahits.github.io/portfolio/hobbies.html</loc>
     <lastmod>2026-11-01T02:36:21.636Z</lastmod>
   </url>
   <url>
-    <loc>https://albahits.github.io/portfolio/index.html</loc>
-    <lastmod>2026-11-01T02:36:21.638Z</lastmod>
+    <loc>https://albahits.github.io/portfolio/digest/cooperatives/index.html</loc>
+    <lastmod>2026-11-01T05:04:38.017Z</lastmod>
+  </url>
+  <url>
+    <loc>https://albahits.github.io/portfolio/about.html</loc>
+    <lastmod>2026-11-01T04:19:02.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://albahits.github.io/portfolio/cv.html</loc>
+    <lastmod>2026-11-01T06:02:17.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://albahits.github.io/portfolio/digest/gen-ai-labor/gen-ai-labor.html</loc>
+    <lastmod>2026-11-01T04:59:11.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://albahits.github.io/portfolio/id/index.html</loc>
+    <lastmod>2026-11-01T02:36:21.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://albahits.github.io/portfolio/opinions.html</loc>
+    <lastmod>2026-11-01T05:23:50.652Z</lastmod>
   </url>
   <url>
     <loc>https://albahits.github.io/portfolio/projects.html</loc>
-    <lastmod>2026-11-01T02:36:21.640Z</lastmod>
+    <lastmod>2026-11-01T05:38:28.531Z</lastmod>
   </url>
 </urlset>

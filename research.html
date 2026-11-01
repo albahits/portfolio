@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>research – Al Bahits Annef</title>
+<title>Research – Al Bahits Annef</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,6 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -73,7 +75,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-digest .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-digest'] = new List('listing-digest', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -116,10 +176,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Opinions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hobbies.html"> 
-<span class="menu-text">Hobbies</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
@@ -146,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">research</h1>
+<h1 class="title">Research</h1>
 </div>
 
 
@@ -163,9 +219,122 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming soon.</p>
+<div class="jump">
+  <a href="#articles">Peer-Reviewed Articles</a>
+  <a href="#working-papers">Working Papers</a>
+  <a href="#digest-section">Digest</a>
+</div>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Peer-Reviewed Articles</h2>
+<div class="pub">
+  <div class="pub-year">July, 2026</div>
+  <div class="pub-body">
+    <div class="pub-title">Too crowded to grow? Luminosity-based evidence on village cooperative finance in Indonesia</div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong>, Rusli Abdulah, Bangkit A. A. Wiryawan</div>
+    <div class="pub-venue"><em>International Journal of Social Economics</em></div>
+    <div class="pub-links">
+      <a href="https://doi.org/10.1108/IJSE-11-2025-1107" target="_blank">DOI ↗</a>
+      <a href="digest/cooperatives/index.html">Digest</a>
+    </div>
+  </div>
+</div>
+<!-- Notes: copy the whole .pub block for each additional article -->
+</section>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<div class="pub">
+  <div class="pub-year">2026</div>
+  <div class="pub-body">
+    <div class="pub-title">GenAI Impact on Formal Jobs: Evidence from Indonesia<span class="status">Work in progress</span></div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong></div>
+    <div class="pub-links">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7108818" target="_blank">SSRN ↗</a>
+      <a href="digest/gen-ai-labor/index.html">Digest</a>
+    </div>
+  </div>
+</div>
+<div class="pub">
+  <div class="pub-year">2026</div>
+  <div class="pub-body">
+    <div class="pub-title">Corruption Does Not Occur in a Vacuum: Firm Bribery, Institutional Quality, and Management Role<span class="status">Work in progress</span></div>
+    <div class="pub-authors"><strong>Al Bahits Annef</strong></div>
+    <div class="pub-links">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6956239" target="_blank">SSRN ↗</a>
+    </div>
+</div>
+</div></section>
+<section id="digest-section" class="level2">
+<h2 class="anchored" data-anchor-id="digest-section">Digest</h2>
+<p>Plain-language summaries of my research: the question, the evidence and why it matters.</p>
+<div id="listing-digest" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Q29vcGVyYXRpdmVzJTJDTWljcm9maW5hbmNlJTJDSW5kb25lc2lh" data-listing-date-sort="1793458800000" data-listing-file-modified-sort="1793509478017" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278">
+<a href="./digest/cooperatives/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./digest/cooperatives/figure1.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+More financial institutions is not always better: cooperatives and village economies in Indonesia
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29vcGVyYXRpdmVz'); return false;">Cooperatives</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWljcm9maW5hbmNl'); return false;">Microfinance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW5kb25lc2lh'); return false;">Indonesia</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Using nighttime-light GDP estimates, this study compares two cooperative models across Indonesian villages and finds signs of overcrowding.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 1, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="QUklMkNMYWJvciUyQ0luZG9uZXNpYQ==" data-listing-date-sort="1793458800000" data-listing-file-modified-sort="1793509151621" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="415">
+<a href="./digest/gen-ai-labor/gen-ai-labor.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./digest/gen-ai-labor/figure1.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFib3I='); return false;">Labor</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW5kb25lc2lh'); return false;">Indonesia</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Using Sakernas 2019–2024, I find GenAI exposure lowers formal-employment shares, especially among young workers, without lowering total employment.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 1, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

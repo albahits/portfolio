@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/research.html",
+    "items": [
+      "/digest/cooperatives/index.html",
+      "/digest/gen-ai-labor/gen-ai-labor.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/ai-score/index.html"
+    ]
+  }
+]

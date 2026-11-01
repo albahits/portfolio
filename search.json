@@ -2,37 +2,65 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "research",
+    "title": "Research",
     "section": "",
-    "text": "Coming soon."
+    "text": "Peer-Reviewed Articles\n  Working Papers\n  Digest"
   },
   {
-    "objectID": "opinions.html",
-    "href": "opinions.html",
-    "title": "opinion",
-    "section": "",
-    "text": "Coming soon."
+    "objectID": "research.html#articles",
+    "href": "research.html#articles",
+    "title": "Research",
+    "section": "Peer-Reviewed Articles",
+    "text": "Peer-Reviewed Articles\n\n  July, 2026\n  \n    Too crowded to grow? Luminosity-based evidence on village cooperative finance in Indonesia\n    Al Bahits Annef, Rusli Abdulah, Bangkit A. A. Wiryawan\n    International Journal of Social Economics\n    \n      DOI ↗\n      Digest"
   },
   {
-    "objectID": "id/index.html",
-    "href": "id/index.html",
-    "title": "Beranda",
-    "section": "",
-    "text": "Segera hadir."
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research",
+    "section": "Working Papers",
+    "text": "Working Papers\n\n  2026\n  \n    GenAI Impact on Formal Jobs: Evidence from IndonesiaWork in progress\n    Al Bahits Annef\n    \n      SSRN ↗\n      Digest\n    \n  \n\n\n  2026\n  \n    Corruption Does Not Occur in a Vacuum: Firm Bribery, Institutional Quality, and Management RoleWork in progress\n    Al Bahits Annef\n    \n      SSRN ↗"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "cv",
-    "section": "",
-    "text": "Coming soon."
+    "objectID": "research.html#digest-section",
+    "href": "research.html#digest-section",
+    "title": "Research",
+    "section": "Digest",
+    "text": "Digest\nPlain-language summaries of my research: the question, the evidence and why it matters.\n\n\n\n\n\n\n\n\n\n\nMore financial institutions is not always better: cooperatives and village economies in Indonesia\n\n\n\nCooperatives\n\nMicrofinance\n\nIndonesia\n\n\n\nUsing nighttime-light GDP estimates, this study compares two cooperative models across Indonesian villages and finds signs of overcrowding.\n\n\n\nNov 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs\n\n\n\nAI\n\nLabor\n\nIndonesia\n\n\n\nUsing Sakernas 2019–2024, I find GenAI exposure lowers formal-employment shares, especially among young workers, without lowering total employment.\n\n\n\nNov 1, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "projects/ai-score/index.html",
+    "href": "projects/ai-score/index.html",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
     "section": "",
-    "text": "About this site"
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/ai-score/index.html#the-question",
+    "href": "projects/ai-score/index.html#the-question",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "The question",
+    "text": "The question\nWe hear a lot about AI transforming the corporate landscape, but who is actually talking about it, and does size matter?"
+  },
+  {
+    "objectID": "projects/ai-score/index.html#data-and-method",
+    "href": "projects/ai-score/index.html#data-and-method",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "Data and method",
+    "text": "Data and method\nI scraped and text-mined the annual reports (2020–2025) of Indonesia’s largest listed companies across Financials, Technology, Industrials and Consumer sectors. “AI penetration” measures how much a firm talks about AI in its own disclosures, using keyword density.\n\nTools: Python, with pdfplumber for PDF parsing and pandas for the data work. Built with AI assistance (Claude)."
+  },
+  {
+    "objectID": "projects/ai-score/index.html#what-the-data-shows",
+    "href": "projects/ai-score/index.html#what-the-data-shows",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What the data shows",
+    "text": "What the data shows\n1. The AI conversation is still concentrated in Tech. Blibli (BELI) and GoTo Group (GOTO) naturally lead. Beyond them, Astra International (ASII) shows an isolated but rising AI conversation in the Industrial sector. Financials follow the same upward trend, though modestly, led by BCA (BBCA), BNI (BBNI) and Sinar Mas Multiartha (SMMA).\n\n\n\nFigure 1. AI penetration in annual reports: top 5 IDX companies (2020–2025).\n\n\n2. AI rhetoric is beginning to track capital allocation. Within Financials and Tech, the firms with the largest capital expenditure (CapEx) are also those that put the most emphasis on AI in their reporting, a positive correlation.\n\n\n\nFigure 2. AI score and capital expenditure, Financials and Tech sectors, top 5 IDX firms (2020–2025)."
+  },
+  {
+    "objectID": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "href": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What it does and does not tell us",
+    "text": "What it does and does not tell us\nKeyword density captures what firms say, not what they deploy, and the CapEx link is descriptive, not causal. Corporate reporting is the surface layer. The real question is how it translates into operational deployment and productivity gains.\nDo these reporting trends match what you see in the market, or is it just another buzzword? Join the discussion on LinkedIn →"
   },
   {
     "objectID": "hobbies.html",
@@ -42,17 +70,150 @@
     "text": "Coming soon."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "portfolio",
+    "objectID": "digest/cooperatives/index.html",
+    "href": "digest/cooperatives/index.html",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "← Back to Research"
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#the-question",
+    "href": "digest/cooperatives/index.html#the-question",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "The question",
+    "text": "The question\nCooperatives are a pillar of rural finance in Indonesia, but they come in different forms. Village Cooperative Units (KUD) are the traditional, village-based model. Savings and Loans Cooperatives (Kospin) focus on member savings and credit. Do they support village economies equally well, and what happens when they operate alongside formal banks?"
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#data-and-method",
+    "href": "digest/cooperatives/index.html#data-and-method",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "Data and method",
+    "text": "Data and method\nVillages rarely have their own GDP figures, so the study measures economic activity from space. It converts nighttime-light satellite data into village-level GDP estimates, calibrated against official figures, and combines these with village-level data on which institutions are present. Quasi-experimental methods then compare villages with and without each cooperative type, alone and in combination with banks."
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#what-the-study-finds",
+    "href": "digest/cooperatives/index.html#what-the-study-finds",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "What the study finds",
+    "text": "What the study finds\n\nKospin villages do better. They are consistently associated with higher local economic activity.\nKUDs on their own show no clear difference. Villages with a KUD operating in isolation are not statistically different.\nKUDs paired with formal banks do better. Where the two coexist, outcomes are more favorable.\nAdding more stops helping. When KUDs, Kospin and banks are all present, the marginal gains weaken, which points to possible overcrowding (Figure 1).\n\n\n\n\nFigure 1. Interaction effects of financial institutions on village economic activity. Combinations of institutions show weaker marginal differences, suggesting overcrowding."
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#why-it-matters",
+    "href": "digest/cooperatives/index.html#why-it-matters",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "Why it matters",
+    "text": "Why it matters\nThe results challenge one-size-fits-all policy. What a cooperative adds depends on which institutions already serve the village, and too many overlapping providers may crowd out gains. This matters now that Indonesia is rolling out its “Koperasi Merah Putih” flagship initiative: the evidence points toward a flexible, context-sensitive cooperative ecosystem rather than a uniform template. The lesson on institutional complementarity also extends to inclusive-finance efforts across developing Asia.\nRead the full article →"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.\n    My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. \n    Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions."
+  },
+  {
+    "objectID": "about.html#research-interest",
+    "href": "about.html#research-interest",
+    "title": "About",
+    "section": "Research Interest",
+    "text": "Research Interest\nI work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See my work on the Research page."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\n\nGraduate Student, Economic Development, Graduate School of International Development, Nagoya University, under Prof. Christian Otchia. MEXT Scholar, 2024–2027.\nAssociate Project Manager, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.\nCommunications consultancy, Maverick Indonesia, [2022-2023]. Improved how businesses are perceived by the public across different sectors.\nBachelor of International Relations, Universitas Pembangunan Nasional Veteran Jakarta, [2018-2022], Outstanding Student Award (2020)."
+  },
+  {
+    "objectID": "about.html#community-leadership",
+    "href": "about.html#community-leadership",
+    "title": "About",
+    "section": "Community & Leadership",
+    "text": "Community & Leadership\n\nChairman, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025\nVice President, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\n   Personal Email\n   University Email\n  Download CV ↗"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Your download should start automatically. If it doesn't, click here."
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "",
+    "text": "← Back to Research"
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "The question",
+    "text": "The question\nMost debates about generative AI ask whether it will destroy jobs. But in developing economies like Indonesia, where formal and informal employment offer very different levels of security and protection, another question matters: does AI change not just how many people work, but the kinds of jobs they hold? Following ChatGPT’s public release in late 2022, did workers in more AI-exposed groups experience a greater decline in formal employment?"
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "Data and method",
+    "text": "Data and method\nIndonesia’s national labor force survey (Sakernas, 2019–2024) is rich but does not follow the same workers over time, which rules out the standard panel approach. Given this limitation, we take a different route:\n\nA demographic pseudo-panel, which tracks groups of similar workers (by cohort and background) instead of individuals.\nA GenAI-exposure measure adapted to Indonesia, so that existing occupational measures fit occupation–industry cells in the local labor market.\nA continuous-treatment difference-in-differences design, which treats ChatGPT’s release as a common shock and compares groups with more versus less baseline exposure, before and after."
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "What we find",
+    "text": "What we find\nTotal employment barely moved. We detect no differential change in overall employment between more- and less-exposed groups.\nThe formal share did. A one-standard-deviation increase in baseline exposure lowers the formal-employment share by 0.9–1.3 percentage points. Figure 1 shows why we trust this: before late 2022 the groups move in parallel, and afterwards the formal share falls in the more exposed group. Event-study and placebo tests support the result.\n\n\n\nFigure 1. Formal-employment share in more- versus less-exposed groups. Trends are parallel before late 2022; the formal share declines afterwards among the more exposed.\n\n\nThe young bear most of it. The decline is concentrated among entry-level cohorts and selected service industries (Figure 2). Over the same period, freelance employment among Gen Z workers (aged 18–27) rose significantly by 2024, which suggests a shift in how young workers enter the labor market.\n\n\n\nFigure 2. Decline in the formal-employment share among younger cohorts."
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "Why it matters",
+    "text": "Why it matters\nHeadline employment numbers may remain stable, but the adjustment can occur in employment formality: younger workers face weaker pathways into regular jobs, while freelance and platform-based work becomes an alternative. Policy should therefore strengthen early-career pathways through targeted internships in highly exposed sectors and extend basic labor protections, including occupational safety and social security, beyond ride-hailing to a broader range of informal and platform workers. The focus should be not only on developing AI-related skills, but also on ensuring that technological change does not come at the expense of access to formal employment and worker protection.\nRead the full paper →"
+  },
+  {
+    "objectID": "id/index.html",
+    "href": "id/index.html",
+    "title": "Beranda",
+    "section": "",
+    "text": "Segera hadir."
+  },
+  {
+    "objectID": "opinions.html",
+    "href": "opinions.html",
+    "title": "Opinion",
+    "section": "",
+    "text": "English\n  Bahasa Indonesia"
+  },
+  {
+    "objectID": "opinions.html#english",
+    "href": "opinions.html#english",
+    "title": "Opinion",
+    "section": "English",
+    "text": "English\n\n  Jun 2026\n  \n    Survive, Innovate and Scale Up: Lessons from Japan's Resilient MSMEs ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Sep 2025\n  \n    Leave, Return or Reform? ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Jul 2025\n  \n    Prioritizing Agriculture in the Indonesia-Japan Partnership ↗\n    Rusli Abdulah, Al Bahits Annef\n    The Jakarta Post"
+  },
+  {
+    "objectID": "opinions.html#indonesia",
+    "href": "opinions.html#indonesia",
+    "title": "Opinion",
+    "section": "Bahasa Indonesia",
+    "text": "Bahasa Indonesia\n\n  Jul 2025\n  \n    Refleksi Ekonomi dari Potong Rambut di Jepang ↗\n    Al Bahits Annef\n    Kontan"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "projects",
+    "title": "Projects",
     "section": "",
-    "text": "Coming soon."
+    "text": "Side projects at the intersection of data, economics and policy.\n\n\n\n\n\n\n\n\n\n\nWho is talking about AI? Text-mining Indonesian firms’ annual reports\n\n\n\nText mining\n\nPython\n\nAI\n\nIndonesia\n\n\n\nScraping 2020–2025 annual reports of large IDX-listed firms to track AI penetration through keyword density.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
