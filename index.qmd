@@ -57,9 +57,18 @@ page-layout: custom
       <div class="feat-body">
         <span class="outlet">Okezone</span>
         <h3>PPI Nagoya Jepang Kenalkan Budaya Indonesia</h3>
-        <p>Coverage of PPI Nagoya introducing Indonesian culture in Japan, during my term as chairman. ↗</p>
+        <p>Coverage of PPIJ Nagoya introducing Indonesian culture in Japan, during my term as chairman. ↗</p>
       </div>
     </a>
+
+    <a class="feat-card" href="https://en.nagoya-u.ac.jp/news/articles/voice_010/" target="_blank" rel="noopener">
+  <img src="https://en.nagoya-u.ac.jp/images/voice_010_image_11.jpg" alt="Nagoya University feature" loading="lazy">
+  <div class="feat-body">
+    <span class="outlet">Nagoya University</span>
+    <h3>Indonesian Students Lead Children’s Rights Seminar at Nagoya University</h3>
+    <p>Coverage of PPIJ Nagoya organizing student-led seminar. ↗</p>
+  </div>
+</a>
 
   </div>
 </section>

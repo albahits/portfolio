@@ -3,6 +3,10 @@ project:
 
 website:
   title: "Al Bahits Annef"
+  google-analytics:
+    tracking-id: "G-8X68J732NR"
+    anonymize-ip: true
+  cookie-consent: true
   navbar:
     left:
       - text: "Home"
@@ -17,11 +21,6 @@ website:
         href: opinions.qmd
       - text: "CV"
         href: cv.qmd
-        
-  google-analytics:
-    tracking-id: "G-8X68J732NR"
-    anonymize-ip: true
-  cookie-consent: true
 
     right: 
       - text: "ID"
