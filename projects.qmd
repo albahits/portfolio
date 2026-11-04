@@ -1,4 +1,5 @@
 ---
+::: {.band .grad-dark}
 title: "Projects"
 listing:
   id: projects

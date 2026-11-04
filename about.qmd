@@ -4,7 +4,6 @@ title: "About"
 
 ```{=html}
 <div class="about-intro">
-<img src="img/profile.jpg" width="300" height="300" alt="Al Bahits Annef" style="display: block; margin: 0 auto;">
   <div class="bio">
     <p>MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.</p>
     <p>My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. 
@@ -15,7 +14,7 @@ title: "About"
 
 ## Research Interest
 
-I work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See my work on the [Research](research.qmd) page.
+I work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See more of my works on the [Research](research.qmd) or [Projects](projects.qmd) page.
 
 ## Background
 

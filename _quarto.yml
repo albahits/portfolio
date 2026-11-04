@@ -13,7 +13,7 @@ website:
         href: research.qmd
       - text: "Projects"
         href: projects.qmd
-      - text: "Opinions"
+      - text: "Perspective"
         href: opinions.qmd
       - text: "CV"
         href: cv.qmd
