@@ -174,7 +174,7 @@ cookieconsent.run({
   <div class="hero-card">
 
     <div class="pc-photo">
-      <img src="img/profile.jpg" alt="Al Bahits Annef">
+      <img src="img/profile.jpeg" alt="Al Bahits Annef">
       <div class="pc-name">
         <h1>Al Bahits Annef</h1>
         <p>Practitioner-Researcher in Economic Development</p>
@@ -324,7 +324,7 @@ cookieconsent.run({
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/albahits\.github\.io\/portfolio\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
