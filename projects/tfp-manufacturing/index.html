@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.20">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Al Bahits Annef">
+<meta name="dcterms.date" content="2026-11-09">
+<meta name="description" content="Where does output in Indonesian factories come from? A Levinsohn–Petrin TFP exercise on 148,000 firm-years, from raw survey files to sector-level returns to scale, with the full Stata code.">
+
+<title>Productivity in Indonesian Manufacturing – Al Bahits Annef</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8X68J732NR"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8X68J732NR', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Al Bahits Annef</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../opinions.html"> 
+<span class="menu-text">Perspective</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../id/index.html"> 
+<span class="menu-text">ID</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-productivity-and-why-firms" id="toc-why-productivity-and-why-firms" class="nav-link active" data-scroll-target="#why-productivity-and-why-firms">Why productivity, and why firms</a></li>
+  <li><a href="#step-1-cleaning-the-survey" id="toc-step-1-cleaning-the-survey" class="nav-link" data-scroll-target="#step-1-cleaning-the-survey">Step 1: Cleaning the survey</a></li>
+  <li><a href="#step-2-what-the-data-looks-like" id="toc-step-2-what-the-data-looks-like" class="nav-link" data-scroll-target="#step-2-what-the-data-looks-like">Step 2: What the data looks like</a></li>
+  <li><a href="#step-3-estimating-tfp" id="toc-step-3-estimating-tfp" class="nav-link" data-scroll-target="#step-3-estimating-tfp">Step 3: Estimating TFP</a></li>
+  <li><a href="#step-4-what-the-tfp-estimates-show" id="toc-step-4-what-the-tfp-estimates-show" class="nav-link" data-scroll-target="#step-4-what-the-tfp-estimates-show">Step 4: What the TFP estimates show</a>
+  <ul class="collapse">
+  <li><a href="#productivity-rose-until-2020-then-slipped" id="toc-productivity-rose-until-2020-then-slipped" class="nav-link" data-scroll-target="#productivity-rose-until-2020-then-slipped">Productivity rose until 2020, then slipped</a></li>
+  <li><a href="#the-average-hides-a-widening-gap" id="toc-the-average-hides-a-widening-gap" class="nav-link" data-scroll-target="#the-average-hides-a-widening-gap">The average hides a widening gap</a></li>
+  <li><a href="#returns-to-scale-differ-by-sector" id="toc-returns-to-scale-differ-by-sector" class="nav-link" data-scroll-target="#returns-to-scale-differ-by-sector">Returns to scale differ by sector</a></li>
+  <li><a href="#two-sectors-two-production-structures" id="toc-two-sectors-two-production-structures" class="nav-link" data-scroll-target="#two-sectors-two-production-structures">Two sectors, two production structures</a></li>
+  </ul></li>
+  <li><a href="#what-this-adds-up-to" id="toc-what-this-adds-up-to" class="nav-link" data-scroll-target="#what-this-adds-up-to">What this adds up to</a></li>
+  <li><a href="#replicate-it" id="toc-replicate-it" class="nav-link" data-scroll-target="#replicate-it">Replicate it</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Productivity in Indonesian Manufacturing</h1>
+<p class="subtitle lead">Estimating firm-level TFP from the IBS survey, 2017–2022</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Productivity</div>
+    <div class="quarto-category">Manufacturing</div>
+    <div class="quarto-category">Indonesia</div>
+    <div class="quarto-category">Stata</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Where does output in Indonesian factories come from? A Levinsohn–Petrin TFP exercise on 148,000 firm-years, from raw survey files to sector-level returns to scale, with the full Stata code.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Al Bahits Annef </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 9, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>At a glance</strong></p>
+<ul>
+<li><strong>Data:</strong> <em>Industri Besar dan Sedang</em> (IBS), BPS, 2017–2022 · 148,617 firm-year observations</li>
+<li><strong>Method:</strong> Levinsohn–Petrin (2003) production function, Stata 18</li>
+<li><strong>Headline:</strong> materials carry most of the output elasticity (0.685); mean TFP rose to a 2020 peak, and the frontier–laggard gap was widest that year (0.64 log points)</li>
+<li><strong>Code:</strong> <a href="code/01_clean_ibs2020.do">01 Clean</a> · <a href="code/02_append_panel.do">02 Append</a> · <a href="code/03_tfp_and_figures.do">03 TFP &amp; figures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<section id="why-productivity-and-why-firms" class="level2">
+<h2 class="anchored" data-anchor-id="why-productivity-and-why-firms">Why productivity, and why firms</h2>
+<p>Industrial policy is back on the agenda. Many developing countries see it as a way to build industrial capacity and drive growth. Firms are where that growth actually happens, and researchers have long studied both how firms shape industrial policy and how they benefit from it.</p>
+<p>This project looks at firm-level productivity in Indonesian manufacturing. Productivity is hard to measure directly, so the analysis centers on <strong>Total Factor Productivity (TFP)</strong>, the standard measure of how efficiently a firm turns inputs into output.</p>
+<p>The data is the <em>Industri Besar dan Sedang</em> survey (Large and Medium Manufacturing, hereafter <strong>IBS</strong>) from Statistics Indonesia, covering 2017 to 2022. Everything runs in Stata 18, end to end. The project doesn’t evaluate any specific industrial policy. It’s a practical exercise that shows how to:</p>
+<ol type="1">
+<li>Clean and prepare the dataset, including proper deflation of financial variables.</li>
+<li>Estimate TFP and its input elasticities.</li>
+<li>Build descriptive evidence on firm performance and productivity trends.</li>
+</ol>
+</section>
+<section id="step-1-cleaning-the-survey" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-cleaning-the-survey">Step 1: Cleaning the survey</h2>
+<p>Each IBS year comes as its own file with year-specific variable names, so cleaning is done one year at a time. Using 2020 as the example, the do-file:</p>
+<ul>
+<li>builds a numeric <strong>firm ID</strong> and the <strong>ISIC 2- and 5-digit</strong> sector codes;</li>
+<li>deflates <strong>output</strong> with the sector-specific producer price index (IHP, 2010 = 100);</li>
+<li>splits <strong>labor</strong> into production and non-production workers and keeps firms with 20 or more workers (the IBS definition of medium and large);</li>
+<li>imputes <strong>capital</strong> where the opening value is missing, first from the year-end value and then, for firms that lease, from rent paid; capital is deflated with the general wholesale price index (IHPB);</li>
+<li>deflates <strong>raw materials</strong> with the IHPB.</li>
+</ul>
+<p>The core of the output deflation looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>* Sector-specific producer price deflator (IHP, 2010 = 100)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> ihp2020 = .</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> ihp2020 = 150.43 <span class="kw">if</span> disic2 == 10</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> ihp2020 = 163.93 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 11, 12)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>* ... one <span class="kw">line</span> per sector <span class="fu">group</span> ...</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> real_output = (output / ihp2020) * 100</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> log_output  = <span class="fu">ln</span>(real_output)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Full cleaning code for one year (2020)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>01_clean_ibs2020.do</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="01_clean_ibs2020.do"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>* 01_clean_ibs2020.<span class="kw">do</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>* Productivity <span class="kw">in</span> Indonesian Manufacturing (IBS 2017-2022)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>* Step 1: Clean and deflate one survey <span class="fu">year</span> (2020 shown).</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>*         Repeat <span class="kw">for</span> 2017-2022, adjusting the <span class="fu">year</span>-specific</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>*         <span class="kw">variable</span> suffixes (<span class="fu">e</span>.g. *20 -&gt; *19) and deflators.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>* Software: Stata 18</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>* Input : ibs2020.dta  (BPS Industri Besar dan Sedang; <span class="kw">not</span> shared)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>* Output: ibs 2020.dta (cleaned)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"ibs2020.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>**# Firm ID</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="kw">double</span> firm_id = <span class="fu">real</span>(Kipb)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">format</span> firm_id %12.0f</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>la <span class="kw">var</span> firm_id <span class="st">"Firm ID"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>**# Year</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="kw">rename</span> <span class="fu">year</span> annual_operation</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="fu">year</span> = 2020</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>la <span class="kw">var</span> <span class="fu">year</span> <span class="st">"Year of the Observation"</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>**# Sector (ISIC)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> disic5 = disic520</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="kw">destring</span> disic5, <span class="kw">replace</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>la <span class="kw">var</span> disic5 <span class="st">"ISIC Code 5 Digit"</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> disic2 = <span class="fu">substr</span>(disic520, 1, 2)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="kw">destring</span> disic2, <span class="kw">replace</span> <span class="kw">force</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>la <span class="kw">var</span> disic2 <span class="st">"ISIC 2 Digit"</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>* 1. Firm Output</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>**# Firm Income &amp; Output Deflation</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> RUN_INCOME_BLOCK 1</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="kw">if</span> <span class="ot">`RUN_INCOME_BLOCK'</span> == 1 {</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    * 0. Destring raw inputs (yprvcu20 = nominal income)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">destring</span> yprvcu20, <span class="kw">replace</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    * 1. Base nominal output (preserves raw survey <span class="kw">data</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> output = yprvcu20</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    * 2. Drop non-producing firms and firms <span class="fu">missing</span> a sector code</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> output == 0 | <span class="fu">missing</span>(output)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> <span class="fu">missing</span>(disic2)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    * 3. Sector-specific producer price deflator (IHP, 2010 = 100, BPS)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> ihp2020 = .</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 150.43 <span class="kw">if</span> disic2 == 10</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 163.93 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 11, 12)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 153.81 <span class="kw">if</span> disic2 == 13</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 165.41 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 14, 15)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 164.88 <span class="kw">if</span> disic2 == 16</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 145.55 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 17, 18)</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 128.78 <span class="kw">if</span> disic2 == 19</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 138.43 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 20, 21)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 123.61 <span class="kw">if</span> disic2 == 22</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 150.01 <span class="kw">if</span> disic2 == 23</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 118.50 <span class="kw">if</span> disic2 == 24</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 130.14 <span class="kw">if</span> disic2 == 25</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 152.09 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 26, 27, 28)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 141.04 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 29, 30)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> ihp2020 = 162.53 <span class="kw">if</span> <span class="fu">inlist</span>(disic2, 31, 32, 33)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    * 4. Deflate: (Nominal / Deflator) * 100</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> real_output = (output / ihp2020) * 100</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    * 5. Log <span class="kw">of</span> <span class="fu">real</span> output</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_output = <span class="fu">ln</span>(real_output)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> output      <span class="st">"Firm Total Output Nominal (Rp)"</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> ihp2020     <span class="st">"IHP 2020 Deflator (Base 2010=100, by disic2)"</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> real_output <span class="st">"Firm Total Output Real (Deflated by Sector IHP)"</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_output  <span class="st">"Firm Total Output Real (in Log)"</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>* 2. Labor</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>**# Labor (Production vs Non-Production)</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> RUN_LABOR_BLOCK 1</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="kw">if</span> <span class="ot">`RUN_LABOR_BLOCK'</span> == 1 {</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    * 1. Destring raw inputs (<span class="ot">l</span> = Indonesian, f = foreign workers)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    <span class="kw">destring</span> lprnol20 lprnof20 lnpnol20 lnpnof20, <span class="kw">replace</span> <span class="kw">force</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    * 2. Headcounts</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> prodlab     = lprnol20 + lprnof20</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> non_prodlab = lnpnol20 + lnpnof20</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> labor       = prodlab + non_prodlab</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    * Keep firms with 20+ workers (IBS definition <span class="kw">of</span> medium/large)</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> labor == 0 | <span class="fu">missing</span>(labor)</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> labor &lt; 20</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>    * 3. Logs (<span class="fu">ln</span>(0) -&gt; <span class="fu">missing</span> <span class="kw">for</span> firms with no non-production staff)</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_labor      = <span class="fu">ln</span>(labor)</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_prodlab    = <span class="fu">ln</span>(prodlab)</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_nonprodlab = <span class="fu">ln</span>(non_prodlab)</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> labor          <span class="st">"Total Labor"</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_labor      <span class="st">"Total Labor (in Log)"</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> prodlab        <span class="st">"Labor: Production Workers"</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_prodlab    <span class="st">"Labor: Production Workers (in Log)"</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> non_prodlab    <span class="st">"Labor: Non-Production/Other Workers"</span></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_nonprodlab <span class="st">"Labor: Non-Production/Other Workers (in Log)"</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>    * 4. Firm <span class="kw">size</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> <span class="kw">size</span> = .</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> <span class="kw">size</span> = 0 <span class="kw">if</span> labor &gt;= 20 &amp; labor &lt;= 99</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> <span class="kw">size</span> = 1 <span class="kw">if</span> labor &gt;= 100</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>    la def lbl_size 0 <span class="st">"Medium Firm"</span> 1 <span class="st">"Large Firm"</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    la val <span class="kw">size</span> lbl_size</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> <span class="kw">size</span> <span class="st">"Firm Size (Categorical)"</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>    * 5. Wage bill</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>    <span class="kw">destring</span> zpdvcu20 zndvcu20 zptvcu20 zntvcu20, <span class="kw">replace</span> <span class="kw">force</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> zpdvcu20 = 0 <span class="kw">if</span> <span class="fu">missing</span>(zpdvcu20)</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> zndvcu20 = 0 <span class="kw">if</span> <span class="fu">missing</span>(zndvcu20)</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> labor_cost      = zpdvcu20 + zndvcu20</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_labor_cost  = <span class="fu">ln</span>(labor_cost + 1)</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> prod_cost       = zptvcu20</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_prodcost    = <span class="fu">ln</span>(prod_cost)</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> nonprod_cost    = zntvcu20</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_nonprodcost = <span class="fu">ln</span>(nonprod_cost)</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> labor_cost      <span class="st">"Total Labor Cost Nominal (Rp 000)"</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_labor_cost  <span class="st">"Total Labor Cost Nominal (in Log)"</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> prod_cost       <span class="st">"Labor Cost, Production Workers (Rp 000)"</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> nonprod_cost    <span class="st">"Labor Cost, Non-Production Workers (Rp 000)"</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_prodcost    <span class="st">"Labor Cost, Production Workers (in Log)"</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_nonprodcost <span class="st">"Labor Cost, Non-Production Workers (in Log)"</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>* 3. Capital</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>**# Capital</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> RUN_CAPITAL_BLOCK 1</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="kw">if</span> <span class="ot">`RUN_CAPITAL_BLOCK'</span> == 1 {</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Flow: (1) impute missing start-of-year capital with end-of-year value (v1115)</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="co">//       (2) impute firms that lease capital from rent paid (ibrvcu20 / 0.10)</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>    <span class="co">//       (3) drop if still zero  (4) deflate with IHPB (general)  (5) log</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="kw">destring</span> ctfpcu20 v1115 ibrvcu20, <span class="kw">replace</span> <span class="kw">force</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> capital = ctfpcu20</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> capital = v1115          <span class="kw">if</span> capital == 0 &amp; v1115 &gt; 0    &amp; !<span class="fu">missing</span>(v1115)</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> capital = ibrvcu20 / 0.10 <span class="kw">if</span> capital == 0 &amp; ibrvcu20 &gt; 0 &amp; !<span class="fu">missing</span>(ibrvcu20)</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> capital == 0 | <span class="fu">missing</span>(capital)</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> real_capital = (capital / 103.55) * 100</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_capital  = <span class="fu">ln</span>(real_capital)</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> capital      <span class="st">"Firm Capital (Rp)"</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> real_capital <span class="st">"Firm Capital (Deflated with IHPB Umum)"</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_capital  <span class="st">"Firm Capital (in Log)"</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>* 4. Raw Materials and Energy</span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>**# Raw Materials &amp; Input</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> RUN_INPUT_BLOCK 1</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a><span class="kw">if</span> <span class="ot">`RUN_INPUT_BLOCK'</span> == 1 {</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>    <span class="kw">destring</span> rtlvcu20 eplvcu20, <span class="kw">replace</span> <span class="kw">force</span></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> raw_material = rtlvcu20</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>    <span class="kw">drop</span> <span class="kw">if</span> raw_material == 0 | <span class="fu">missing</span>(raw_material)</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>    * Deflate with wholesale price <span class="fu">index</span> (IHPB), 2020 <span class="ot">value</span> = 104.30</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> real_materials = (raw_material / 104.30) * 100</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_material   = <span class="fu">ln</span>(real_materials)</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> raw_material   <span class="st">"Raw Materials (Rp)"</span></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> real_materials <span class="st">"Raw Materials (Deflated with IHPB)"</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_material   <span class="st">"Raw Materials (in Log)"</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> electricity     = eplvcu20</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    <span class="kw">gen</span> log_electricity = <span class="fu">ln</span>(electricity)</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> electricity     <span class="st">"Electricity Cost (Rp)"</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>    la <span class="kw">var</span> log_electricity <span class="st">"Electricity Cost (in Log)"</span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a><span class="kw">save</span> <span class="st">"ibs 2020.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The cleaned years are then stacked into one panel and declared with <code>xtset</code>:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Appending 2017–2022 into a panel
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>02_append_panel.do</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="02_append_panel.do"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>* 02_append_panel.<span class="kw">do</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>* Step 2: Append the cleaned annual files and declare the panel.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>* Input : ibs 2017.dta ... ibs 2022.dta (outputs <span class="kw">of</span> step 1)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>* Output: appended 2017-2022.dta</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>* ============================================================</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">clear</span> <span class="ot">all</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">set</span> <span class="kw">more</span> <span class="kw">off</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"ibs 2017.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> yr <span class="kw">of</span> numlist 2018/2022 {</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">append</span> <span class="kw">using</span> <span class="st">"ibs `yr'.dta"</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">sort</span> firm_id <span class="fu">year</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> firm_id <span class="st">"Firm Unique Identifier"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> <span class="fu">year</span>    <span class="st">"Year of Observation"</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>xtset firm_id <span class="fu">year</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>xtdescribe</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">save</span> <span class="st">"appended 2017-2022.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-what-the-data-looks-like" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-what-the-data-looks-like">Step 2: What the data looks like</h2>
+<p>Table 1 summarizes the variables used in the TFP estimation. Output is real (deflated) output, labor is production plus non-production workers, capital is the firm’s capital stock, and materials are raw materials used in production. All are in natural logs.</p>
+<table class="table-striped table-hover caption-top table">
+<caption><strong>Table 1.</strong> Descriptive statistics (all variables in logs)</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Obs</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Std. Dev.</th>
+<th style="text-align: right;">Min</th>
+<th style="text-align: right;">Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>log_output</code></td>
+<td style="text-align: left;">Real output</td>
+<td style="text-align: right;">148,617</td>
+<td style="text-align: right;">16.453</td>
+<td style="text-align: right;">2.096</td>
+<td style="text-align: right;">4.795</td>
+<td style="text-align: right;">24.980</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log_labor</code></td>
+<td style="text-align: left;">Total labor</td>
+<td style="text-align: right;">148,617</td>
+<td style="text-align: right;">4.293</td>
+<td style="text-align: right;">1.211</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10.920</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>log_prodlab</code></td>
+<td style="text-align: left;">Production labor</td>
+<td style="text-align: right;">148,617</td>
+<td style="text-align: right;">4.094</td>
+<td style="text-align: right;">1.226</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10.844</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log_nonprodlab</code></td>
+<td style="text-align: left;">Non-production labor</td>
+<td style="text-align: right;">127,110</td>
+<td style="text-align: right;">2.488</td>
+<td style="text-align: right;">1.351</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9.485</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>log_capital</code></td>
+<td style="text-align: left;">Capital stock</td>
+<td style="text-align: right;">148,617</td>
+<td style="text-align: right;">14.088</td>
+<td style="text-align: right;">2.634</td>
+<td style="text-align: right;">1.839</td>
+<td style="text-align: right;">26.592</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log_material</code></td>
+<td style="text-align: left;">Intermediate materials</td>
+<td style="text-align: right;">148,617</td>
+<td style="text-align: right;">15.670</td>
+<td style="text-align: right;">2.290</td>
+<td style="text-align: right;">3.423</td>
+<td style="text-align: right;">24.704</td>
+</tr>
+</tbody>
+</table>
+<p>Non-production labor has fewer observations because some firms report no non-production staff, and the log of zero is undefined.</p>
+</section>
+<section id="step-3-estimating-tfp" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-estimating-tfp">Step 3: Estimating TFP</h2>
+<p>The estimation follows Levinsohn and Petrin (2003). It assumes a Cobb–Douglas technology with two kinds of labor, and uses intermediate inputs (raw materials) rather than investment as a proxy for productivity shocks that the firm sees but the econometrician doesn’t:</p>
+<p><span class="math display">\[
+\ln Y_{it} = \beta_1 \ln L^{P}_{it} + \beta_2 \ln L^{NP}_{it} + \beta_3 \ln M_{it} + \beta_4 \ln K_{it} + \omega_{it} + \varepsilon_{it}
+\]</span></p>
+<p>Here <span class="math inline">\(i\)</span> and <span class="math inline">\(t\)</span> index firms and years. <span class="math inline">\(Y_{it}\)</span> is output, <span class="math inline">\(L^{P}_{it}\)</span> and <span class="math inline">\(L^{NP}_{it}\)</span> are production and non-production labor, <span class="math inline">\(M_{it}\)</span> is materials and <span class="math inline">\(K_{it}\)</span> is capital. The <span class="math inline">\(\beta\)</span>s are output elasticities, <span class="math inline">\(\omega_{it}\)</span> is firm productivity, and <span class="math inline">\(\varepsilon_{it}\)</span> is an idiosyncratic error.</p>
+<p>In Stata this is a single <code>prodest</code> call, followed by predicting <span class="math inline">\(\omega_{it}\)</span> as each firm’s TFP:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>prodest log_output, free(log_prodlab log_nonprodlab) proxy(log_material) <span class="co">///</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    state(log_capital) id(firm_id) t(<span class="fu">year</span>) method(lp) fsresiduals(fsr)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">lincom</span> log_prodlab + log_nonprodlab + log_capital + log_material      <span class="co">// returns to scale</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">test</span>   log_prodlab + log_nonprodlab + log_capital + log_material = 1  <span class="co">// CRS test</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">predict</span> tfp_lp, omega</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="table-striped caption-top table">
+<caption><strong>Table 2.</strong> Levinsohn–Petrin input elasticities</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Input</th>
+<th style="text-align: center;">Elasticity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Production labor</td>
+<td style="text-align: center;">0.121*** <br>(0.001)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Non-production labor</td>
+<td style="text-align: center;">0.131*** <br>(0.001)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Capital stock</td>
+<td style="text-align: center;">0.016*** <br>(0.000)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intermediate materials</td>
+<td style="text-align: center;">0.685*** <br>(0.004)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Returns to scale</strong> (<span class="math inline">\(\sum \hat\beta\)</span>)</td>
+<td style="text-align: center;">0.9535</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Wald test for CRS</strong> (<span class="math inline">\(\chi^2\)</span>)</td>
+<td style="text-align: center;">90.04***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Observations</td>
+<td style="text-align: center;">126,976</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Period</td>
+<td style="text-align: center;">2017–2022</td>
+</tr>
+</tbody>
+</table>
+<div class="small">
+<p><em>Notes:</em> *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10. Standard errors in parentheses. Intermediate materials proxy for unobserved productivity shocks to address simultaneity bias. Returns to scale is the sum of the estimated elasticities. Source: Author’s own calculation.</p>
+</div>
+<p><strong>Materials dominate.</strong> At 0.685, the materials elasticity is several times larger than production labor (0.121), non-production labor (0.131) or capital (0.016). All four are significant at 1%. Returns to scale of 0.9535 point to slightly decreasing returns, and the Wald test rejects constant returns at the 1% level.</p>
+<p>This suggests Indonesian manufacturing is material-intensive. Production depends on raw materials and intermediate inputs more than on accumulating capital or adding workers, so how reliably and efficiently firms source and use materials matters a lot for their performance.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>A garment factory as an example</strong></p>
+<p>Take a factory making shirts for domestic and export markets:</p>
+<ul>
+<li><strong>Production labor:</strong> sewing operators, cutters, assemblers</li>
+<li><strong>Non-production labor:</strong> administrators, accountants, supervisors, warehouse managers</li>
+<li><strong>Capital:</strong> sewing machines, cutting equipment, buildings</li>
+<li><strong>Materials:</strong> fabric, thread, buttons, zippers, labels, packaging</li>
+</ul>
+<p>Even with enough workers and machines, the factory can’t produce without fabric. A supply disruption leaves machines idle and workers unable to finish orders. That dependence is what a large materials elasticity captures.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-what-the-tfp-estimates-show" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-what-the-tfp-estimates-show">Step 4: What the TFP estimates show</h2>
+<section id="productivity-rose-until-2020-then-slipped" class="level3">
+<h3 class="anchored" data-anchor-id="productivity-rose-until-2020-then-slipped">Productivity rose until 2020, then slipped</h3>
+<div id="fig-level" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Line chart of mean log TFP from 2017 to 2022, rising from about 4.69 to a peak of about 4.78 in 2020, then easing to about 4.76 by 2022.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-level-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig1-tfp-level.png" class="img-fluid figure-img" alt="Line chart of mean log TFP from 2017 to 2022, rising from about 4.69 to a peak of about 4.78 in 2020, then easing to about 4.76 by 2022.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-level-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Mean log TFP by year. Whiskers show 95% confidence intervals.
+</figcaption>
+</figure>
+</div>
+<p>Productivity climbed steadily from 2017 and peaked in 2020, then declined gradually through 2022. The rise continued into the first COVID-19 year, which could reflect firms adjusting how they produce or a change in which firms survived. The later decline suggests those gains didn’t fully hold.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Code for Figure 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">preserve</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">collapse</span> (<span class="kw">mean</span>) mean_tfp = tfp_lp (<span class="fu">sd</span>) sd_tfp = tfp_lp (<span class="fu">count</span>) n = tfp_lp, <span class="kw">by</span>(<span class="fu">year</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> ci_high = mean_tfp + 1.96 * (sd_tfp / <span class="fu">sqrt</span>(n))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> ci_low  = mean_tfp - 1.96 * (sd_tfp / <span class="fu">sqrt</span>(n))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (rcap ci_low ci_high <span class="fu">year</span>, lcolor(gs7) lwidth(<span class="bn">medthick</span>)) <span class="co">///</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>       (connected mean_tfp <span class="fu">year</span>, lcolor(<span class="bn">black</span>) mcolor(<span class="bn">black</span>) <span class="bn">msymbol</span>(O) lwidth(thick)), <span class="co">///</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bn">ytitle</span>(<span class="st">"Log TFP Level (Levinsohn-Petrin)"</span>) <span class="bn">xtitle</span>(<span class="st">"Year"</span>) <span class="co">///</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ylabel</span>(4.65(0.05)4.80, angle(0) <span class="bn">nogrid</span> <span class="kw">format</span>(%9.2f)) <span class="kw">xlabel</span>(2017(1)2022, <span class="bn">nogrid</span>) <span class="co">///</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bn">legend</span>(<span class="kw">order</span>(2 <span class="st">"Mean TFP"</span> 1 <span class="st">"95% Confidence Interval"</span>) <span class="bn">rows</span>(1) <span class="bn">position</span>(6))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"fig1-tfp-level.png"</span>, <span class="kw">replace</span> <span class="kw">width</span>(3600)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">restore</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Full styling options are in <a href="code/03_tfp_and_figures.do">03_tfp_and_figures.do</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-average-hides-a-widening-gap" class="level3">
+<h3 class="anchored" data-anchor-id="the-average-hides-a-widening-gap">The average hides a widening gap</h3>
+<div id="fig-dispersion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two lines: the 90th percentile of TFP rises from about 5.01 in 2017 to 5.13 in 2020 then dips; the 10th percentile stays nearly flat around 4.45 to 4.49. The gap peaks at 0.64 in 2020.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig2-dispersion.png" class="img-fluid figure-img" alt="Two lines: the 90th percentile of TFP rises from about 5.01 in 2017 to 5.13 in 2020 then dips; the 10th percentile stays nearly flat around 4.45 to 4.49. The gap peaks at 0.64 in 2020.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: 90th (frontier) and 10th (laggard) percentiles of log TFP. The shaded area is the gap; the dashed line marks its 2020 peak.
+</figcaption>
+</figure>
+</div>
+<p>Firms at the 90th percentile consistently outperform those at the 10th, and the gap widened from 2017 to a peak of <strong>0.64 log points in 2020</strong>. Frontier firms gained until 2020 while laggards improved only modestly. After 2020, frontier productivity started to fall and laggards stayed flat.</p>
+<p>So productivity growth in Indonesian manufacturing was uneven. Leading firms drove most of it, rather than improvements spreading across the sector.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Code for Figure 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">preserve</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">collapse</span> (p90) p90_tfp = tfp_lp (p10) p10_tfp = tfp_lp, <span class="kw">by</span>(<span class="fu">year</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">quietly</span> <span class="kw">summarize</span> p90_tfp <span class="kw">if</span> <span class="fu">year</span> == 2020</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> y90 = <span class="fu">r</span>(<span class="kw">mean</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">quietly</span> <span class="kw">summarize</span> p10_tfp <span class="kw">if</span> <span class="fu">year</span> == 2020</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> y10 = <span class="fu">r</span>(<span class="kw">mean</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> gap_str : <span class="kw">display</span> %9.2f <span class="ot">`y90'</span> - <span class="ot">`y10'</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> gap_str = <span class="kw">trim</span>(<span class="st">"`gap_str'"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> ymid = (<span class="ot">`y90'</span> + <span class="ot">`y10'</span>) / 2</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (rarea p90_tfp p10_tfp <span class="fu">year</span>, fcolor(gs12) lcolor(<span class="kw">none</span>)) <span class="co">///</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>       (connected p90_tfp <span class="fu">year</span>, lcolor(<span class="bn">black</span>) <span class="bn">msymbol</span>(S) lwidth(thick)) <span class="co">///</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>       (connected p10_tfp <span class="fu">year</span>, lcolor(gs7) <span class="bn">msymbol</span>(D) lpattern(<span class="kw">dash</span>) lwidth(thick)) <span class="co">///</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>       (scatteri <span class="ot">`y90'</span> 2020 <span class="ot">`y10'</span> 2020, <span class="kw">connect</span>(<span class="kw">line</span>) <span class="bn">msymbol</span>(<span class="kw">none</span>) lpattern(shortdash)), <span class="co">///</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="bn">text</span>(<span class="ot">`ymid'</span> 2020 <span class="st">"`gap_str' (Peak)"</span>, box fcolor(<span class="bn">white</span>)) <span class="co">///</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="bn">legend</span>(<span class="kw">order</span>(2 <span class="st">"90th Percentile (Frontier)"</span> 3 <span class="st">"10th Percentile (Laggards)"</span> 1 <span class="st">"90-10 Gap"</span>) <span class="co">///</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="bn">rows</span>(1) <span class="bn">position</span>(6))</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"fig2-dispersion.png"</span>, <span class="kw">replace</span> <span class="kw">width</span>(4000)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="kw">restore</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Full styling options are in <a href="code/03_tfp_and_figures.do">03_tfp_and_figures.do</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="returns-to-scale-differ-by-sector" class="level3">
+<h3 class="anchored" data-anchor-id="returns-to-scale-differ-by-sector">Returns to scale differ by sector</h3>
+<div id="fig-rts" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dot-and-whisker chart of returns to scale for 24 two-digit manufacturing sectors, ranging from about 0.83 for beverages to about 1.06 for paper.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig3-sectoral-rts.png" class="img-fluid figure-img" alt="Dot-and-whisker chart of returns to scale for 24 two-digit manufacturing sectors, ranging from about 0.83 for beverages to about 1.06 for paper.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Returns to scale from sector-specific Levinsohn–Petrin estimations, with 95% confidence intervals. The dashed line marks constant returns (<span class="math inline">\(\gamma = 1\)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Re-estimating the production function sector by sector shows a lot of variation. Several industries sit near constant returns. Paper, non-metallic minerals and motor vehicles come out above one, suggesting increasing returns. Beverages, leather, rubber and plastics, and electrical equipment come out well below one.</p>
+<p>The takeaway is that manufacturing doesn’t share a single production structure. How much a firm gains from scaling up depends on its subsector.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Code for Figure 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The loop runs <code>prodest</code> for each 2-digit sector, then stores the coefficients, the returns to scale and a test of constant returns with <code>postfile</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">levelsof</span> disic2, <span class="kw">local</span>(sectors)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">tempname</span> results</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">tempfile</span> sector_results</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">postfile</span> <span class="ot">`results'</span> <span class="kw">int</span> disic2 <span class="kw">double</span> rts rts_se p_crs <span class="kw">long</span> <span class="kw">N</span> <span class="co">///</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">using</span> <span class="ot">`sector_results'</span>, <span class="kw">replace</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> <span class="fu">s</span> <span class="kw">of</span> <span class="kw">local</span> sectors {</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">capture</span> <span class="kw">drop</span> fsr</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">capture</span> <span class="kw">quietly</span> prodest log_output <span class="kw">if</span> disic2 == <span class="ot">`s'</span>, <span class="co">///</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        free(log_prodlab log_nonprodlab) proxy(log_material) <span class="co">///</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        state(log_capital) id(firm_id) t(<span class="fu">year</span>) method(lp) fsresiduals(fsr)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> !<span class="dt">_rc</span> {</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">quietly</span> <span class="kw">lincom</span> log_prodlab + log_nonprodlab + log_capital + log_material</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">local</span> rts = <span class="fu">r</span>(estimate)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">local</span> se  = <span class="fu">r</span>(se)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">quietly</span> <span class="kw">test</span> log_prodlab + log_nonprodlab + log_capital + log_material = 1</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="kw">post</span> <span class="ot">`results'</span> (<span class="ot">`s'</span>) (<span class="ot">`rts'</span>) (<span class="ot">`se'</span>) (<span class="fu">r</span>(<span class="kw">p</span>)) (<span class="fu">e</span>(<span class="kw">N</span>))</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="kw">postclose</span> <span class="ot">`results'</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="ot">`sector_results'</span>, <span class="kw">clear</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> ci_low  = rts - 1.96*rts_se</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> ci_high = rts + 1.96*rts_se</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (rcap ci_low ci_high disic2, horizontal lcolor(gs6)) <span class="co">///</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>       (<span class="kw">scatter</span> disic2 rts, mcolor(<span class="bn">black</span>) <span class="bn">msymbol</span>(O)), <span class="co">///</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="bn">xline</span>(1, lpattern(<span class="kw">dash</span>)) <span class="bn">yscale</span>(<span class="fu">reverse</span>) <span class="kw">ylabel</span>(10(1)33, valuelabel angle(0)) <span class="co">///</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="bn">xtitle</span>(<span class="st">"Estimated Returns to Scale ({&amp;gamma})"</span>) <span class="bn">ytitle</span>(<span class="st">""</span>) <span class="bn">legend</span>(<span class="kw">off</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"fig3-sectoral-rts.png"</span>, <span class="kw">replace</span> <span class="kw">width</span>(3000)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The sector labels and full styling options are in <a href="code/03_tfp_and_figures.do">03_tfp_and_figures.do</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-sectors-two-production-structures" class="level3">
+<h3 class="anchored" data-anchor-id="two-sectors-two-production-structures">Two sectors, two production structures</h3>
+<div id="fig-two-sectors" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Grouped horizontal bar chart comparing textiles and motor vehicles. Production labor 0.069 vs 0.294; non-production labor 0.152 vs 0.023; capital 0.025 vs 0.009; materials 0.792 vs 0.685.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-two-sectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig4-elasticities-two-sectors.png" class="img-fluid figure-img" alt="Grouped horizontal bar chart comparing textiles and motor vehicles. Production labor 0.069 vs 0.294; non-production labor 0.152 vs 0.023; capital 0.025 vs 0.009; materials 0.792 vs 0.685.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-two-sectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Levinsohn–Petrin input elasticities from separate regressions for textiles and motor vehicles.
+</figcaption>
+</figure>
+</div>
+<p>Finally, the comparison of <strong>textiles (ISIC 13)</strong> and <strong>motor vehicles (ISIC 29)</strong> asks whether the material-intensity story holds in sectors that look very different.</p>
+<p>Materials are still the largest elasticity in both (0.792 for textiles and 0.685 for motor vehicles), but the labor structures diverge:</p>
+<ul>
+<li><strong>Production labor</strong> matters far more in motor vehicles (0.294) than in textiles (0.069).</li>
+<li><strong>Non-production labor</strong> is higher in textiles (0.152) than in motor vehicles (0.023).</li>
+<li><strong>Capital</strong> contributes little in either sector.</li>
+</ul>
+<p>Textiles look especially material-intensive, while motor vehicles lean more on direct production workers. In both cases, material inputs remain central.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Code for Figure 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> <span class="fu">s</span> <span class="kw">in</span> 13 29 {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="ot">`s'</span> == 13 <span class="kw">local</span> sname = <span class="st">"Textile Industry"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="ot">`s'</span> == 29 <span class="kw">local</span> sname = <span class="st">"Motor Vehicles Industry"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">capture</span> <span class="kw">drop</span> fsr</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">capture</span> <span class="kw">quietly</span> prodest log_output <span class="kw">if</span> disic2 == <span class="ot">`s'</span>, <span class="co">///</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        free(log_prodlab log_nonprodlab) proxy(log_material) <span class="co">///</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        state(log_capital) id(firm_id) t(<span class="fu">year</span>) method(lp) fsresiduals(fsr)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> !<span class="dt">_rc</span> <span class="kw">post</span> <span class="ot">`results'</span> (<span class="ot">`s'</span>) (<span class="st">"`sname'"</span>) (_b[log_prodlab]) <span class="co">///</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        (_b[log_nonprodlab]) (_b[log_capital]) (_b[log_material])</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>* ... <span class="kw">reshape</span> <span class="kw">long</span>, then:</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">hbar</span> (<span class="kw">mean</span>) elasticity, <span class="bn">over</span>(sector_name) <span class="bn">over</span>(input_id) asyvars <span class="co">///</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="bn">blabel</span>(<span class="bn">bar</span>, <span class="kw">format</span>(%9.3f)) <span class="bn">ytitle</span>(<span class="st">"Output Elasticity ({&amp;beta})"</span>) <span class="co">///</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="bn">legend</span>(<span class="kw">order</span>(1 <span class="st">"Textile Industry (ISIC 13)"</span> 2 <span class="st">"Motor Vehicles Industry (ISIC 29)"</span>))</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"fig4-elasticities-two-sectors.png"</span>, <span class="kw">replace</span> <span class="kw">width</span>(3600)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The complete loop, reshape and styling are in <a href="code/03_tfp_and_figures.do">03_tfp_and_figures.do</a>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="what-this-adds-up-to" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-adds-up-to">What this adds up to</h2>
+<p>Using IBS data for 2017–2022 and the Levinsohn–Petrin approach, the project estimates firm-level TFP and describes several features of manufacturing performance:</p>
+<ul>
+<li><strong>Materials carry the most weight</strong> in production, which points to the material-intensive nature of Indonesian manufacturing.</li>
+<li><strong>Average TFP rose until 2020</strong> and then declined gradually through 2022.</li>
+<li><strong>The average hides a gap.</strong> Frontier firms pulled away from laggards, and the gap peaked in 2020.</li>
+<li><strong>Production structures differ by sector</strong>, in both returns to scale and input elasticities.</li>
+</ul>
+<p>Taken together, strengthening manufacturing capacity is about more than adding inputs. It’s also about how well firms combine and use them. For a developing economy like Indonesia, understanding sector-specific production structures, improving access to intermediate inputs and narrowing the gap between leading and lagging firms are useful starting points for industrial policy discussions.</p>
+<p>This is descriptive work. It doesn’t establish causal links between industrial policy and productivity, but it shows what firm-level productivity analysis can reveal about structure and performance in the manufacturing sector.</p>
+</section>
+<section id="replicate-it" class="level2">
+<h2 class="anchored" data-anchor-id="replicate-it">Replicate it</h2>
+<table class="table-striped caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">File</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><a href="code/01_clean_ibs2020.do">01_clean_ibs2020.do</a></td>
+<td style="text-align: left;">Cleans and deflates one survey year; repeat for each year with that year’s variable suffixes and deflators</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><a href="code/02_append_panel.do">02_append_panel.do</a></td>
+<td style="text-align: left;">Stacks 2017–2022 and declares the panel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><a href="code/03_tfp_and_figures.do">03_tfp_and_figures.do</a></td>
+<td style="text-align: left;">Table 1, the Levinsohn–Petrin estimation (Table 2), and Figures 1–4</td>
+</tr>
+</tbody>
+</table>
+<p>Requires Stata 18 (earlier versions should work) and the <code>prodest</code> package (<code>ssc install prodest</code>). The IBS microdata is distributed by BPS–Statistics Indonesia and isn’t included here.</p>
+<p><strong>Reference:</strong> Levinsohn, J., &amp; Petrin, A. (2003). Estimating production functions using inputs to control for unobservables. <em>The Review of Economic Studies</em>, 70(2), 317–341.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/albahits\.github\.io\/portfolio\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Al Bahits Annef</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

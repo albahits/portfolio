@@ -28,123 +28,88 @@
     "text": "Plain-language summaries of my research: the question, the evidence and why it matters.\n\n\n\n\n\n\n\n\n\n\n\n\nCooperatives\n\nMicrofinance\n\nIndonesia\n\n\n\nUsing nighttime-light GDP estimates, this study compares two cooperative models across Indonesian villages and finds signs of overcrowding.\n\n\n\nNov 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI\n\nLabor\n\nIndonesia\n\n\n\nUsing Sakernas 2019–2024, I find GenAI exposure lowers formal-employment shares, especially among young workers, without lowering total employment.\n\n\n\nNov 1, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/ai-score/index.html",
-    "href": "projects/ai-score/index.html",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "objectID": "projects/tfp-manufacturing/index.html",
+    "href": "projects/tfp-manufacturing/index.html",
+    "title": "Productivity in Indonesian Manufacturing",
     "section": "",
-    "text": "← Back to Projects"
+    "text": "At a glance\n\nData: Industri Besar dan Sedang (IBS), BPS, 2017–2022 · 148,617 firm-year observations\nMethod: Levinsohn–Petrin (2003) production function, Stata 18\nHeadline: materials carry most of the output elasticity (0.685); mean TFP rose to a 2020 peak, and the frontier–laggard gap was widest that year (0.64 log points)\nCode: 01 Clean · 02 Append · 03 TFP & figures"
   },
   {
-    "objectID": "projects/ai-score/index.html#the-question",
-    "href": "projects/ai-score/index.html#the-question",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "The question",
-    "text": "The question\nWe hear a lot about AI transforming the corporate landscape, but who is actually talking about it, and does size matter?"
+    "objectID": "projects/tfp-manufacturing/index.html#why-productivity-and-why-firms",
+    "href": "projects/tfp-manufacturing/index.html#why-productivity-and-why-firms",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Why productivity, and why firms",
+    "text": "Why productivity, and why firms\nIndustrial policy is back on the agenda. Many developing countries see it as a way to build industrial capacity and drive growth. Firms are where that growth actually happens, and researchers have long studied both how firms shape industrial policy and how they benefit from it.\nThis project looks at firm-level productivity in Indonesian manufacturing. Productivity is hard to measure directly, so the analysis centers on Total Factor Productivity (TFP), the standard measure of how efficiently a firm turns inputs into output.\nThe data is the Industri Besar dan Sedang survey (Large and Medium Manufacturing, hereafter IBS) from Statistics Indonesia, covering 2017 to 2022. Everything runs in Stata 18, end to end. The project doesn’t evaluate any specific industrial policy. It’s a practical exercise that shows how to:\n\nClean and prepare the dataset, including proper deflation of financial variables.\nEstimate TFP and its input elasticities.\nBuild descriptive evidence on firm performance and productivity trends."
   },
   {
-    "objectID": "projects/ai-score/index.html#data-and-method",
-    "href": "projects/ai-score/index.html#data-and-method",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "Data and method",
-    "text": "Data and method\nI scraped and text-mined the annual reports (2020–2025) of Indonesia’s largest listed companies across Financials, Technology, Industrials and Consumer sectors. “AI penetration” measures how much a firm talks about AI in its own disclosures, using keyword density.\n\nTools: Python, with pdfplumber for PDF parsing and pandas for the data work. Built with AI assistance (Claude)."
+    "objectID": "projects/tfp-manufacturing/index.html#step-1-cleaning-the-survey",
+    "href": "projects/tfp-manufacturing/index.html#step-1-cleaning-the-survey",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Step 1: Cleaning the survey",
+    "text": "Step 1: Cleaning the survey\nEach IBS year comes as its own file with year-specific variable names, so cleaning is done one year at a time. Using 2020 as the example, the do-file:\n\nbuilds a numeric firm ID and the ISIC 2- and 5-digit sector codes;\ndeflates output with the sector-specific producer price index (IHP, 2010 = 100);\nsplits labor into production and non-production workers and keeps firms with 20 or more workers (the IBS definition of medium and large);\nimputes capital where the opening value is missing, first from the year-end value and then, for firms that lease, from rent paid; capital is deflated with the general wholesale price index (IHPB);\ndeflates raw materials with the IHPB.\n\nThe core of the output deflation looks like this:\n* Sector-specific producer price deflator (IHP, 2010 = 100)\ngen ihp2020 = .\nreplace ihp2020 = 150.43 if disic2 == 10\nreplace ihp2020 = 163.93 if inlist(disic2, 11, 12)\n* ... one line per sector group ...\n\ngen real_output = (output / ihp2020) * 100\ngen log_output  = ln(real_output)\n\n\n\n\n\n\nNoteFull cleaning code for one year (2020)\n\n\n\n\n\n\n\n01_clean_ibs2020.do\n\n* ============================================================\n* 01_clean_ibs2020.do\n* Productivity in Indonesian Manufacturing (IBS 2017-2022)\n* Step 1: Clean and deflate one survey year (2020 shown).\n*         Repeat for 2017-2022, adjusting the year-specific\n*         variable suffixes (e.g. *20 -&gt; *19) and deflators.\n* Software: Stata 18\n* Input : ibs2020.dta  (BPS Industri Besar dan Sedang; not shared)\n* Output: ibs 2020.dta (cleaned)\n* ============================================================\n\nuse \"ibs2020.dta\", clear\n\n**# Firm ID\ngen double firm_id = real(Kipb)\nformat firm_id %12.0f\nla var firm_id \"Firm ID\"\n\n**# Year\nrename year annual_operation\ngen year = 2020\nla var year \"Year of the Observation\"\n\n**# Sector (ISIC)\ngen disic5 = disic520\ndestring disic5, replace\nla var disic5 \"ISIC Code 5 Digit\"\n\ngen disic2 = substr(disic520, 1, 2)\ndestring disic2, replace force\nla var disic2 \"ISIC 2 Digit\"\n\n* ============================================================\n* 1. Firm Output\n* ============================================================\n**# Firm Income & Output Deflation\nlocal RUN_INCOME_BLOCK 1\nif `RUN_INCOME_BLOCK' == 1 {\n\n    * 0. Destring raw inputs (yprvcu20 = nominal income)\n    destring yprvcu20, replace\n\n    * 1. Base nominal output (preserves raw survey data)\n    gen output = yprvcu20\n\n    * 2. Drop non-producing firms and firms missing a sector code\n    drop if output == 0 | missing(output)\n    drop if missing(disic2)\n\n    * 3. Sector-specific producer price deflator (IHP, 2010 = 100, BPS)\n    gen ihp2020 = .\n    replace ihp2020 = 150.43 if disic2 == 10\n    replace ihp2020 = 163.93 if inlist(disic2, 11, 12)\n    replace ihp2020 = 153.81 if disic2 == 13\n    replace ihp2020 = 165.41 if inlist(disic2, 14, 15)\n    replace ihp2020 = 164.88 if disic2 == 16\n    replace ihp2020 = 145.55 if inlist(disic2, 17, 18)\n    replace ihp2020 = 128.78 if disic2 == 19\n    replace ihp2020 = 138.43 if inlist(disic2, 20, 21)\n    replace ihp2020 = 123.61 if disic2 == 22\n    replace ihp2020 = 150.01 if disic2 == 23\n    replace ihp2020 = 118.50 if disic2 == 24\n    replace ihp2020 = 130.14 if disic2 == 25\n    replace ihp2020 = 152.09 if inlist(disic2, 26, 27, 28)\n    replace ihp2020 = 141.04 if inlist(disic2, 29, 30)\n    replace ihp2020 = 162.53 if inlist(disic2, 31, 32, 33)\n\n    * 4. Deflate: (Nominal / Deflator) * 100\n    gen real_output = (output / ihp2020) * 100\n\n    * 5. Log of real output\n    gen log_output = ln(real_output)\n\n    la var output      \"Firm Total Output Nominal (Rp)\"\n    la var ihp2020     \"IHP 2020 Deflator (Base 2010=100, by disic2)\"\n    la var real_output \"Firm Total Output Real (Deflated by Sector IHP)\"\n    la var log_output  \"Firm Total Output Real (in Log)\"\n}\n\n* ============================================================\n* 2. Labor\n* ============================================================\n**# Labor (Production vs Non-Production)\nlocal RUN_LABOR_BLOCK 1\nif `RUN_LABOR_BLOCK' == 1 {\n\n    * 1. Destring raw inputs (l = Indonesian, f = foreign workers)\n    destring lprnol20 lprnof20 lnpnol20 lnpnof20, replace force\n\n    * 2. Headcounts\n    gen prodlab     = lprnol20 + lprnof20\n    gen non_prodlab = lnpnol20 + lnpnof20\n    gen labor       = prodlab + non_prodlab\n\n    * Keep firms with 20+ workers (IBS definition of medium/large)\n    drop if labor == 0 | missing(labor)\n    drop if labor &lt; 20\n\n    * 3. Logs (ln(0) -&gt; missing for firms with no non-production staff)\n    gen log_labor      = ln(labor)\n    gen log_prodlab    = ln(prodlab)\n    gen log_nonprodlab = ln(non_prodlab)\n\n    la var labor          \"Total Labor\"\n    la var log_labor      \"Total Labor (in Log)\"\n    la var prodlab        \"Labor: Production Workers\"\n    la var log_prodlab    \"Labor: Production Workers (in Log)\"\n    la var non_prodlab    \"Labor: Non-Production/Other Workers\"\n    la var log_nonprodlab \"Labor: Non-Production/Other Workers (in Log)\"\n\n    * 4. Firm size\n    gen size = .\n    replace size = 0 if labor &gt;= 20 & labor &lt;= 99\n    replace size = 1 if labor &gt;= 100\n    la def lbl_size 0 \"Medium Firm\" 1 \"Large Firm\"\n    la val size lbl_size\n    la var size \"Firm Size (Categorical)\"\n\n    * 5. Wage bill\n    destring zpdvcu20 zndvcu20 zptvcu20 zntvcu20, replace force\n    replace zpdvcu20 = 0 if missing(zpdvcu20)\n    replace zndvcu20 = 0 if missing(zndvcu20)\n\n    gen labor_cost      = zpdvcu20 + zndvcu20\n    gen log_labor_cost  = ln(labor_cost + 1)\n    gen prod_cost       = zptvcu20\n    gen log_prodcost    = ln(prod_cost)\n    gen nonprod_cost    = zntvcu20\n    gen log_nonprodcost = ln(nonprod_cost)\n\n    la var labor_cost      \"Total Labor Cost Nominal (Rp 000)\"\n    la var log_labor_cost  \"Total Labor Cost Nominal (in Log)\"\n    la var prod_cost       \"Labor Cost, Production Workers (Rp 000)\"\n    la var nonprod_cost    \"Labor Cost, Non-Production Workers (Rp 000)\"\n    la var log_prodcost    \"Labor Cost, Production Workers (in Log)\"\n    la var log_nonprodcost \"Labor Cost, Non-Production Workers (in Log)\"\n}\n\n* ============================================================\n* 3. Capital\n* ============================================================\n**# Capital\nlocal RUN_CAPITAL_BLOCK 1\nif `RUN_CAPITAL_BLOCK' == 1 {\n\n    // Flow: (1) impute missing start-of-year capital with end-of-year value (v1115)\n    //       (2) impute firms that lease capital from rent paid (ibrvcu20 / 0.10)\n    //       (3) drop if still zero  (4) deflate with IHPB (general)  (5) log\n\n    destring ctfpcu20 v1115 ibrvcu20, replace force\n\n    gen capital = ctfpcu20\n    replace capital = v1115          if capital == 0 & v1115 &gt; 0    & !missing(v1115)\n    replace capital = ibrvcu20 / 0.10 if capital == 0 & ibrvcu20 &gt; 0 & !missing(ibrvcu20)\n\n    drop if capital == 0 | missing(capital)\n\n    gen real_capital = (capital / 103.55) * 100\n    gen log_capital  = ln(real_capital)\n\n    la var capital      \"Firm Capital (Rp)\"\n    la var real_capital \"Firm Capital (Deflated with IHPB Umum)\"\n    la var log_capital  \"Firm Capital (in Log)\"\n}\n\n* ============================================================\n* 4. Raw Materials and Energy\n* ============================================================\n**# Raw Materials & Input\nlocal RUN_INPUT_BLOCK 1\nif `RUN_INPUT_BLOCK' == 1 {\n\n    destring rtlvcu20 eplvcu20, replace force\n\n    gen raw_material = rtlvcu20\n    drop if raw_material == 0 | missing(raw_material)\n\n    * Deflate with wholesale price index (IHPB), 2020 value = 104.30\n    gen real_materials = (raw_material / 104.30) * 100\n    gen log_material   = ln(real_materials)\n\n    la var raw_material   \"Raw Materials (Rp)\"\n    la var real_materials \"Raw Materials (Deflated with IHPB)\"\n    la var log_material   \"Raw Materials (in Log)\"\n\n    gen electricity     = eplvcu20\n    gen log_electricity = ln(electricity)\n    la var electricity     \"Electricity Cost (Rp)\"\n    la var log_electricity \"Electricity Cost (in Log)\"\n}\n\nsave \"ibs 2020.dta\", replace\n\n\n\n\nThe cleaned years are then stacked into one panel and declared with xtset:\n\n\n\n\n\n\nNoteAppending 2017–2022 into a panel\n\n\n\n\n\n\n\n02_append_panel.do\n\n* ============================================================\n* 02_append_panel.do\n* Step 2: Append the cleaned annual files and declare the panel.\n* Input : ibs 2017.dta ... ibs 2022.dta (outputs of step 1)\n* Output: appended 2017-2022.dta\n* ============================================================\n\nclear all\nset more off\n\nuse \"ibs 2017.dta\", clear\nforeach yr of numlist 2018/2022 {\n    append using \"ibs `yr'.dta\"\n}\n\nsort firm_id year\nlabel variable firm_id \"Firm Unique Identifier\"\nlabel variable year    \"Year of Observation\"\n\nxtset firm_id year\nxtdescribe\n\nsave \"appended 2017-2022.dta\", replace"
   },
   {
-    "objectID": "projects/ai-score/index.html#what-the-data-shows",
-    "href": "projects/ai-score/index.html#what-the-data-shows",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "What the data shows",
-    "text": "What the data shows\n1. The AI conversation is still concentrated in Tech. Blibli (BELI) and GoTo Group (GOTO) naturally lead. Beyond them, Astra International (ASII) shows an isolated but rising AI conversation in the Industrial sector. Financials follow the same upward trend, though modestly, led by BCA (BBCA), BNI (BBNI) and Sinar Mas Multiartha (SMMA).\n\n\n\nFigure 1. AI penetration in annual reports: top 5 IDX companies (2020–2025).\n\n\n2. AI rhetoric is beginning to track capital allocation. Within Financials and Tech, the firms with the largest capital expenditure (CapEx) are also those that put the most emphasis on AI in their reporting, a positive correlation.\n\n\n\nFigure 2. AI score and capital expenditure, Financials and Tech sectors, top 5 IDX firms (2020–2025)."
+    "objectID": "projects/tfp-manufacturing/index.html#step-2-what-the-data-looks-like",
+    "href": "projects/tfp-manufacturing/index.html#step-2-what-the-data-looks-like",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Step 2: What the data looks like",
+    "text": "Step 2: What the data looks like\nTable 1 summarizes the variables used in the TFP estimation. Output is real (deflated) output, labor is production plus non-production workers, capital is the firm’s capital stock, and materials are raw materials used in production. All are in natural logs.\n\nTable 1. Descriptive statistics (all variables in logs)\n\n\n\n\n\n\n\n\n\n\n\nVariable\nDescription\nObs\nMean\nStd. Dev.\nMin\nMax\n\n\n\n\nlog_output\nReal output\n148,617\n16.453\n2.096\n4.795\n24.980\n\n\nlog_labor\nTotal labor\n148,617\n4.293\n1.211\n0\n10.920\n\n\nlog_prodlab\nProduction labor\n148,617\n4.094\n1.226\n0\n10.844\n\n\nlog_nonprodlab\nNon-production labor\n127,110\n2.488\n1.351\n0\n9.485\n\n\nlog_capital\nCapital stock\n148,617\n14.088\n2.634\n1.839\n26.592\n\n\nlog_material\nIntermediate materials\n148,617\n15.670\n2.290\n3.423\n24.704\n\n\n\nNon-production labor has fewer observations because some firms report no non-production staff, and the log of zero is undefined."
   },
   {
-    "objectID": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
-    "href": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "What it does and does not tell us",
-    "text": "What it does and does not tell us\nKeyword density captures what firms say, not what they deploy, and the CapEx link is descriptive, not causal. Corporate reporting is the surface layer. The real question is how it translates into operational deployment and productivity gains.\nDo these reporting trends match what you see in the market, or is it just another buzzword? Join the discussion on LinkedIn →"
+    "objectID": "projects/tfp-manufacturing/index.html#step-3-estimating-tfp",
+    "href": "projects/tfp-manufacturing/index.html#step-3-estimating-tfp",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Step 3: Estimating TFP",
+    "text": "Step 3: Estimating TFP\nThe estimation follows Levinsohn and Petrin (2003). It assumes a Cobb–Douglas technology with two kinds of labor, and uses intermediate inputs (raw materials) rather than investment as a proxy for productivity shocks that the firm sees but the econometrician doesn’t:\n\\[\n\\ln Y_{it} = \\beta_1 \\ln L^{P}_{it} + \\beta_2 \\ln L^{NP}_{it} + \\beta_3 \\ln M_{it} + \\beta_4 \\ln K_{it} + \\omega_{it} + \\varepsilon_{it}\n\\]\nHere \\(i\\) and \\(t\\) index firms and years. \\(Y_{it}\\) is output, \\(L^{P}_{it}\\) and \\(L^{NP}_{it}\\) are production and non-production labor, \\(M_{it}\\) is materials and \\(K_{it}\\) is capital. The \\(\\beta\\)s are output elasticities, \\(\\omega_{it}\\) is firm productivity, and \\(\\varepsilon_{it}\\) is an idiosyncratic error.\nIn Stata this is a single prodest call, followed by predicting \\(\\omega_{it}\\) as each firm’s TFP:\nprodest log_output, free(log_prodlab log_nonprodlab) proxy(log_material) ///\n    state(log_capital) id(firm_id) t(year) method(lp) fsresiduals(fsr)\n\nlincom log_prodlab + log_nonprodlab + log_capital + log_material      // returns to scale\ntest   log_prodlab + log_nonprodlab + log_capital + log_material = 1  // CRS test\n\npredict tfp_lp, omega\n\nTable 2. Levinsohn–Petrin input elasticities\n\n\nInput\nElasticity\n\n\n\n\nProduction labor\n0.121*** (0.001)\n\n\nNon-production labor\n0.131*** (0.001)\n\n\nCapital stock\n0.016*** (0.000)\n\n\nIntermediate materials\n0.685*** (0.004)\n\n\nReturns to scale (\\(\\sum \\hat\\beta\\))\n0.9535\n\n\nWald test for CRS (\\(\\chi^2\\))\n90.04***\n\n\nObservations\n126,976\n\n\nPeriod\n2017–2022\n\n\n\n\nNotes: *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10. Standard errors in parentheses. Intermediate materials proxy for unobserved productivity shocks to address simultaneity bias. Returns to scale is the sum of the estimated elasticities. Source: Author’s own calculation.\n\nMaterials dominate. At 0.685, the materials elasticity is several times larger than production labor (0.121), non-production labor (0.131) or capital (0.016). All four are significant at 1%. Returns to scale of 0.9535 point to slightly decreasing returns, and the Wald test rejects constant returns at the 1% level.\nThis suggests Indonesian manufacturing is material-intensive. Production depends on raw materials and intermediate inputs more than on accumulating capital or adding workers, so how reliably and efficiently firms source and use materials matters a lot for their performance.\n\n\n\n\n\n\nA garment factory as an example\nTake a factory making shirts for domestic and export markets:\n\nProduction labor: sewing operators, cutters, assemblers\nNon-production labor: administrators, accountants, supervisors, warehouse managers\nCapital: sewing machines, cutting equipment, buildings\nMaterials: fabric, thread, buttons, zippers, labels, packaging\n\nEven with enough workers and machines, the factory can’t produce without fabric. A supply disruption leaves machines idle and workers unable to finish orders. That dependence is what a large materials elasticity captures."
   },
   {
-    "objectID": "hobbies.html",
-    "href": "hobbies.html",
-    "title": "Hobbies",
+    "objectID": "projects/tfp-manufacturing/index.html#step-4-what-the-tfp-estimates-show",
+    "href": "projects/tfp-manufacturing/index.html#step-4-what-the-tfp-estimates-show",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Step 4: What the TFP estimates show",
+    "text": "Step 4: What the TFP estimates show\n\nProductivity rose until 2020, then slipped\n\n\n\n\n\n\nFigure 1: Mean log TFP by year. Whiskers show 95% confidence intervals.\n\n\n\nProductivity climbed steadily from 2017 and peaked in 2020, then declined gradually through 2022. The rise continued into the first COVID-19 year, which could reflect firms adjusting how they produce or a change in which firms survived. The later decline suggests those gains didn’t fully hold.\n\n\n\n\n\n\nNoteCode for Figure 1\n\n\n\n\n\npreserve\ncollapse (mean) mean_tfp = tfp_lp (sd) sd_tfp = tfp_lp (count) n = tfp_lp, by(year)\ngen ci_high = mean_tfp + 1.96 * (sd_tfp / sqrt(n))\ngen ci_low  = mean_tfp - 1.96 * (sd_tfp / sqrt(n))\n\ntwoway (rcap ci_low ci_high year, lcolor(gs7) lwidth(medthick)) ///\n       (connected mean_tfp year, lcolor(black) mcolor(black) msymbol(O) lwidth(thick)), ///\n    ytitle(\"Log TFP Level (Levinsohn-Petrin)\") xtitle(\"Year\") ///\n    ylabel(4.65(0.05)4.80, angle(0) nogrid format(%9.2f)) xlabel(2017(1)2022, nogrid) ///\n    legend(order(2 \"Mean TFP\" 1 \"95% Confidence Interval\") rows(1) position(6))\ngraph export \"fig1-tfp-level.png\", replace width(3600)\nrestore\nFull styling options are in 03_tfp_and_figures.do.\n\n\n\n\n\nThe average hides a widening gap\n\n\n\n\n\n\nFigure 2: 90th (frontier) and 10th (laggard) percentiles of log TFP. The shaded area is the gap; the dashed line marks its 2020 peak.\n\n\n\nFirms at the 90th percentile consistently outperform those at the 10th, and the gap widened from 2017 to a peak of 0.64 log points in 2020. Frontier firms gained until 2020 while laggards improved only modestly. After 2020, frontier productivity started to fall and laggards stayed flat.\nSo productivity growth in Indonesian manufacturing was uneven. Leading firms drove most of it, rather than improvements spreading across the sector.\n\n\n\n\n\n\nNoteCode for Figure 2\n\n\n\n\n\npreserve\ncollapse (p90) p90_tfp = tfp_lp (p10) p10_tfp = tfp_lp, by(year)\n\nquietly summarize p90_tfp if year == 2020\nlocal y90 = r(mean)\nquietly summarize p10_tfp if year == 2020\nlocal y10 = r(mean)\nlocal gap_str : display %9.2f `y90' - `y10'\nlocal gap_str = trim(\"`gap_str'\")\nlocal ymid = (`y90' + `y10') / 2\n\ntwoway (rarea p90_tfp p10_tfp year, fcolor(gs12) lcolor(none)) ///\n       (connected p90_tfp year, lcolor(black) msymbol(S) lwidth(thick)) ///\n       (connected p10_tfp year, lcolor(gs7) msymbol(D) lpattern(dash) lwidth(thick)) ///\n       (scatteri `y90' 2020 `y10' 2020, connect(line) msymbol(none) lpattern(shortdash)), ///\n    text(`ymid' 2020 \"`gap_str' (Peak)\", box fcolor(white)) ///\n    legend(order(2 \"90th Percentile (Frontier)\" 3 \"10th Percentile (Laggards)\" 1 \"90-10 Gap\") ///\n        rows(1) position(6))\ngraph export \"fig2-dispersion.png\", replace width(4000)\nrestore\nFull styling options are in 03_tfp_and_figures.do.\n\n\n\n\n\nReturns to scale differ by sector\n\n\n\n\n\n\nFigure 3: Returns to scale from sector-specific Levinsohn–Petrin estimations, with 95% confidence intervals. The dashed line marks constant returns (\\(\\gamma = 1\\)).\n\n\n\nRe-estimating the production function sector by sector shows a lot of variation. Several industries sit near constant returns. Paper, non-metallic minerals and motor vehicles come out above one, suggesting increasing returns. Beverages, leather, rubber and plastics, and electrical equipment come out well below one.\nThe takeaway is that manufacturing doesn’t share a single production structure. How much a firm gains from scaling up depends on its subsector.\n\n\n\n\n\n\nNoteCode for Figure 3\n\n\n\n\n\nThe loop runs prodest for each 2-digit sector, then stores the coefficients, the returns to scale and a test of constant returns with postfile:\nlevelsof disic2, local(sectors)\ntempname results\ntempfile sector_results\npostfile `results' int disic2 double rts rts_se p_crs long N ///\n    using `sector_results', replace\n\nforeach s of local sectors {\n    capture drop fsr\n    capture quietly prodest log_output if disic2 == `s', ///\n        free(log_prodlab log_nonprodlab) proxy(log_material) ///\n        state(log_capital) id(firm_id) t(year) method(lp) fsresiduals(fsr)\n    if !_rc {\n        quietly lincom log_prodlab + log_nonprodlab + log_capital + log_material\n        local rts = r(estimate)\n        local se  = r(se)\n        quietly test log_prodlab + log_nonprodlab + log_capital + log_material = 1\n        post `results' (`s') (`rts') (`se') (r(p)) (e(N))\n    }\n}\npostclose `results'\n\nuse `sector_results', clear\ngen ci_low  = rts - 1.96*rts_se\ngen ci_high = rts + 1.96*rts_se\n\ntwoway (rcap ci_low ci_high disic2, horizontal lcolor(gs6)) ///\n       (scatter disic2 rts, mcolor(black) msymbol(O)), ///\n    xline(1, lpattern(dash)) yscale(reverse) ylabel(10(1)33, valuelabel angle(0)) ///\n    xtitle(\"Estimated Returns to Scale ({&gamma})\") ytitle(\"\") legend(off)\ngraph export \"fig3-sectoral-rts.png\", replace width(3000)\nThe sector labels and full styling options are in 03_tfp_and_figures.do.\n\n\n\n\n\nTwo sectors, two production structures\n\n\n\n\n\n\nFigure 4: Levinsohn–Petrin input elasticities from separate regressions for textiles and motor vehicles.\n\n\n\nFinally, the comparison of textiles (ISIC 13) and motor vehicles (ISIC 29) asks whether the material-intensity story holds in sectors that look very different.\nMaterials are still the largest elasticity in both (0.792 for textiles and 0.685 for motor vehicles), but the labor structures diverge:\n\nProduction labor matters far more in motor vehicles (0.294) than in textiles (0.069).\nNon-production labor is higher in textiles (0.152) than in motor vehicles (0.023).\nCapital contributes little in either sector.\n\nTextiles look especially material-intensive, while motor vehicles lean more on direct production workers. In both cases, material inputs remain central.\n\n\n\n\n\n\nNoteCode for Figure 4\n\n\n\n\n\nforeach s in 13 29 {\n    if `s' == 13 local sname = \"Textile Industry\"\n    if `s' == 29 local sname = \"Motor Vehicles Industry\"\n    capture drop fsr\n    capture quietly prodest log_output if disic2 == `s', ///\n        free(log_prodlab log_nonprodlab) proxy(log_material) ///\n        state(log_capital) id(firm_id) t(year) method(lp) fsresiduals(fsr)\n    if !_rc post `results' (`s') (\"`sname'\") (_b[log_prodlab]) ///\n        (_b[log_nonprodlab]) (_b[log_capital]) (_b[log_material])\n}\n* ... reshape long, then:\ngraph hbar (mean) elasticity, over(sector_name) over(input_id) asyvars ///\n    blabel(bar, format(%9.3f)) ytitle(\"Output Elasticity ({&beta})\") ///\n    legend(order(1 \"Textile Industry (ISIC 13)\" 2 \"Motor Vehicles Industry (ISIC 29)\"))\ngraph export \"fig4-elasticities-two-sectors.png\", replace width(3600)\nThe complete loop, reshape and styling are in 03_tfp_and_figures.do."
+  },
+  {
+    "objectID": "projects/tfp-manufacturing/index.html#what-this-adds-up-to",
+    "href": "projects/tfp-manufacturing/index.html#what-this-adds-up-to",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "What this adds up to",
+    "text": "What this adds up to\nUsing IBS data for 2017–2022 and the Levinsohn–Petrin approach, the project estimates firm-level TFP and describes several features of manufacturing performance:\n\nMaterials carry the most weight in production, which points to the material-intensive nature of Indonesian manufacturing.\nAverage TFP rose until 2020 and then declined gradually through 2022.\nThe average hides a gap. Frontier firms pulled away from laggards, and the gap peaked in 2020.\nProduction structures differ by sector, in both returns to scale and input elasticities.\n\nTaken together, strengthening manufacturing capacity is about more than adding inputs. It’s also about how well firms combine and use them. For a developing economy like Indonesia, understanding sector-specific production structures, improving access to intermediate inputs and narrowing the gap between leading and lagging firms are useful starting points for industrial policy discussions.\nThis is descriptive work. It doesn’t establish causal links between industrial policy and productivity, but it shows what firm-level productivity analysis can reveal about structure and performance in the manufacturing sector."
+  },
+  {
+    "objectID": "projects/tfp-manufacturing/index.html#replicate-it",
+    "href": "projects/tfp-manufacturing/index.html#replicate-it",
+    "title": "Productivity in Indonesian Manufacturing",
+    "section": "Replicate it",
+    "text": "Replicate it\n\n\n\nStep\nFile\nWhat it does\n\n\n\n\n1\n01_clean_ibs2020.do\nCleans and deflates one survey year; repeat for each year with that year’s variable suffixes and deflators\n\n\n2\n02_append_panel.do\nStacks 2017–2022 and declares the panel\n\n\n3\n03_tfp_and_figures.do\nTable 1, the Levinsohn–Petrin estimation (Table 2), and Figures 1–4\n\n\n\nRequires Stata 18 (earlier versions should work) and the prodest package (ssc install prodest). The IBS microdata is distributed by BPS–Statistics Indonesia and isn’t included here.\nReference: Levinsohn, J., & Petrin, A. (2003). Estimating production functions using inputs to control for unobservables. The Review of Economic Studies, 70(2), 317–341."
+  },
+  {
+    "objectID": "opinions.html",
+    "href": "opinions.html",
+    "title": "Perspective",
     "section": "",
-    "text": "Coming soon."
+    "text": "English\n  Bahasa Indonesia"
   },
   {
-    "objectID": "digest/cooperatives/index.html",
-    "href": "digest/cooperatives/index.html",
-    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "objectID": "opinions.html#english",
+    "href": "opinions.html#english",
+    "title": "Perspective",
+    "section": "English",
+    "text": "English\n\n  Jun 2026\n  \n  \n  \n  \n    Survive, Innovate and Scale Up: Lessons from Japan's Resilient MSMEs ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Sep 2025\n  \n    \n  \n  \n    Leave, Return or Reform? ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Jul 2025\n  \n    \n  \n  \n    Prioritizing Agriculture in the Indonesia-Japan Partnership ↗\n    Rusli Abdulah, Al Bahits Annef\n    The Jakarta Post"
+  },
+  {
+    "objectID": "opinions.html#indonesia",
+    "href": "opinions.html#indonesia",
+    "title": "Perspective",
+    "section": "Bahasa Indonesia",
+    "text": "Bahasa Indonesia\n\n  Jul 2025\n  \n    \n  \n  \n    Refleksi Ekonomi dari Potong Rambut di Jepang ↗\n    Al Bahits Annef\n    Kontan"
+  },
+  {
+    "objectID": "id/index.html",
+    "href": "id/index.html",
+    "title": "Beranda",
     "section": "",
-    "text": "← Back to Research"
-  },
-  {
-    "objectID": "digest/cooperatives/index.html#the-question",
-    "href": "digest/cooperatives/index.html#the-question",
-    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
-    "section": "The question",
-    "text": "The question\nCooperatives are a pillar of rural finance in Indonesia, but they come in different forms. Village Cooperative Units (KUD) are the traditional, village-based model. Savings and Loans Cooperatives (Kospin) focus on member savings and credit. Do they support village economies equally well, and what happens when they operate alongside formal banks?"
-  },
-  {
-    "objectID": "digest/cooperatives/index.html#data-and-method",
-    "href": "digest/cooperatives/index.html#data-and-method",
-    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
-    "section": "Data and method",
-    "text": "Data and method\nVillages rarely have their own GDP figures, so the study measures economic activity from space. It converts nighttime-light satellite data into village-level GDP estimates, calibrated against official figures, and combines these with village-level data on which institutions are present. Quasi-experimental methods then compare villages with and without each cooperative type, alone and in combination with banks."
-  },
-  {
-    "objectID": "digest/cooperatives/index.html#what-the-study-finds",
-    "href": "digest/cooperatives/index.html#what-the-study-finds",
-    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
-    "section": "What the study finds",
-    "text": "What the study finds\n\nKospin villages do better. They are consistently associated with higher local economic activity.\nKUDs on their own show no clear difference. Villages with a KUD operating in isolation are not statistically different.\nKUDs paired with formal banks do better. Where the two coexist, outcomes are more favorable.\nAdding more stops helping. When KUDs, Kospin and banks are all present, the marginal gains weaken, which points to possible overcrowding (Figure 1).\n\n\n\n\nFigure 1. Interaction effects of financial institutions on village economic activity. Combinations of institutions show weaker marginal differences, suggesting overcrowding."
-  },
-  {
-    "objectID": "digest/cooperatives/index.html#why-it-matters",
-    "href": "digest/cooperatives/index.html#why-it-matters",
-    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
-    "section": "Why it matters",
-    "text": "Why it matters\nThe results challenge one-size-fits-all policy. What a cooperative adds depends on which institutions already serve the village, and too many overlapping providers may crowd out gains. This matters now that Indonesia is rolling out its “Koperasi Merah Putih” flagship initiative: the evidence points toward a flexible, context-sensitive cooperative ecosystem rather than a uniform template. The lesson on institutional complementarity also extends to inclusive-finance efforts across developing Asia.\nRead the full article →"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.\n    My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. \n    Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions."
-  },
-  {
-    "objectID": "about.html#research-interest",
-    "href": "about.html#research-interest",
-    "title": "About",
-    "section": "Research Interest",
-    "text": "Research Interest\nI work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See more of my works on the Research or Projects page."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "Background",
-    "text": "Background\n\nGraduate Student, Economic Development, Graduate School of International Development, Nagoya University, under Prof. Christian Otchia. MEXT Scholar, 2024–2027.\nAssociate Project Manager, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.\nCommunications consultancy, Maverick Indonesia, [2022-2023]. Improved how businesses are perceived by the public across different sectors.\nBachelor of International Relations, Universitas Pembangunan Nasional Veteran Jakarta, [2018-2022], Outstanding Student Award (2020)."
-  },
-  {
-    "objectID": "about.html#community-leadership",
-    "href": "about.html#community-leadership",
-    "title": "About",
-    "section": "Community & Leadership",
-    "text": "Community & Leadership\n\nChairman, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025\nVice President, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\n\n   Personal Email\n   University Email\n  Download CV ↗"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Your download should start automatically. If it doesn't, click here."
+    "text": "Segera hadir."
   },
   {
     "objectID": "digest/gen-ai-labor/gen-ai-labor.html",
@@ -182,38 +147,129 @@
     "text": "Why it matters\nHeadline employment numbers may remain stable, but the adjustment can occur in employment formality: younger workers face weaker pathways into regular jobs, while freelance and platform-based work becomes an alternative. Policy should therefore strengthen early-career pathways through targeted internships in highly exposed sectors and extend basic labor protections, including occupational safety and social security, beyond ride-hailing to a broader range of informal and platform workers. The focus should be not only on developing AI-related skills, but also on ensuring that technological change does not come at the expense of access to formal employment and worker protection.\nRead the full paper →"
   },
   {
-    "objectID": "id/index.html",
-    "href": "id/index.html",
-    "title": "Beranda",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "Segera hadir."
+    "text": "Your download should start automatically. If it doesn't, click here."
   },
   {
-    "objectID": "opinions.html",
-    "href": "opinions.html",
-    "title": "Perspective",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "English\n  Bahasa Indonesia"
+    "text": "MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.\n    My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. \n    Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions."
   },
   {
-    "objectID": "opinions.html#english",
-    "href": "opinions.html#english",
-    "title": "Perspective",
-    "section": "English",
-    "text": "English\n\n  Jun 2026\n  \n  \n  \n  \n    Survive, Innovate and Scale Up: Lessons from Japan's Resilient MSMEs ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Sep 2025\n  \n    \n  \n  \n    Leave, Return or Reform? ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Jul 2025\n  \n    \n  \n  \n    Prioritizing Agriculture in the Indonesia-Japan Partnership ↗\n    Rusli Abdulah, Al Bahits Annef\n    The Jakarta Post"
+    "objectID": "about.html#research-interest",
+    "href": "about.html#research-interest",
+    "title": "About",
+    "section": "Research Interest",
+    "text": "Research Interest\nI work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See more of my works on the Research or Projects page."
   },
   {
-    "objectID": "opinions.html#indonesia",
-    "href": "opinions.html#indonesia",
-    "title": "Perspective",
-    "section": "Bahasa Indonesia",
-    "text": "Bahasa Indonesia\n\n  Jul 2025\n  \n    \n  \n  \n    Refleksi Ekonomi dari Potong Rambut di Jepang ↗\n    Al Bahits Annef\n    Kontan"
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\n\nGraduate Student, Economic Development, Graduate School of International Development, Nagoya University, under Prof. Christian Otchia. MEXT Scholar, 2024–2027.\nAssociate Project Manager, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.\nCommunications consultancy, Maverick Indonesia, [2022-2023]. Improved how businesses are perceived by the public across different sectors.\nBachelor of International Relations, Universitas Pembangunan Nasional Veteran Jakarta, [2018-2022], Outstanding Student Award (2020)."
+  },
+  {
+    "objectID": "about.html#community-leadership",
+    "href": "about.html#community-leadership",
+    "title": "About",
+    "section": "Community & Leadership",
+    "text": "Community & Leadership\n\nChairman, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025\nVice President, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\n   Personal Email\n   University Email\n  Download CV ↗"
+  },
+  {
+    "objectID": "digest/cooperatives/index.html",
+    "href": "digest/cooperatives/index.html",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "",
+    "text": "← Back to Research"
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#the-question",
+    "href": "digest/cooperatives/index.html#the-question",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "The question",
+    "text": "The question\nCooperatives are a pillar of rural finance in Indonesia, but they come in different forms. Village Cooperative Units (KUD) are the traditional, village-based model. Savings and Loans Cooperatives (Kospin) focus on member savings and credit. Do they support village economies equally well, and what happens when they operate alongside formal banks?"
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#data-and-method",
+    "href": "digest/cooperatives/index.html#data-and-method",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "Data and method",
+    "text": "Data and method\nVillages rarely have their own GDP figures, so the study measures economic activity from space. It converts nighttime-light satellite data into village-level GDP estimates, calibrated against official figures, and combines these with village-level data on which institutions are present. Quasi-experimental methods then compare villages with and without each cooperative type, alone and in combination with banks."
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#what-the-study-finds",
+    "href": "digest/cooperatives/index.html#what-the-study-finds",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "What the study finds",
+    "text": "What the study finds\n\nKospin villages do better. They are consistently associated with higher local economic activity.\nKUDs on their own show no clear difference. Villages with a KUD operating in isolation are not statistically different.\nKUDs paired with formal banks do better. Where the two coexist, outcomes are more favorable.\nAdding more stops helping. When KUDs, Kospin and banks are all present, the marginal gains weaken, which points to possible overcrowding (Figure 1).\n\n\n\n\nFigure 1. Interaction effects of financial institutions on village economic activity. Combinations of institutions show weaker marginal differences, suggesting overcrowding."
+  },
+  {
+    "objectID": "digest/cooperatives/index.html#why-it-matters",
+    "href": "digest/cooperatives/index.html#why-it-matters",
+    "title": "More financial institutions is not always better: cooperatives and village economies in Indonesia",
+    "section": "Why it matters",
+    "text": "Why it matters\nThe results challenge one-size-fits-all policy. What a cooperative adds depends on which institutions already serve the village, and too many overlapping providers may crowd out gains. This matters now that Indonesia is rolling out its “Koperasi Merah Putih” flagship initiative: the evidence points toward a flexible, context-sensitive cooperative ecosystem rather than a uniform template. The lesson on institutional complementarity also extends to inclusive-finance efforts across developing Asia.\nRead the full article →"
+  },
+  {
+    "objectID": "hobbies.html",
+    "href": "hobbies.html",
+    "title": "Hobbies",
+    "section": "",
+    "text": "Coming soon."
+  },
+  {
+    "objectID": "projects/ai-score/index.html",
+    "href": "projects/ai-score/index.html",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "",
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/ai-score/index.html#the-question",
+    "href": "projects/ai-score/index.html#the-question",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "The question",
+    "text": "The question\nWe hear a lot about AI transforming the corporate landscape, but who is actually talking about it, and does size matter?"
+  },
+  {
+    "objectID": "projects/ai-score/index.html#data-and-method",
+    "href": "projects/ai-score/index.html#data-and-method",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "Data and method",
+    "text": "Data and method\nI scraped and text-mined the annual reports (2020–2025) of Indonesia’s largest listed companies across Financials, Technology, Industrials and Consumer sectors. “AI penetration” measures how much a firm talks about AI in its own disclosures, using keyword density.\n\nTools: Python, with pdfplumber for PDF parsing and pandas for the data work. Built with AI assistance (Claude)."
+  },
+  {
+    "objectID": "projects/ai-score/index.html#what-the-data-shows",
+    "href": "projects/ai-score/index.html#what-the-data-shows",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What the data shows",
+    "text": "What the data shows\n1. The AI conversation is still concentrated in Tech. Blibli (BELI) and GoTo Group (GOTO) naturally lead. Beyond them, Astra International (ASII) shows an isolated but rising AI conversation in the Industrial sector. Financials follow the same upward trend, though modestly, led by BCA (BBCA), BNI (BBNI) and Sinar Mas Multiartha (SMMA).\n\n\n\nFigure 1. AI penetration in annual reports: top 5 IDX companies (2020–2025).\n\n\n2. AI rhetoric is beginning to track capital allocation. Within Financials and Tech, the firms with the largest capital expenditure (CapEx) are also those that put the most emphasis on AI in their reporting, a positive correlation.\n\n\n\nFigure 2. AI score and capital expenditure, Financials and Tech sectors, top 5 IDX firms (2020–2025)."
+  },
+  {
+    "objectID": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "href": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What it does and does not tell us",
+    "text": "What it does and does not tell us\nKeyword density captures what firms say, not what they deploy, and the CapEx link is descriptive, not causal. Corporate reporting is the surface layer. The real question is how it translates into operational deployment and productivity gains.\nDo these reporting trends match what you see in the market, or is it just another buzzword? Join the discussion on LinkedIn →"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Side projects at the intersection of data, economics and policy.\n\n\n\n\n\n\n\n\n\n\nWho is talking about AI? Text-mining Indonesian firms’ annual reports\n\n\n\nText mining\n\nPython\n\nAI\n\nIndonesia\n\n\n\nScraping 2020–2025 annual reports of large IDX-listed firms to track AI penetration through keyword density.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Side projects at the intersection of data, economics and policy.\n\n\n\n\n\n\n\n\n\n\nProductivity in Indonesian Manufacturing\n\n\n\nProductivity\n\nManufacturing\n\nIndonesia\n\nStata\n\n\n\nWhere does output in Indonesian factories come from? A Levinsohn–Petrin TFP exercise on 148,000 firm-years, from raw survey files to sector-level returns to scale, with the full…\n\n\n\nNov 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho is talking about AI? Text-mining Indonesian firms’ annual reports\n\n\n\nText mining\n\nPython\n\nAI\n\nIndonesia\n\n\n\nScraping 2020–2025 annual reports of large IDX-listed firms to track AI penetration through keyword density.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
