@@ -7,7 +7,9 @@ website:
     tracking-id: "G-8X68J732NR"
     anonymize-ip: true
   cookie-consent: true
+  favicon: img/web-logo/favicon.png
   navbar:
+    logo: img/web-logo/favicon.svg
     left:
       - text: "Home"
         href: index.qmd
@@ -22,15 +24,14 @@ website:
       - text: "CV"
         href: cv.qmd
 
-    right: 
-      - text: "ID"
-        href: id/index.qmd
   page-footer: "© 2026 Al Bahits Annef"
 
 format:
   html:
     theme: cosmo
     css: styles.css
+    include-in-header:
+      text: '<link rel="apple-touch-icon" href="/portfolio/img/web-logo/apple-touch-icon.png">'
 
 
 
