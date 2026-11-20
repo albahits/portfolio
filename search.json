@@ -84,109 +84,46 @@
     "text": "Replicate it\n\n\n\nStep\nFile\nWhat it does\n\n\n\n\n1\n01_clean_ibs2020.do\nCleans and deflates one survey year; repeat for each year with that year’s variable suffixes and deflators\n\n\n2\n02_append_panel.do\nStacks 2017–2022 and declares the panel\n\n\n3\n03_tfp_and_figures.do\nTable 1, the Levinsohn–Petrin estimation (Table 2), and Figures 1–4\n\n\n\nRequires Stata 18 (earlier versions should work) and the prodest package (ssc install prodest). The IBS microdata is distributed by BPS–Statistics Indonesia and isn’t included here.\nReference: Levinsohn, J., & Petrin, A. (2003). Estimating production functions using inputs to control for unobservables. The Review of Economic Studies, 70(2), 317–341."
   },
   {
-    "objectID": "opinions.html",
-    "href": "opinions.html",
-    "title": "Perspective",
+    "objectID": "projects/ai-score/index.html",
+    "href": "projects/ai-score/index.html",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
     "section": "",
-    "text": "English\n  Bahasa Indonesia"
+    "text": "← Back to Projects"
   },
   {
-    "objectID": "opinions.html#english",
-    "href": "opinions.html#english",
-    "title": "Perspective",
-    "section": "English",
-    "text": "English\n\n  Jun 2026\n  \n  \n  \n  \n    Survive, Innovate and Scale Up: Lessons from Japan's Resilient MSMEs ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Sep 2025\n  \n    \n  \n  \n    Leave, Return or Reform? ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Jul 2025\n  \n    \n  \n  \n    Prioritizing Agriculture in the Indonesia-Japan Partnership ↗\n    Rusli Abdulah, Al Bahits Annef\n    The Jakarta Post"
-  },
-  {
-    "objectID": "opinions.html#indonesia",
-    "href": "opinions.html#indonesia",
-    "title": "Perspective",
-    "section": "Bahasa Indonesia",
-    "text": "Bahasa Indonesia\n\n  Jul 2025\n  \n    \n  \n  \n    Refleksi Ekonomi dari Potong Rambut di Jepang ↗\n    Al Bahits Annef\n    Kontan"
-  },
-  {
-    "objectID": "id/index.html",
-    "href": "id/index.html",
-    "title": "Beranda",
-    "section": "",
-    "text": "Segera hadir."
-  },
-  {
-    "objectID": "digest/gen-ai-labor/gen-ai-labor.html",
-    "href": "digest/gen-ai-labor/gen-ai-labor.html",
-    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
-    "section": "",
-    "text": "← Back to Research"
-  },
-  {
-    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
-    "href": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
-    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "objectID": "projects/ai-score/index.html#the-question",
+    "href": "projects/ai-score/index.html#the-question",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
     "section": "The question",
-    "text": "The question\nMost debates about generative AI ask whether it will destroy jobs. But in developing economies like Indonesia, where formal and informal employment offer very different levels of security and protection, another question matters: does AI change not just how many people work, but the kinds of jobs they hold? Following ChatGPT’s public release in late 2022, did workers in more AI-exposed groups experience a greater decline in formal employment?"
+    "text": "The question\nWe hear a lot about AI transforming the corporate landscape, but who is actually talking about it, and does size matter?"
   },
   {
-    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
-    "href": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
-    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "objectID": "projects/ai-score/index.html#data-and-method",
+    "href": "projects/ai-score/index.html#data-and-method",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
     "section": "Data and method",
-    "text": "Data and method\nIndonesia’s national labor force survey (Sakernas, 2019–2024) is rich but does not follow the same workers over time, which rules out the standard panel approach. Given this limitation, we take a different route:\n\nA demographic pseudo-panel, which tracks groups of similar workers (by cohort and background) instead of individuals.\nA GenAI-exposure measure adapted to Indonesia, so that existing occupational measures fit occupation–industry cells in the local labor market.\nA continuous-treatment difference-in-differences design, which treats ChatGPT’s release as a common shock and compares groups with more versus less baseline exposure, before and after."
+    "text": "Data and method\nI scraped and text-mined the annual reports (2020–2025) of Indonesia’s largest listed companies across Financials, Technology, Industrials and Consumer sectors. “AI penetration” measures how much a firm talks about AI in its own disclosures, using keyword density.\n\nTools: Python, with pdfplumber for PDF parsing and pandas for the data work. Built with AI assistance (Claude)."
   },
   {
-    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
-    "href": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
-    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
-    "section": "What we find",
-    "text": "What we find\nTotal employment barely moved. We detect no differential change in overall employment between more- and less-exposed groups.\nThe formal share did. A one-standard-deviation increase in baseline exposure lowers the formal-employment share by 0.9–1.3 percentage points. Figure 1 shows why we trust this: before late 2022 the groups move in parallel, and afterwards the formal share falls in the more exposed group. Event-study and placebo tests support the result.\n\n\n\nFigure 1. Formal-employment share in more- versus less-exposed groups. Trends are parallel before late 2022; the formal share declines afterwards among the more exposed.\n\n\nThe young bear most of it. The decline is concentrated among entry-level cohorts and selected service industries (Figure 2). Over the same period, freelance employment among Gen Z workers (aged 18–27) rose significantly by 2024, which suggests a shift in how young workers enter the labor market.\n\n\n\nFigure 2. Decline in the formal-employment share among younger cohorts."
+    "objectID": "projects/ai-score/index.html#what-the-data-shows",
+    "href": "projects/ai-score/index.html#what-the-data-shows",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What the data shows",
+    "text": "What the data shows\n1. The AI conversation is still concentrated in Tech. Blibli (BELI) and GoTo Group (GOTO) naturally lead. Beyond them, Astra International (ASII) shows an isolated but rising AI conversation in the Industrial sector. Financials follow the same upward trend, though modestly, led by BCA (BBCA), BNI (BBNI) and Sinar Mas Multiartha (SMMA).\n\n\n\nFigure 1. AI penetration in annual reports: top 5 IDX companies (2020–2025).\n\n\n2. AI rhetoric is beginning to track capital allocation. Within Financials and Tech, the firms with the largest capital expenditure (CapEx) are also those that put the most emphasis on AI in their reporting, a positive correlation.\n\n\n\nFigure 2. AI score and capital expenditure, Financials and Tech sectors, top 5 IDX firms (2020–2025)."
   },
   {
-    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
-    "href": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
-    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
-    "section": "Why it matters",
-    "text": "Why it matters\nHeadline employment numbers may remain stable, but the adjustment can occur in employment formality: younger workers face weaker pathways into regular jobs, while freelance and platform-based work becomes an alternative. Policy should therefore strengthen early-career pathways through targeted internships in highly exposed sectors and extend basic labor protections, including occupational safety and social security, beyond ride-hailing to a broader range of informal and platform workers. The focus should be not only on developing AI-related skills, but also on ensuring that technological change does not come at the expense of access to formal employment and worker protection.\nRead the full paper →"
+    "objectID": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "href": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
+    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "section": "What it does and does not tell us",
+    "text": "What it does and does not tell us\nKeyword density captures what firms say, not what they deploy, and the CapEx link is descriptive, not causal. Corporate reporting is the surface layer. The real question is how it translates into operational deployment and productivity gains.\nDo these reporting trends match what you see in the market, or is it just another buzzword? Join the discussion on LinkedIn →"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "hobbies.html",
+    "href": "hobbies.html",
+    "title": "Hobbies",
     "section": "",
-    "text": "Your download should start automatically. If it doesn't, click here."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.\n    My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. \n    Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions."
-  },
-  {
-    "objectID": "about.html#research-interest",
-    "href": "about.html#research-interest",
-    "title": "About",
-    "section": "Research Interest",
-    "text": "Research Interest\nI work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See more of my works on the Research or Projects page."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "Background",
-    "text": "Background\n\nGraduate Student, Economic Development, Graduate School of International Development, Nagoya University, under Prof. Christian Otchia. MEXT Scholar, 2024–2027.\nAssociate Project Manager, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.\nCommunications consultancy, Maverick Indonesia, [2022-2023]. Improved how businesses are perceived by the public across different sectors.\nBachelor of International Relations, Universitas Pembangunan Nasional Veteran Jakarta, [2018-2022], Outstanding Student Award (2020)."
-  },
-  {
-    "objectID": "about.html#community-leadership",
-    "href": "about.html#community-leadership",
-    "title": "About",
-    "section": "Community & Leadership",
-    "text": "Community & Leadership\n\nChairman, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025\nVice President, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\n\n   Personal Email\n   University Email\n  Download CV ↗"
+    "text": "Coming soon."
   },
   {
     "objectID": "digest/cooperatives/index.html",
@@ -224,52 +161,192 @@
     "text": "Why it matters\nThe results challenge one-size-fits-all policy. What a cooperative adds depends on which institutions already serve the village, and too many overlapping providers may crowd out gains. This matters now that Indonesia is rolling out its “Koperasi Merah Putih” flagship initiative: the evidence points toward a flexible, context-sensitive cooperative ecosystem rather than a uniform template. The lesson on institutional complementarity also extends to inclusive-finance efforts across developing Asia.\nRead the full article →"
   },
   {
-    "objectID": "hobbies.html",
-    "href": "hobbies.html",
-    "title": "Hobbies",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Coming soon."
+    "text": "MEXT Scholar and Graduate student in Economic Development at Graduate School of International Development, Nagoya University, Japan.  I have 3+ years of managing multilateral capacity-building projects across the Asia-Pacific. As an Associate Project Manager at an international development consultancy, I co-managed 10+ international projects, including nine APEC initiatives for Indonesian government ministries on SMEs, clean energy, sustainability, gender equality and the digital economy.\n    My work sits where implementation meets evidence: projects with measurable outcomes, grounded in research. \n    Currently open for engagements, including internship, research collaborations and pre-graduation engagements with development agencies, consulting firms and policy research institutions."
   },
   {
-    "objectID": "projects/ai-score/index.html",
-    "href": "projects/ai-score/index.html",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "",
-    "text": "← Back to Projects"
+    "objectID": "about.html#research-interest",
+    "href": "about.html#research-interest",
+    "title": "About",
+    "section": "Research Interest",
+    "text": "Research Interest\nI work on empirical micro-development economics, at the intersection of technology, institutions and structural transformation. See more of my works on the Research or Projects page."
   },
   {
-    "objectID": "projects/ai-score/index.html#the-question",
-    "href": "projects/ai-score/index.html#the-question",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\n\nGraduate Student, Economic Development, Graduate School of International Development, Nagoya University, under Prof. Christian Otchia. MEXT Scholar, 2024–2027.\nAssociate Project Manager, [Cietra Indonesia Utama], [2019-2024]. Co-managed 10+ international projects and led nine APEC capacity-building initiatives for Indonesian government clients.\nCommunications consultancy, Maverick Indonesia, [2022-2023]. Improved how businesses are perceived by the public across different sectors.\nBachelor of International Relations, Universitas Pembangunan Nasional Veteran Jakarta, [2018-2022], Outstanding Student Award (2020)."
+  },
+  {
+    "objectID": "about.html#community-leadership",
+    "href": "about.html#community-leadership",
+    "title": "About",
+    "section": "Community & Leadership",
+    "text": "Community & Leadership\n\nChairman, Indonesian Student Association in Nagoya (PPI Nagoya), 2024–2025\nVice President, Foreign Policy Community of Indonesia, UPNVJ Chapter, 2019–2020"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\n   Personal Email\n   University Email\n  Download CV ↗"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Your download should start automatically. If it doesn't, click here."
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "",
+    "text": "← Back to Research"
+  },
+  {
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#the-question",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
     "section": "The question",
-    "text": "The question\nWe hear a lot about AI transforming the corporate landscape, but who is actually talking about it, and does size matter?"
+    "text": "The question\nMost debates about generative AI ask whether it will destroy jobs. But in developing economies like Indonesia, where formal and informal employment offer very different levels of security and protection, another question matters: does AI change not just how many people work, but the kinds of jobs they hold? Following ChatGPT’s public release in late 2022, did workers in more AI-exposed groups experience a greater decline in formal employment?"
   },
   {
-    "objectID": "projects/ai-score/index.html#data-and-method",
-    "href": "projects/ai-score/index.html#data-and-method",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#data-and-method",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
     "section": "Data and method",
-    "text": "Data and method\nI scraped and text-mined the annual reports (2020–2025) of Indonesia’s largest listed companies across Financials, Technology, Industrials and Consumer sectors. “AI penetration” measures how much a firm talks about AI in its own disclosures, using keyword density.\n\nTools: Python, with pdfplumber for PDF parsing and pandas for the data work. Built with AI assistance (Claude)."
+    "text": "Data and method\nIndonesia’s national labor force survey (Sakernas, 2019–2024) is rich but does not follow the same workers over time, which rules out the standard panel approach. Given this limitation, we take a different route:\n\nA demographic pseudo-panel, which tracks groups of similar workers (by cohort and background) instead of individuals.\nA GenAI-exposure measure adapted to Indonesia, so that existing occupational measures fit occupation–industry cells in the local labor market.\nA continuous-treatment difference-in-differences design, which treats ChatGPT’s release as a common shock and compares groups with more versus less baseline exposure, before and after."
   },
   {
-    "objectID": "projects/ai-score/index.html#what-the-data-shows",
-    "href": "projects/ai-score/index.html#what-the-data-shows",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "What the data shows",
-    "text": "What the data shows\n1. The AI conversation is still concentrated in Tech. Blibli (BELI) and GoTo Group (GOTO) naturally lead. Beyond them, Astra International (ASII) shows an isolated but rising AI conversation in the Industrial sector. Financials follow the same upward trend, though modestly, led by BCA (BBCA), BNI (BBNI) and Sinar Mas Multiartha (SMMA).\n\n\n\nFigure 1. AI penetration in annual reports: top 5 IDX companies (2020–2025).\n\n\n2. AI rhetoric is beginning to track capital allocation. Within Financials and Tech, the firms with the largest capital expenditure (CapEx) are also those that put the most emphasis on AI in their reporting, a positive correlation.\n\n\n\nFigure 2. AI score and capital expenditure, Financials and Tech sectors, top 5 IDX firms (2020–2025)."
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#what-we-find",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "What we find",
+    "text": "What we find\nTotal employment barely moved. We detect no differential change in overall employment between more- and less-exposed groups.\nThe formal share did. A one-standard-deviation increase in baseline exposure lowers the formal-employment share by 0.9–1.3 percentage points. Figure 1 shows why we trust this: before late 2022 the groups move in parallel, and afterwards the formal share falls in the more exposed group. Event-study and placebo tests support the result.\n\n\n\nFigure 1. Formal-employment share in more- versus less-exposed groups. Trends are parallel before late 2022; the formal share declines afterwards among the more exposed.\n\n\nThe young bear most of it. The decline is concentrated among entry-level cohorts and selected service industries (Figure 2). Over the same period, freelance employment among Gen Z workers (aged 18–27) rose significantly by 2024, which suggests a shift in how young workers enter the labor market.\n\n\n\nFigure 2. Decline in the formal-employment share among younger cohorts."
   },
   {
-    "objectID": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
-    "href": "projects/ai-score/index.html#what-it-does-and-does-not-tell-us",
-    "title": "Who is talking about AI? Text-mining Indonesian firms’ annual reports",
-    "section": "What it does and does not tell us",
-    "text": "What it does and does not tell us\nKeyword density captures what firms say, not what they deploy, and the CapEx link is descriptive, not causal. Corporate reporting is the surface layer. The real question is how it translates into operational deployment and productivity gains.\nDo these reporting trends match what you see in the market, or is it just another buzzword? Join the discussion on LinkedIn →"
+    "objectID": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
+    "href": "digest/gen-ai-labor/gen-ai-labor.html#why-it-matters",
+    "title": "GenAI did not cut Indonesia’s jobs, but it may be changing what kind of jobs",
+    "section": "Why it matters",
+    "text": "Why it matters\nHeadline employment numbers may remain stable, but the adjustment can occur in employment formality: younger workers face weaker pathways into regular jobs, while freelance and platform-based work becomes an alternative. Policy should therefore strengthen early-career pathways through targeted internships in highly exposed sectors and extend basic labor protections, including occupational safety and social security, beyond ride-hailing to a broader range of informal and platform workers. The focus should be not only on developing AI-related skills, but also on ensuring that technological change does not come at the expense of access to formal employment and worker protection.\nRead the full paper →"
+  },
+  {
+    "objectID": "id/index.html",
+    "href": "id/index.html",
+    "title": "Beranda",
+    "section": "",
+    "text": "Segera hadir."
+  },
+  {
+    "objectID": "opinions.html",
+    "href": "opinions.html",
+    "title": "Perspective",
+    "section": "",
+    "text": "English\n  Bahasa Indonesia"
+  },
+  {
+    "objectID": "opinions.html#english",
+    "href": "opinions.html#english",
+    "title": "Perspective",
+    "section": "English",
+    "text": "English\n\n  Jun 2026\n  \n  \n  \n  \n    Survive, Innovate and Scale Up: Lessons from Japan's Resilient MSMEs ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Sep 2025\n  \n    \n  \n  \n    Leave, Return or Reform? ↗\n    Al Bahits Annef\n    Medium\n  \n\n\n\n  Jul 2025\n  \n    \n  \n  \n    Prioritizing Agriculture in the Indonesia-Japan Partnership ↗\n    Rusli Abdulah, Al Bahits Annef\n    The Jakarta Post"
+  },
+  {
+    "objectID": "opinions.html#indonesia",
+    "href": "opinions.html#indonesia",
+    "title": "Perspective",
+    "section": "Bahasa Indonesia",
+    "text": "Bahasa Indonesia\n\n  Jul 2025\n  \n    \n  \n  \n    Refleksi Ekonomi dari Potong Rambut di Jepang ↗\n    Al Bahits Annef\n    Kontan"
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html",
+    "href": "projects/gcam-netzero/index.html",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "",
+    "text": "Global pressure to cut emissions calls for collective action. Where do Indonesia’s population, economy and energy system stand against its net-zero target, and what would it take to get there ten years sooner?"
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#why-this-matters",
+    "href": "projects/gcam-netzero/index.html#why-this-matters",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Why this matters",
+    "text": "Why this matters\nAs COP31 convenes in Antalya, Türkiye (9–20 November 2026), the gap between pledges and the Paris Agreement’s goal of holding warming well below 2°C remains wide. UNEP’s Emissions Gap Report 2026 projects 2.8°C of warming this century under current policies, and 2.6°C even if every country delivers its national pledge (NDC).\nIndonesia is among the world’s ten largest greenhouse gas emitters. Its CO2 emissions from fossil fuels and industry reached about 822 MtCO2 in 2025, 2.6 times their 2001 level (Figure 1).\nThe Indonesian Government’s official net-zero target is 2060 or sooner, and President Prabowo has said that 2050 is within reach.\nThis exercise asks what each target demands of Indonesia’s energy system, and what the ten years between them cost.\n\n\n\n\n\n\nFigure 1: Annual CO2 emissions from fossil fuels and industry, 2001 and 2025. Data: Global Carbon Budget (2026), via Our World in Data."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#approach",
+    "href": "projects/gcam-netzero/index.html#approach",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Approach",
+    "text": "Approach\nThe projections use the Global Change Analysis Model or GCAM v9.1. It was developed by the Joint Global Change Research Institute (Pacific Northwest National Laboratory). GCAM is an integrated assessment model, where it links the economy, energy, land, water and climate in 32 world regions, Indonesia among them, and in each five-year period it finds the prices that balance supply and demand across all markets at once.\nAs in the real world, a change in one element ripples through the others. A carbon price, for example, changes which power plants are built or how much industries pay for electricity generation. This makes GCAM well suited to asking what a national target implies for the whole system rather than for one sector.\nThe exercise has three steps:\n\nUpdate the drivers. Replace GCAM’s default population and GDP paths for Indonesia (a generic middle-of-the-road scenario, SSP2) with the latest UN and OECD projections.\nValidate and calibrate. Compare GCAM’s 2025 electricity generation by source with the Handbook of Energy and Economic Statistics of Indonesia (HEESI) 2025, then correct the 2025 power mix where the model diverges.\nAdd the net-zero targets. Cap Indonesia’s energy and industry CO2 so that it follows the baseline to a 2030 peak, falls in a straight line to zero in 2050 or 2060, and stays at zero afterwards. GCAM solves for the carbon price that meets each cap."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#building-a-baseline-that-reflects-indonesia",
+    "href": "projects/gcam-netzero/index.html#building-a-baseline-that-reflects-indonesia",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Building a baseline that reflects Indonesia",
+    "text": "Building a baseline that reflects Indonesia\n\nUpdating population and growth\nPopulation and income drive everything else in GCAM: how much energy households and industry demand, and therefore how much has to be decarbonised. GCAM’s default pathway is shared across all regions and predates the latest projections. For Indonesia it understates population throughout the century, and understates economic growth after the mid-2040s. If I built the baseline on these drivers, it would understate the possible outcomes.\nTo solve this, I keep GCAM’s calibrated 2021 values, apply observed growth to 2025, and follow the UN medium variant and OECD long-term projections thereafter. Replacing the 2021 values themselves would break the consistency of GCAM’s calibration, in which energy data and demand parameters are fitted jointly with 2021 population and GDP. The updates enter the model as a small add-on file, and a check confirms that GCAM’s output reproduces the inputs exactly.\n\n\nsocioeconomics_idn.xml\n\n&lt;!-- overrides 2025-2100 for Indonesia --&gt;\n&lt;region name=\"Indonesia\"&gt;\n  &lt;demographics&gt;\n    &lt;populationMiniCAM year=\"2025\"&gt;&lt;totalPop&gt;282410&lt;/totalPop&gt;&lt;/populationMiniCAM&gt;\n    ...\n  &lt;/demographics&gt;\n  &lt;nationalAccountContainer&gt;\n    &lt;nationalAccount year=\"2025\"&gt;&lt;GDP&gt;771295&lt;/GDP&gt;&lt;/nationalAccount&gt;\n    ...\n  &lt;/nationalAccountContainer&gt;\n&lt;/region&gt;\n\n\n\nconfiguration file (inside ScenarioComponents)\n\n&lt;Value name=\"socio_idn\"&gt;D:/GCAM/idn-runs/xml/socioeconomics_idn.xml&lt;/Value&gt;\n\n\n\n\n\n\n\nFigure 2: Updated drivers compared with GCAM’s default (SSP2) path. GDP in trillion 2024 US$ at market exchange rates; population in millions.\n\n\n\nThe near-term economy is slightly smaller than the GCAM default projected, which matters for the late 2020s and early 2030s, the period covered by the national electricity plan (RUPTL 2025–2034). From the mid-2040s it is larger, so reaching net zero in 2060 means decarbonising a bigger economy than the default model implies.\n\n\nCalibrating the 2025 power mix\nUpdating population and GDP sets how much electricity Indonesia uses, not which technologies supply it. GCAM’s 2025 total of 390 TWh fell within HEESI’s range, but the problem is that the power mix did not.\nThe unadjusted model generated 22 times more solar and 15 times more wind than HEESI reports. Worse, it included nuclear power generation, which Indonesia does not possess at present.\nOne possible explanation is instructive. GCAM chooses technologies by cost, and solar is cost-competitive in its economics. Indonesia’s actual deployment has been held back by barriers that are not only about cost. It covers something more dynamics, including procurement processes, local-content regulations, long-term coal contracts and even political considerations.\nI fixed 2025 output for solar, wind and nuclear at HEESI values, using the same mechanism GCAM uses for hydropower, and left coal to fill the remaining demand through the model’s own logic. After calibration, six of eight sources fall within HEESI’s range, and solar and wind match exactly (Figure 3).\n\n\n\n\n\n\nFigure 3: 2025 electricity generation: HEESI range, unadjusted model and calibrated baseline. Arrows show each correction. The HEESI band runs from on-grid generation (PLN and its purchases) to all categories including captive plants.\n\n\n\nHEESI is shown as a range because its 2025 edition adds 144.5 TWh of private and captive generation, much of it coal plants serving industrial estates. Part of it may overlap with PLN’s purchases. GCAM’s calibrated coal sits at the on-grid level, so captive coal for industry is likely under-represented. Captive coal capacity reached about 19.3 GW in 2025, according to CREA and Global Energy Monitor, driven largely by nickel processing in Central Sulawesi and North Maluku; projects in development would take it above 31 GW."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#two-pathways-to-net-zero",
+    "href": "projects/gcam-netzero/index.html#two-pathways-to-net-zero",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Two pathways to net zero",
+    "text": "Two pathways to net zero\nBefore going further: what exactly is net zero? Oxford Net Zero at the University of Oxford defines it as “a state in which the greenhouse gases going into the atmosphere are balanced by removal out of the atmosphere.”\nAs the same source puts it, “the term net zero is important because – for CO2 at least – this is the state at which global warming stops.” In the model’s baseline, without new policy, emissions keep rising: from about 680 MtCO2 in 2025 to about 1,000 MtCO2 by 2060.\nBoth targets bend this path from a 2030 peak of about 730 MtCO2. By 2060, NZE 2060 avoids 987 MtCO2 relative to the baseline. The power sector delivers about two-thirds of that cut, largely because bioenergy with carbon capture turns its emissions negative (Figure 4).\n\n\n\n\n\n\nFigure 4: Energy and industry CO2 under the three scenarios (left) and the 2060 reduction by sector under NZE 2060 (right).\n\n\n\nNet zero rebuilds the energy system rather than shrinking it.\nTotal primary energy is higher under both targets than in the baseline by 2060, and the difference is biomass, which grows several-fold to feed bioenergy power plants with carbon capture and biofuels. Interestingly, coal and gas shrink but do not disappear completely.\nBy 2060, total primary energy reaches about 13–14 EJ under the net-zero paths against about 10.6 EJ in the baseline, and biomass supply is roughly five times the baseline level (Figure 5). This pattern actually depicts current situation where government has think about it. The biodiesel blending mandate rose to B50 as of July 2026, and PLN co-fires biomass in its coal power plants.\nTo author, this is where the net-zero pathways ignite a further concern. They would demand five to six times today’s biomass supply, and the model counts that biomass as carbon-neutral. That holds only if it is grown on land that is already farmed, not on cleared forest or drained peatland.\nIf expansion comes at the expense of forests, the emissions reappear as land-use change, which these pathways do not cap. This condition compounds an existing crisis as hundred-thousand hectares of forest and land burned for the past few months, mostly in Sumatera, Kalimantan and now in Papua – often on drained peatland, with fire used to clear land as the main cause.\nTherefore, outside technical calculation, land and forest safeguards are undoubtedly not a side issue, but rather a condition for the net-zero results to hold.\n\n\n\n\n\n\nFigure 5: Primary energy by fuel, 2015–2060, on the same scale in all three scenarios.\n\n\n\nIn the power sector, total generation is similar across scenarios; what changes is the source. In the baseline, coal keeps growing to about 450 TWh by 2060. Under both targets it shrinks toward a small remainder, replaced by solar and by BECCS, which exceeds 200 TWh by 2060 (Figure 6).\nOne caveat on how this figure should be read. The model is calibrated to 2025 only, so from 2030 GCAM deploys solar based on its techno-economic potential. Even in the baseline, solar reaches 80 TWh in 2030, roughly twice the pace in Indonesia’s current electricity plan (RUPTL 2025–2034).\nThe GCAM model projects that solar is economic at scale. Whether planning and procurement allow it is a separate question, taken up below.\n\n\n\n\n\n\nFigure 6: Electricity generation by technology, 2015–2060. Carbon-capture variants are shown separately; BECCS = bioenergy with carbon capture and storage."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#what-net-zero-relies-on",
+    "href": "projects/gcam-netzero/index.html#what-net-zero-relies-on",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "What net zero relies on",
+    "text": "What net zero relies on\nA carbon price reorders the options. In 2050, coal power costs about US$100 per MWh in the baseline but US$210–255 under the net-zero paths. Solar remains the cheapest source in every scenario at about US$80–100 (Figure 7).\nThis result is timely. On 25 August 2026, the government launched a programme to build 100 GWp of solar capacity within about three years, starting with 14 plants totalling 5.3 GWp. That ambition goes well beyond even the model’s unconstrained baseline, which reaches roughly 30 GW of solar by 2030.\nTwo further results stand out. BECCS becomes cheaper the stricter the target, because a higher carbon price pays it for the CO2 it removes. And storage, not generation, is the expensive part of a renewable system: wind with storage costs about US$320 per MWh, solar with storage about US$187.\n\n\n\n\n\n\nFigure 7: Generation cost by technology in 2050, including the carbon price, in 2024 US$ per MWh. One dot per scenario; the grey bar shows how far the carbon price moves each option.\n\n\n\nNet zero is not zero. As Oxford Net Zero puts it, “to ‘go net zero’ is to reduce greenhouse gas emissions and/or to ensure that any ongoing emissions are balanced by removals.”\nIn the target year, about 250 MtCO2 is still emitted, mainly by industry, passenger and freight transport and cement. Almost all of it is offset by a single technology: BECCS removes 212 MtCO2 a year in NZE 2060 and 231 MtCO2 in NZE 2050 (Figure 8). That is comparable to the entire power sector’s emissions today, and it requires biomass supply on a scale that raises direct questions about land, forests and Indonesia’s forestry and land-use (FOLU) commitments.\n\n\n\n\n\n\nFigure 8: CO2 by sector in each scenario’s target year. Negative values are removals. Net is about 8 MtCO2 from fossil-fuel extraction, outside the cap."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#the-cost-of-ambition",
+    "href": "projects/gcam-netzero/index.html#the-cost-of-ambition",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "The cost of ambition",
+    "text": "The cost of ambition\nBoth targets end at roughly the same carbon price, about US$200 per tonne of CO2. Interestingly, bringing the target forward by ten years does not raise the peak; it brings it forward.\nCarbon prices are 26–38% higher throughout 2035–2050 under the NZE 2050 scenario (Figure 9). After each target year the price falls, as clean technologies keep getting cheaper in the model and holding zero costs less than reaching it.\n\n\n\n\n\n\nFigure 9: Carbon price needed to meet each cap, 2024 US$ per tonne of CO2. The shaded wedge is the extra price of the faster target over 2035–2050.\n\n\n\nFor electricity users, the effect is smaller than the carbon price suggests.\nDelivered electricity costs about 19 US cents per kWh in 2025 in the model. In the baseline, cheap solar and coal let it fall to about 14 cents by 2070.\nUnder net zero it stays near today’s level, about 3 cents per kWh above the baseline over 2040–2060 (Figure 10). For consumers, the cost of net zero is not a sudden price increase; it is a smaller decrease than they would otherwise have received. GCAM treats households and businesses as one group and does not account for PLN’s regulated, subsidised tariffs, so these numbers show cost trends, not predicted bills.\n\n\n\n\n\n\nFigure 10: Delivered electricity price, 2024 US cents per kWh. The shaded band is what net zero adds over the baseline."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#implications",
+    "href": "projects/gcam-netzero/index.html#implications",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Implications",
+    "text": "Implications\n\nDelivering the electricity plan is the cheapest insurance for either target. Indonesia’s Electricity Supply Business Plan (RUPTL) 2025–2034 adds 69.5 GW of capacity, 76% of it renewables and storage. But it is back-loaded: in 2025–2029, fossil additions (12.7 GW) slightly exceed renewables (12.2 GW), and most renewable capacity arrives in 2030–2034. The GCAM model finds solar economic at scale, while the binding constraints are institutional, which the model cannot capture. Every year of delay compresses the remaining path, and the NZE 2050 results show what compression costs: 26–38% higher carbon prices across fifteen years.\nNet zero should not rest on a single removal technology. Both pathways depend on more than 200 MtCO2 a year of BECCS, a technology unproven at that scale anywhere. A credible strategy hedges with faster cuts in industry and transport, investment in storage and grids, and a land-use plan that keeps biomass demand consistent with forest commitments.\nGreen and development financing is imperative. Cooperation programmes such as the World Bank’s Indonesia Sustainable Least-cost Electrification program (ISLE-1, US$500 million, focused on Maluku and Nusa Tenggara) and its successor ISLE-2 (540 MW of solar and wind) are the kind of least-cost renewable investment both pathways require, at far larger scale. Renewable generation, storage and grid integration are arguably among the most expensive components of the transition, which is why cooperation and financing matter most.\nHouseholds need protection during the transition, not from it. Net zero keeps electricity costs roughly flat rather than falling. Tariff and subsidy design can manage that difference.\n\nTo be as clear as possible, achieving net zero for Indonesia is not merely a political move to align with a global agenda. Many prior studies reach a similar conclusion: without action, Indonesia’s economy and communities face growing climate risks in the long term. Now, whether we accelerate the process to 2050 or keep the commitment by 2060, a gradual and sustainable transformation, together with cooperation among countries, is imperative."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#limitations",
+    "href": "projects/gcam-netzero/index.html#limitations",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Limitations",
+    "text": "Limitations\n\nScope of the target. The caps cover CO2 from energy and industry. Indonesia’s official target covers all greenhouse gases, including forestry and land use, historically its largest source. About 8 MtCO2 a year from fossil-fuel extraction falls outside the cap.\nSolar pace. Calibration fixes 2025 only. After 2025 the model deploys solar faster than the RUPTL foresees, though more slowly than the government’s new 100 GW ambition, so the 2030s are likely greener than realistic and carbon prices are best read as lower bounds.\nCaptive generation. Coal plants serving industry are likely under-represented in the baseline.\nEmission level. The model’s 2025 energy and industry CO2 (about 680 MtCO2) is about 17% below the Global Carbon Budget estimate (822 MtCO2), consistent with under-represented captive coal, so the net-zero task is likely larger than shown.\nOne region. GCAM treats Indonesia as a single region, so regional grids and programmes are discussed at national level only.\nPrices. Electricity prices are model costs, not PLN tariffs. All money values are converted to 2024 US dollars with the US GDP deflator (BEA, via FRED).\nDrivers. Population and GDP follow UN and OECD growth from GCAM’s 2021 base, so levels sit about 1% below the latest UN estimates."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#replication",
+    "href": "projects/gcam-netzero/index.html#replication",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Replication",
+    "text": "Replication\nConfiguration files, add-on XML, scripts and figure code are available on GitHub. The repository README lists every file, its location and its role, and the order in which to run them."
+  },
+  {
+    "objectID": "projects/gcam-netzero/index.html#sources",
+    "href": "projects/gcam-netzero/index.html#sources",
+    "title": "Net zero by 2060 or 2050?",
+    "section": "Sources",
+    "text": "Sources\n\nUNEP, Emissions Gap Report 2026\nUNFCCC, COP31 Antalya\nInvestortrust, Indonesia reaffirms net zero by 2060 or sooner at COP30\nJakarta Globe via APSN, Prabowo on net zero by 2050 at the G20\nGlobal Carbon Budget (2026), via Our World in Data\nOxford Net Zero, What is net zero?\nMinistry of Energy and Mineral Resources, HEESI 2025\nUN, World Population Prospects\nOECD, Long-term GDP projections\nHLC, Key takeaways from the 2025–2034 RUPTL\nCREA and Global Energy Monitor, 31 GW of captive coal is jeopardizing Indonesia’s economic and emissions goals\nCabinet Secretariat of Indonesia, 100 GWp solar initiative\nBioenergy Times, Indonesia expands bioenergy drive as biodiesel policy sparks debate\nWorld Bank, ISLE-1 (P174350)\nJGCRI, GCAM documentation\nBEA via FRED, US GDP implicit price deflator (A191RD3A086NBEA)"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Side projects at the intersection of data, economics and policy.\n\n\n\n\n\n\n\n\n\n\nProductivity in Indonesian Manufacturing\n\n\n\nProductivity\n\nManufacturing\n\nIndonesia\n\nStata\n\n\n\nWhere does output in Indonesian factories come from? A Levinsohn–Petrin TFP exercise on 148,000 firm-years, from raw survey files to sector-level returns to scale, with the full…\n\n\n\nNov 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho is talking about AI? Text-mining Indonesian firms’ annual reports\n\n\n\nText mining\n\nPython\n\nAI\n\nIndonesia\n\n\n\nScraping 2020–2025 annual reports of large IDX-listed firms to track AI penetration through keyword density.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Side projects at the intersection of data, economics and policy.\n\n\n\n\n\n\n\n\n\n\nNet zero by 2060 or 2050?\n\n\n\nNet zero\n\nIndonesia\n\nIntegrated assessment model\n\nGCAM\n\nEnergy transition\n\n\n\nWhat each net-zero target demands of Indonesia’s energy system, and what the ten years between them cost. A calibrated GCAM v9.1 exercise.\n\n\n\nNov 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nProductivity in Indonesian Manufacturing\n\n\n\nProductivity\n\nManufacturing\n\nIndonesia\n\nStata\n\n\n\nWhere does output in Indonesian factories come from? A Levinsohn–Petrin TFP exercise on 148,000 firm-years, from raw survey files to sector-level returns to scale, with the full…\n\n\n\nNov 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho is talking about AI? Text-mining Indonesian firms’ annual reports\n\n\n\nText mining\n\nPython\n\nAI\n\nIndonesia\n\n\n\nScraping 2020–2025 annual reports of large IDX-listed firms to track AI penetration through keyword density.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
