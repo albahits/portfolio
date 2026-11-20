@@ -17,7 +17,7 @@ fig-cap-location: bottom
 ::: {.callout-tip appearance="simple" icon=false}
 ## At a glance
 
-- In the model's baseline, without new policy, Indonesia's energy and industry CO~2~ keeps rising, from about 680 MtCO~2~ in 2025 to about 1,000 MtCO~2~ by 2060.
+- In the model's baseline, without new policy, Indonesia's energy and industry CO~2~ keeps rising, by almost half (about 46%) between 2025 and 2060.
 - Net zero is reachable in the model under both targets, but "net" carries weight: about 250 MtCO~2~ is still emitted in the target year, offset almost entirely by bioenergy with carbon capture (BECCS).
 - Reaching net zero in 2050 instead of 2060 requires carbon prices 26–38% higher through 2035–2050; both paths peak near US\$200 per tonne of CO~2~.
 - For electricity users, net zero adds about 3 US cents per kWh compared with the baseline in 2040–2060: a price decrease foregone rather than a price shock.
@@ -93,9 +93,36 @@ HEESI is shown as a range because its 2025 edition adds 144.5 TWh of private and
 
 ## Two pathways to net zero
 
-Before going further: what exactly is net zero? [Oxford Net Zero](https://netzeroclimate.org/what-is-net-zero/) at the University of Oxford defines it as "a state in which the greenhouse gases going into the atmosphere are balanced by removal out of the atmosphere."
+Before going further: what exactly is net zero? [Oxford Net Zero](https://netzeroclimate.org/what-is-net-zero/) at the University of Oxford defines it as "a state in which the greenhouse gases going into the atmosphere are balanced by removal out of the atmosphere." As the same source puts it, "the term net zero is important because – for CO2 at least – this is the state at which global warming stops."
 
-As the same source puts it, "the term net zero is important because – for CO~2~ at least – this is the state at which global warming stops." In the model's baseline, without new policy, emissions keep rising: from about 680 MtCO~2~ in 2025 to about 1,000 MtCO~2~ by 2060.
+In the model's baseline, without new policy, emissions keep rising: from about 680 MtCO~2~ in 2025 to about 1,000 MtCO~2~ by 2060. The model's 2025 level sits about 17% below the 822 MtCO~2~ estimate above, mainly because coal plants serving industry are under-represented, so the task shown here is, if anything, understated.
+
+Both targets bend this path from a 2030 peak of about 730 MtCO~2~. By 2060, NZE 2060 avoids 987 MtCO~2~ relative to the baseline. The power sector delivers about two-thirds of that cut, largely because bioenergy with carbon capture turns its emissions negative (@fig-headline).
+
+Each target enters the model as one more add-on file: a CO~2~ cap for Indonesia with its own carbon market, so GCAM solves for the carbon price that holds emissions at each year's cap. The caps start in 2035, after the 2030 peak, and are set in million tonnes of carbon (MtC; multiply by 3.67 for MtCO~2~).
+
+The NZE 2060 policy file looks like this:
+
+```{.xml filename="idn_nze2060.xml"}
+<region name="Indonesia">
+  <ghgpolicy name="CO2">
+    <market>Indonesia</market>
+    <constraint year="2035">165.23</constraint>
+    <constraint year="2040">132.19</constraint>
+    <constraint year="2045">99.14</constraint>
+    <constraint year="2050">66.09</constraint>
+    <constraint year="2055">33.05</constraint>
+    <constraint year="2060">0.00</constraint>
+    ...                                   <!-- zero through 2100 -->
+  </ghgpolicy>
+</region>
+```
+
+```{.xml filename="configuration file (inside ScenarioComponents)"}
+<Value name="nze_idn">Disk:/GCAM/idn-runs/xml/idn_nze2060.xml</Value>
+```
+
+NZE 2050 uses the same structure, with the cap reaching zero in 2050 instead.
 
 Both targets bend this path from a 2030 peak of about 730 MtCO~2~. By 2060, NZE 2060 avoids 987 MtCO~2~ relative to the baseline. The power sector delivers about two-thirds of that cut, largely because bioenergy with carbon capture turns its emissions negative (@fig-headline).
 
