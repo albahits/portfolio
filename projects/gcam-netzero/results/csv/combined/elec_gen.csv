@@ -1,0 +1,580 @@
+Units,scenario,region,subsector,Year,value
+EJ,Reference_aligned,Indonesia,biomass,2005,7.92002e-05
+EJ,Reference_aligned,Indonesia,biomass,2010,0.000342002
+EJ,Reference_aligned,Indonesia,biomass,2015,0.0017316
+EJ,Reference_aligned,Indonesia,biomass,2021,0.0505325
+EJ,Reference_aligned,Indonesia,biomass,2025,0.0610967
+EJ,Reference_aligned,Indonesia,biomass,2030,0.0617982
+EJ,Reference_aligned,Indonesia,biomass,2035,0.06603063
+EJ,Reference_aligned,Indonesia,biomass,2040,0.08254943
+EJ,Reference_aligned,Indonesia,biomass,2045,0.09976302000000001
+EJ,Reference_aligned,Indonesia,biomass,2050,0.11368512
+EJ,Reference_aligned,Indonesia,biomass,2055,0.12809495
+EJ,Reference_aligned,Indonesia,biomass,2060,0.14548488
+EJ,Reference_aligned,Indonesia,biomass,2065,0.1637179
+EJ,Reference_aligned,Indonesia,biomass,2070,0.18217019999999998
+EJ,Reference_aligned,Indonesia,biomass,2075,0.1973896
+EJ,Reference_aligned,Indonesia,biomass,2080,0.2110533
+EJ,Reference_aligned,Indonesia,biomass,2085,0.2222599
+EJ,Reference_aligned,Indonesia,biomass,2090,0.2332948
+EJ,Reference_aligned,Indonesia,biomass,2095,0.242358
+EJ,Reference_aligned,Indonesia,biomass,2100,0.2518126
+EJ,Reference_aligned,Indonesia,coal,1990,0.0351635
+EJ,Reference_aligned,Indonesia,coal,2005,0.186455
+EJ,Reference_aligned,Indonesia,coal,2010,0.246403
+EJ,Reference_aligned,Indonesia,coal,2015,0.469829
+EJ,Reference_aligned,Indonesia,coal,2021,0.682849
+EJ,Reference_aligned,Indonesia,coal,2025,0.848524
+EJ,Reference_aligned,Indonesia,coal,2030,0.9378914049999999
+EJ,Reference_aligned,Indonesia,coal,2035,1.01246119
+EJ,Reference_aligned,Indonesia,coal,2040,1.09473611
+EJ,Reference_aligned,Indonesia,coal,2045,1.19917016
+EJ,Reference_aligned,Indonesia,coal,2050,1.32017967
+EJ,Reference_aligned,Indonesia,coal,2055,1.42173088
+EJ,Reference_aligned,Indonesia,coal,2060,1.6061778500000001
+EJ,Reference_aligned,Indonesia,coal,2065,1.80438875
+EJ,Reference_aligned,Indonesia,coal,2070,2.00943143
+EJ,Reference_aligned,Indonesia,coal,2075,2.2160841799999997
+EJ,Reference_aligned,Indonesia,coal,2080,2.39603914
+EJ,Reference_aligned,Indonesia,coal,2085,2.4436025
+EJ,Reference_aligned,Indonesia,coal,2090,2.5786441
+EJ,Reference_aligned,Indonesia,coal,2095,2.7099712
+EJ,Reference_aligned,Indonesia,coal,2100,2.8040201
+EJ,Reference_aligned,Indonesia,gas,1990,0.0026422994
+EJ,Reference_aligned,Indonesia,gas,2005,0.0687097
+EJ,Reference_aligned,Indonesia,gas,2010,0.1448897
+EJ,Reference_aligned,Indonesia,gas,2015,0.2120187
+EJ,Reference_aligned,Indonesia,gas,2021,0.18915589
+EJ,Reference_aligned,Indonesia,gas,2025,0.2314928
+EJ,Reference_aligned,Indonesia,gas,2030,0.2525665
+EJ,Reference_aligned,Indonesia,gas,2035,0.2760942
+EJ,Reference_aligned,Indonesia,gas,2040,0.3077434
+EJ,Reference_aligned,Indonesia,gas,2045,0.34209900000000004
+EJ,Reference_aligned,Indonesia,gas,2050,0.404399
+EJ,Reference_aligned,Indonesia,gas,2055,0.46815
+EJ,Reference_aligned,Indonesia,gas,2060,0.556869
+EJ,Reference_aligned,Indonesia,gas,2065,0.619307
+EJ,Reference_aligned,Indonesia,gas,2070,0.661225
+EJ,Reference_aligned,Indonesia,gas,2075,0.7272068
+EJ,Reference_aligned,Indonesia,gas,2080,0.7959101
+EJ,Reference_aligned,Indonesia,gas,2085,0.8634969
+EJ,Reference_aligned,Indonesia,gas,2090,0.9351039999999999
+EJ,Reference_aligned,Indonesia,gas,2095,0.9942004999999999
+EJ,Reference_aligned,Indonesia,gas,2100,1.0546034
+EJ,Reference_aligned,Indonesia,geothermal,1990,0.00404985
+EJ,Reference_aligned,Indonesia,geothermal,2005,0.0237745
+EJ,Reference_aligned,Indonesia,geothermal,2010,0.0336854
+EJ,Reference_aligned,Indonesia,geothermal,2015,0.0361729
+EJ,Reference_aligned,Indonesia,geothermal,2021,0.0572356
+EJ,Reference_aligned,Indonesia,geothermal,2025,0.0742469
+EJ,Reference_aligned,Indonesia,geothermal,2030,0.0870493
+EJ,Reference_aligned,Indonesia,geothermal,2035,0.0997839
+EJ,Reference_aligned,Indonesia,geothermal,2040,0.11402
+EJ,Reference_aligned,Indonesia,geothermal,2045,0.128376
+EJ,Reference_aligned,Indonesia,geothermal,2050,0.104635
+EJ,Reference_aligned,Indonesia,geothermal,2055,0.1117
+EJ,Reference_aligned,Indonesia,geothermal,2060,0.126059
+EJ,Reference_aligned,Indonesia,geothermal,2065,0.135753
+EJ,Reference_aligned,Indonesia,geothermal,2070,0.141872
+EJ,Reference_aligned,Indonesia,geothermal,2075,0.144524
+EJ,Reference_aligned,Indonesia,geothermal,2080,0.143883
+EJ,Reference_aligned,Indonesia,geothermal,2085,0.14599
+EJ,Reference_aligned,Indonesia,geothermal,2090,0.145761
+EJ,Reference_aligned,Indonesia,geothermal,2095,0.145163
+EJ,Reference_aligned,Indonesia,geothermal,2100,0.144817
+EJ,Reference_aligned,Indonesia,hydro,1990,0.0205488
+EJ,Reference_aligned,Indonesia,hydro,2005,0.03861
+EJ,Reference_aligned,Indonesia,hydro,2010,0.0628416
+EJ,Reference_aligned,Indonesia,hydro,2015,0.0494676
+EJ,Reference_aligned,Indonesia,hydro,2021,0.0889092
+EJ,Reference_aligned,Indonesia,hydro,2025,0.0895579
+EJ,Reference_aligned,Indonesia,hydro,2030,0.0903687
+EJ,Reference_aligned,Indonesia,hydro,2035,0.0911795
+EJ,Reference_aligned,Indonesia,hydro,2040,0.0919903
+EJ,Reference_aligned,Indonesia,hydro,2045,0.0928012
+EJ,Reference_aligned,Indonesia,hydro,2050,0.093612
+EJ,Reference_aligned,Indonesia,hydro,2055,0.0944228
+EJ,Reference_aligned,Indonesia,hydro,2060,0.0952336
+EJ,Reference_aligned,Indonesia,hydro,2065,0.0960445
+EJ,Reference_aligned,Indonesia,hydro,2070,0.0968553
+EJ,Reference_aligned,Indonesia,hydro,2075,0.0976661
+EJ,Reference_aligned,Indonesia,hydro,2080,0.0984769
+EJ,Reference_aligned,Indonesia,hydro,2085,0.0992877
+EJ,Reference_aligned,Indonesia,hydro,2090,0.100099
+EJ,Reference_aligned,Indonesia,hydro,2095,0.100909
+EJ,Reference_aligned,Indonesia,hydro,2100,0.10172
+EJ,Reference_aligned,Indonesia,nuclear,2030,0.004636694
+EJ,Reference_aligned,Indonesia,nuclear,2035,0.01446175
+EJ,Reference_aligned,Indonesia,nuclear,2040,0.0320659
+EJ,Reference_aligned,Indonesia,nuclear,2045,0.0620699
+EJ,Reference_aligned,Indonesia,nuclear,2050,0.1064114
+EJ,Reference_aligned,Indonesia,nuclear,2055,0.1461152
+EJ,Reference_aligned,Indonesia,nuclear,2060,0.20053700000000002
+EJ,Reference_aligned,Indonesia,nuclear,2065,0.25340399999999996
+EJ,Reference_aligned,Indonesia,nuclear,2070,0.30293499999999995
+EJ,Reference_aligned,Indonesia,nuclear,2075,0.34879
+EJ,Reference_aligned,Indonesia,nuclear,2080,0.392933
+EJ,Reference_aligned,Indonesia,nuclear,2085,0.43500300000000003
+EJ,Reference_aligned,Indonesia,nuclear,2090,0.47561
+EJ,Reference_aligned,Indonesia,nuclear,2095,0.508854
+EJ,Reference_aligned,Indonesia,nuclear,2100,0.530836
+EJ,Reference_aligned,Indonesia,refined liquids,1990,0.0551931
+EJ,Reference_aligned,Indonesia,refined liquids,2005,0.141477
+EJ,Reference_aligned,Indonesia,refined liquids,2010,0.122941
+EJ,Reference_aligned,Indonesia,refined liquids,2015,0.0730909
+EJ,Reference_aligned,Indonesia,refined liquids,2021,0.0402186
+EJ,Reference_aligned,Indonesia,refined liquids,2025,0.04391546
+EJ,Reference_aligned,Indonesia,refined liquids,2030,0.053379
+EJ,Reference_aligned,Indonesia,refined liquids,2035,0.0685419
+EJ,Reference_aligned,Indonesia,refined liquids,2040,0.09589929999999999
+EJ,Reference_aligned,Indonesia,refined liquids,2045,0.1250943
+EJ,Reference_aligned,Indonesia,refined liquids,2050,0.14035350000000002
+EJ,Reference_aligned,Indonesia,refined liquids,2055,0.14886760000000002
+EJ,Reference_aligned,Indonesia,refined liquids,2060,0.16782
+EJ,Reference_aligned,Indonesia,refined liquids,2065,0.1795095
+EJ,Reference_aligned,Indonesia,refined liquids,2070,0.17326719999999998
+EJ,Reference_aligned,Indonesia,refined liquids,2075,0.1637139
+EJ,Reference_aligned,Indonesia,refined liquids,2080,0.15231869999999997
+EJ,Reference_aligned,Indonesia,refined liquids,2085,0.1465171
+EJ,Reference_aligned,Indonesia,refined liquids,2090,0.1308224
+EJ,Reference_aligned,Indonesia,refined liquids,2095,0.11244288
+EJ,Reference_aligned,Indonesia,refined liquids,2100,0.10141990000000001
+EJ,Reference_aligned,Indonesia,rooftop_pv,2030,0.0118105
+EJ,Reference_aligned,Indonesia,rooftop_pv,2035,0.0105466
+EJ,Reference_aligned,Indonesia,rooftop_pv,2040,0.0115559
+EJ,Reference_aligned,Indonesia,rooftop_pv,2045,0.0132634
+EJ,Reference_aligned,Indonesia,rooftop_pv,2050,0.0154384
+EJ,Reference_aligned,Indonesia,rooftop_pv,2055,0.0172071
+EJ,Reference_aligned,Indonesia,rooftop_pv,2060,0.0251511
+EJ,Reference_aligned,Indonesia,rooftop_pv,2065,0.0348572
+EJ,Reference_aligned,Indonesia,rooftop_pv,2070,0.0410244
+EJ,Reference_aligned,Indonesia,rooftop_pv,2075,0.0486245
+EJ,Reference_aligned,Indonesia,rooftop_pv,2080,0.0546115
+EJ,Reference_aligned,Indonesia,rooftop_pv,2085,0.0554367
+EJ,Reference_aligned,Indonesia,rooftop_pv,2090,0.0622187
+EJ,Reference_aligned,Indonesia,rooftop_pv,2095,0.0675378
+EJ,Reference_aligned,Indonesia,rooftop_pv,2100,0.072258
+EJ,Reference_aligned,Indonesia,solar,2010,3.60002e-06
+EJ,Reference_aligned,Indonesia,solar,2015,1.8e-05
+EJ,Reference_aligned,Indonesia,solar,2021,0.00069479
+EJ,Reference_aligned,Indonesia,solar,2025,0.00539479
+EJ,Reference_aligned,Indonesia,solar,2030,0.287835428
+EJ,Reference_aligned,Indonesia,solar,2035,0.6227263319999999
+EJ,Reference_aligned,Indonesia,solar,2040,0.934537411
+EJ,Reference_aligned,Indonesia,solar,2045,1.283418671
+EJ,Reference_aligned,Indonesia,solar,2050,1.666857651
+EJ,Reference_aligned,Indonesia,solar,2055,1.9636094210000001
+EJ,Reference_aligned,Indonesia,solar,2060,2.159022203
+EJ,Reference_aligned,Indonesia,solar,2065,2.337636357
+EJ,Reference_aligned,Indonesia,solar,2070,2.53389564
+EJ,Reference_aligned,Indonesia,solar,2075,2.68534529
+EJ,Reference_aligned,Indonesia,solar,2080,2.81664669
+EJ,Reference_aligned,Indonesia,solar,2085,2.9871247199999997
+EJ,Reference_aligned,Indonesia,solar,2090,3.04867594
+EJ,Reference_aligned,Indonesia,solar,2095,3.08941255
+EJ,Reference_aligned,Indonesia,solar,2100,3.12222849
+EJ,Reference_aligned,Indonesia,wind,2010,1.44001e-05
+EJ,Reference_aligned,Indonesia,wind,2015,1.44e-05
+EJ,Reference_aligned,Indonesia,wind,2021,0.00157318
+EJ,Reference_aligned,Indonesia,wind,2025,0.00157318
+EJ,Reference_aligned,Indonesia,wind,2030,0.043121025
+EJ,Reference_aligned,Indonesia,wind,2035,0.08163962
+EJ,Reference_aligned,Indonesia,wind,2040,0.12495024100000002
+EJ,Reference_aligned,Indonesia,wind,2045,0.177486185
+EJ,Reference_aligned,Indonesia,wind,2050,0.235118342
+EJ,Reference_aligned,Indonesia,wind,2055,0.28403855100000003
+EJ,Reference_aligned,Indonesia,wind,2060,0.307149533
+EJ,Reference_aligned,Indonesia,wind,2065,0.334142225
+EJ,Reference_aligned,Indonesia,wind,2070,0.351799748
+EJ,Reference_aligned,Indonesia,wind,2075,0.357314935
+EJ,Reference_aligned,Indonesia,wind,2080,0.359954504
+EJ,Reference_aligned,Indonesia,wind,2085,0.360300229
+EJ,Reference_aligned,Indonesia,wind,2090,0.353518537
+EJ,Reference_aligned,Indonesia,wind,2095,0.346819458
+EJ,Reference_aligned,Indonesia,wind,2100,0.34000174
+EJ,NZE2060,Indonesia,biomass,2005,7.92002e-05
+EJ,NZE2060,Indonesia,biomass,2010,0.000342002
+EJ,NZE2060,Indonesia,biomass,2015,0.0017316
+EJ,NZE2060,Indonesia,biomass,2021,0.0505325
+EJ,NZE2060,Indonesia,biomass,2025,0.0610967
+EJ,NZE2060,Indonesia,biomass,2030,0.0617982
+EJ,NZE2060,Indonesia,biomass,2035,0.10991482400000001
+EJ,NZE2060,Indonesia,biomass,2040,0.22414756000000002
+EJ,NZE2060,Indonesia,biomass,2045,0.37805257
+EJ,NZE2060,Indonesia,biomass,2050,0.54011494
+EJ,NZE2060,Indonesia,biomass,2055,0.69984629
+EJ,NZE2060,Indonesia,biomass,2060,0.91805139
+EJ,NZE2060,Indonesia,biomass,2065,1.0069233800000001
+EJ,NZE2060,Indonesia,biomass,2070,1.06660577
+EJ,NZE2060,Indonesia,biomass,2075,1.13475674
+EJ,NZE2060,Indonesia,biomass,2080,1.20957044
+EJ,NZE2060,Indonesia,biomass,2085,1.26349745
+EJ,NZE2060,Indonesia,biomass,2090,1.33891152
+EJ,NZE2060,Indonesia,biomass,2095,1.39944419
+EJ,NZE2060,Indonesia,biomass,2100,1.4075738
+EJ,NZE2060,Indonesia,coal,1990,0.0351635
+EJ,NZE2060,Indonesia,coal,2005,0.186455
+EJ,NZE2060,Indonesia,coal,2010,0.246403
+EJ,NZE2060,Indonesia,coal,2015,0.469829
+EJ,NZE2060,Indonesia,coal,2021,0.682849
+EJ,NZE2060,Indonesia,coal,2025,0.848524
+EJ,NZE2060,Indonesia,coal,2030,0.9378914049999999
+EJ,NZE2060,Indonesia,coal,2035,0.708860201
+EJ,NZE2060,Indonesia,coal,2040,0.53887717
+EJ,NZE2060,Indonesia,coal,2045,0.46085784
+EJ,NZE2060,Indonesia,coal,2050,0.38612177
+EJ,NZE2060,Indonesia,coal,2055,0.32009655
+EJ,NZE2060,Indonesia,coal,2060,0.25986045
+EJ,NZE2060,Indonesia,coal,2065,0.29477539
+EJ,NZE2060,Indonesia,coal,2070,0.29769108
+EJ,NZE2060,Indonesia,coal,2075,0.29683238
+EJ,NZE2060,Indonesia,coal,2080,0.29349121
+EJ,NZE2060,Indonesia,coal,2085,0.28116096
+EJ,NZE2060,Indonesia,coal,2090,0.2755461
+EJ,NZE2060,Indonesia,coal,2095,0.26900255
+EJ,NZE2060,Indonesia,coal,2100,0.25439973
+EJ,NZE2060,Indonesia,gas,1990,0.0026422994
+EJ,NZE2060,Indonesia,gas,2005,0.0687097
+EJ,NZE2060,Indonesia,gas,2010,0.1448897
+EJ,NZE2060,Indonesia,gas,2015,0.2120187
+EJ,NZE2060,Indonesia,gas,2021,0.18915589
+EJ,NZE2060,Indonesia,gas,2025,0.2314928
+EJ,NZE2060,Indonesia,gas,2030,0.2525665
+EJ,NZE2060,Indonesia,gas,2035,0.2465819
+EJ,NZE2060,Indonesia,gas,2040,0.2679022
+EJ,NZE2060,Indonesia,gas,2045,0.28649979999999997
+EJ,NZE2060,Indonesia,gas,2050,0.3173638
+EJ,NZE2060,Indonesia,gas,2055,0.3366753
+EJ,NZE2060,Indonesia,gas,2060,0.3568577
+EJ,NZE2060,Indonesia,gas,2065,0.4029844
+EJ,NZE2060,Indonesia,gas,2070,0.4146302
+EJ,NZE2060,Indonesia,gas,2075,0.44359421
+EJ,NZE2060,Indonesia,gas,2080,0.45790242999999997
+EJ,NZE2060,Indonesia,gas,2085,0.46276416
+EJ,NZE2060,Indonesia,gas,2090,0.47671249
+EJ,NZE2060,Indonesia,gas,2095,0.49780779
+EJ,NZE2060,Indonesia,gas,2100,0.53166219
+EJ,NZE2060,Indonesia,geothermal,1990,0.00404985
+EJ,NZE2060,Indonesia,geothermal,2005,0.0237745
+EJ,NZE2060,Indonesia,geothermal,2010,0.0336854
+EJ,NZE2060,Indonesia,geothermal,2015,0.0361729
+EJ,NZE2060,Indonesia,geothermal,2021,0.0572356
+EJ,NZE2060,Indonesia,geothermal,2025,0.0742469
+EJ,NZE2060,Indonesia,geothermal,2030,0.0870493
+EJ,NZE2060,Indonesia,geothermal,2035,0.114647
+EJ,NZE2060,Indonesia,geothermal,2040,0.144411
+EJ,NZE2060,Indonesia,geothermal,2045,0.164507
+EJ,NZE2060,Indonesia,geothermal,2050,0.153369
+EJ,NZE2060,Indonesia,geothermal,2055,0.164759
+EJ,NZE2060,Indonesia,geothermal,2060,0.164779
+EJ,NZE2060,Indonesia,geothermal,2065,0.164767
+EJ,NZE2060,Indonesia,geothermal,2070,0.16476
+EJ,NZE2060,Indonesia,geothermal,2075,0.164763
+EJ,NZE2060,Indonesia,geothermal,2080,0.164746
+EJ,NZE2060,Indonesia,geothermal,2085,0.164742
+EJ,NZE2060,Indonesia,geothermal,2090,0.164739
+EJ,NZE2060,Indonesia,geothermal,2095,0.16474
+EJ,NZE2060,Indonesia,geothermal,2100,0.164748
+EJ,NZE2060,Indonesia,hydro,1990,0.0205488
+EJ,NZE2060,Indonesia,hydro,2005,0.03861
+EJ,NZE2060,Indonesia,hydro,2010,0.0628416
+EJ,NZE2060,Indonesia,hydro,2015,0.0494676
+EJ,NZE2060,Indonesia,hydro,2021,0.0889092
+EJ,NZE2060,Indonesia,hydro,2025,0.0895579
+EJ,NZE2060,Indonesia,hydro,2030,0.0903687
+EJ,NZE2060,Indonesia,hydro,2035,0.0911795
+EJ,NZE2060,Indonesia,hydro,2040,0.0919903
+EJ,NZE2060,Indonesia,hydro,2045,0.0928012
+EJ,NZE2060,Indonesia,hydro,2050,0.093612
+EJ,NZE2060,Indonesia,hydro,2055,0.0944228
+EJ,NZE2060,Indonesia,hydro,2060,0.0952336
+EJ,NZE2060,Indonesia,hydro,2065,0.0960445
+EJ,NZE2060,Indonesia,hydro,2070,0.0968553
+EJ,NZE2060,Indonesia,hydro,2075,0.0976661
+EJ,NZE2060,Indonesia,hydro,2080,0.0984769
+EJ,NZE2060,Indonesia,hydro,2085,0.0992877
+EJ,NZE2060,Indonesia,hydro,2090,0.100099
+EJ,NZE2060,Indonesia,hydro,2095,0.100909
+EJ,NZE2060,Indonesia,hydro,2100,0.10172
+EJ,NZE2060,Indonesia,nuclear,2030,0.004636694
+EJ,NZE2060,Indonesia,nuclear,2035,0.02750561
+EJ,NZE2060,Indonesia,nuclear,2040,0.0737477
+EJ,NZE2060,Indonesia,nuclear,2045,0.1448683
+EJ,NZE2060,Indonesia,nuclear,2050,0.244716
+EJ,NZE2060,Indonesia,nuclear,2055,0.336985
+EJ,NZE2060,Indonesia,nuclear,2060,0.46826
+EJ,NZE2060,Indonesia,nuclear,2065,0.608973
+EJ,NZE2060,Indonesia,nuclear,2070,0.7446349999999999
+EJ,NZE2060,Indonesia,nuclear,2075,0.870333
+EJ,NZE2060,Indonesia,nuclear,2080,0.991387
+EJ,NZE2060,Indonesia,nuclear,2085,1.098694
+EJ,NZE2060,Indonesia,nuclear,2090,1.2232910000000001
+EJ,NZE2060,Indonesia,nuclear,2095,1.337139
+EJ,NZE2060,Indonesia,nuclear,2100,1.420242
+EJ,NZE2060,Indonesia,refined liquids,1990,0.0551931
+EJ,NZE2060,Indonesia,refined liquids,2005,0.141477
+EJ,NZE2060,Indonesia,refined liquids,2010,0.122941
+EJ,NZE2060,Indonesia,refined liquids,2015,0.0730909
+EJ,NZE2060,Indonesia,refined liquids,2021,0.0402186
+EJ,NZE2060,Indonesia,refined liquids,2025,0.04391546
+EJ,NZE2060,Indonesia,refined liquids,2030,0.053379
+EJ,NZE2060,Indonesia,refined liquids,2035,0.07172376
+EJ,NZE2060,Indonesia,refined liquids,2040,0.1038074
+EJ,NZE2060,Indonesia,refined liquids,2045,0.1255415
+EJ,NZE2060,Indonesia,refined liquids,2050,0.1241503
+EJ,NZE2060,Indonesia,refined liquids,2055,0.11692930000000001
+EJ,NZE2060,Indonesia,refined liquids,2060,0.11241365
+EJ,NZE2060,Indonesia,refined liquids,2065,0.0924088
+EJ,NZE2060,Indonesia,refined liquids,2070,0.08178215
+EJ,NZE2060,Indonesia,refined liquids,2075,0.07504808
+EJ,NZE2060,Indonesia,refined liquids,2080,0.06944924
+EJ,NZE2060,Indonesia,refined liquids,2085,0.06401543
+EJ,NZE2060,Indonesia,refined liquids,2090,0.05818367000000001
+EJ,NZE2060,Indonesia,refined liquids,2095,0.050467189999999995
+EJ,NZE2060,Indonesia,refined liquids,2100,0.048716380000000004
+EJ,NZE2060,Indonesia,rooftop_pv,2030,0.0118105
+EJ,NZE2060,Indonesia,rooftop_pv,2035,0.00918716
+EJ,NZE2060,Indonesia,rooftop_pv,2040,0.00856067
+EJ,NZE2060,Indonesia,rooftop_pv,2045,0.00990869
+EJ,NZE2060,Indonesia,rooftop_pv,2050,0.0124569
+EJ,NZE2060,Indonesia,rooftop_pv,2055,0.0149631
+EJ,NZE2060,Indonesia,rooftop_pv,2060,0.0220397
+EJ,NZE2060,Indonesia,rooftop_pv,2065,0.0334324
+EJ,NZE2060,Indonesia,rooftop_pv,2070,0.037754
+EJ,NZE2060,Indonesia,rooftop_pv,2075,0.0440175
+EJ,NZE2060,Indonesia,rooftop_pv,2080,0.0493402
+EJ,NZE2060,Indonesia,rooftop_pv,2085,0.0533016
+EJ,NZE2060,Indonesia,rooftop_pv,2090,0.0607357
+EJ,NZE2060,Indonesia,rooftop_pv,2095,0.0665168
+EJ,NZE2060,Indonesia,rooftop_pv,2100,0.0700211
+EJ,NZE2060,Indonesia,solar,2010,3.60002e-06
+EJ,NZE2060,Indonesia,solar,2015,1.8e-05
+EJ,NZE2060,Indonesia,solar,2021,0.00069479
+EJ,NZE2060,Indonesia,solar,2025,0.00539479
+EJ,NZE2060,Indonesia,solar,2030,0.287835428
+EJ,NZE2060,Indonesia,solar,2035,0.745881972
+EJ,NZE2060,Indonesia,solar,2040,1.129021352
+EJ,NZE2060,Indonesia,solar,2045,1.526550062
+EJ,NZE2060,Indonesia,solar,2050,1.958370412
+EJ,NZE2060,Indonesia,solar,2055,2.316561612
+EJ,NZE2060,Indonesia,solar,2060,2.6236796840000003
+EJ,NZE2060,Indonesia,solar,2065,2.87535431
+EJ,NZE2060,Indonesia,solar,2070,3.16305591
+EJ,NZE2060,Indonesia,solar,2075,3.39312624
+EJ,NZE2060,Indonesia,solar,2080,3.5885312000000003
+EJ,NZE2060,Indonesia,solar,2085,3.7717574000000003
+EJ,NZE2060,Indonesia,solar,2090,3.8825137
+EJ,NZE2060,Indonesia,solar,2095,3.9753935
+EJ,NZE2060,Indonesia,solar,2100,4.075154
+EJ,NZE2060,Indonesia,wind,2010,1.44001e-05
+EJ,NZE2060,Indonesia,wind,2015,1.44e-05
+EJ,NZE2060,Indonesia,wind,2021,0.00157318
+EJ,NZE2060,Indonesia,wind,2025,0.00157318
+EJ,NZE2060,Indonesia,wind,2030,0.043121025
+EJ,NZE2060,Indonesia,wind,2035,0.123143749
+EJ,NZE2060,Indonesia,wind,2040,0.219479853
+EJ,NZE2060,Indonesia,wind,2045,0.323150187
+EJ,NZE2060,Indonesia,wind,2050,0.431314621
+EJ,NZE2060,Indonesia,wind,2055,0.526120397
+EJ,NZE2060,Indonesia,wind,2060,0.604786992
+EJ,NZE2060,Indonesia,wind,2065,0.661569828
+EJ,NZE2060,Indonesia,wind,2070,0.703248054
+EJ,NZE2060,Indonesia,wind,2075,0.73073332
+EJ,NZE2060,Indonesia,wind,2080,0.756433756
+EJ,NZE2060,Indonesia,wind,2085,0.761690886
+EJ,NZE2060,Indonesia,wind,2090,0.765904796
+EJ,NZE2060,Indonesia,wind,2095,0.774894626
+EJ,NZE2060,Indonesia,wind,2100,0.782874816
+EJ,NZE2050,Indonesia,biomass,2005,7.92002e-05
+EJ,NZE2050,Indonesia,biomass,2010,0.000342002
+EJ,NZE2050,Indonesia,biomass,2015,0.0017316
+EJ,NZE2050,Indonesia,biomass,2021,0.0505325
+EJ,NZE2050,Indonesia,biomass,2025,0.0610967
+EJ,NZE2050,Indonesia,biomass,2030,0.0617982
+EJ,NZE2050,Indonesia,biomass,2035,0.147103397
+EJ,NZE2050,Indonesia,biomass,2040,0.36576113
+EJ,NZE2050,Indonesia,biomass,2045,0.64729604
+EJ,NZE2050,Indonesia,biomass,2050,0.94016809
+EJ,NZE2050,Indonesia,biomass,2055,0.9890797399999999
+EJ,NZE2050,Indonesia,biomass,2060,1.0331626
+EJ,NZE2050,Indonesia,biomass,2065,1.084724
+EJ,NZE2050,Indonesia,biomass,2070,1.14950287
+EJ,NZE2050,Indonesia,biomass,2075,1.229932
+EJ,NZE2050,Indonesia,biomass,2080,1.3134114799999999
+EJ,NZE2050,Indonesia,biomass,2085,1.3623655200000002
+EJ,NZE2050,Indonesia,biomass,2090,1.42613601
+EJ,NZE2050,Indonesia,biomass,2095,1.46018718
+EJ,NZE2050,Indonesia,biomass,2100,1.39908617
+EJ,NZE2050,Indonesia,coal,1990,0.0351635
+EJ,NZE2050,Indonesia,coal,2005,0.186455
+EJ,NZE2050,Indonesia,coal,2010,0.246403
+EJ,NZE2050,Indonesia,coal,2015,0.469829
+EJ,NZE2050,Indonesia,coal,2021,0.682849
+EJ,NZE2050,Indonesia,coal,2025,0.848524
+EJ,NZE2050,Indonesia,coal,2030,0.9378914049999999
+EJ,NZE2050,Indonesia,coal,2035,0.579946783
+EJ,NZE2050,Indonesia,coal,2040,0.35671294
+EJ,NZE2050,Indonesia,coal,2045,0.26352039
+EJ,NZE2050,Indonesia,coal,2050,0.20838418099999997
+EJ,NZE2050,Indonesia,coal,2055,0.28665906999999996
+EJ,NZE2050,Indonesia,coal,2060,0.30404988
+EJ,NZE2050,Indonesia,coal,2065,0.28233498
+EJ,NZE2050,Indonesia,coal,2070,0.28659558
+EJ,NZE2050,Indonesia,coal,2075,0.27630179
+EJ,NZE2050,Indonesia,coal,2080,0.26171354999999996
+EJ,NZE2050,Indonesia,coal,2085,0.25242254000000003
+EJ,NZE2050,Indonesia,coal,2090,0.25837637999999996
+EJ,NZE2050,Indonesia,coal,2095,0.25023217999999997
+EJ,NZE2050,Indonesia,coal,2100,0.22199194
+EJ,NZE2050,Indonesia,gas,1990,0.0026422994
+EJ,NZE2050,Indonesia,gas,2005,0.0687097
+EJ,NZE2050,Indonesia,gas,2010,0.1448897
+EJ,NZE2050,Indonesia,gas,2015,0.2120187
+EJ,NZE2050,Indonesia,gas,2021,0.18915589
+EJ,NZE2050,Indonesia,gas,2025,0.2314928
+EJ,NZE2050,Indonesia,gas,2030,0.2525665
+EJ,NZE2050,Indonesia,gas,2035,0.2470772
+EJ,NZE2050,Indonesia,gas,2040,0.2524668
+EJ,NZE2050,Indonesia,gas,2045,0.2546596
+EJ,NZE2050,Indonesia,gas,2050,0.2626007
+EJ,NZE2050,Indonesia,gas,2055,0.315597
+EJ,NZE2050,Indonesia,gas,2060,0.3609349
+EJ,NZE2050,Indonesia,gas,2065,0.3928465
+EJ,NZE2050,Indonesia,gas,2070,0.4045695
+EJ,NZE2050,Indonesia,gas,2075,0.43080096
+EJ,NZE2050,Indonesia,gas,2080,0.43106480999999996
+EJ,NZE2050,Indonesia,gas,2085,0.42554357
+EJ,NZE2050,Indonesia,gas,2090,0.44770856
+EJ,NZE2050,Indonesia,gas,2095,0.48834887000000005
+EJ,NZE2050,Indonesia,gas,2100,0.5368429
+EJ,NZE2050,Indonesia,geothermal,1990,0.00404985
+EJ,NZE2050,Indonesia,geothermal,2005,0.0237745
+EJ,NZE2050,Indonesia,geothermal,2010,0.0336854
+EJ,NZE2050,Indonesia,geothermal,2015,0.0361729
+EJ,NZE2050,Indonesia,geothermal,2021,0.0572356
+EJ,NZE2050,Indonesia,geothermal,2025,0.0742469
+EJ,NZE2050,Indonesia,geothermal,2030,0.0870493
+EJ,NZE2050,Indonesia,geothermal,2035,0.120351
+EJ,NZE2050,Indonesia,geothermal,2040,0.151531
+EJ,NZE2050,Indonesia,geothermal,2045,0.164535
+EJ,NZE2050,Indonesia,geothermal,2050,0.153932
+EJ,NZE2050,Indonesia,geothermal,2055,0.161388
+EJ,NZE2050,Indonesia,geothermal,2060,0.16477
+EJ,NZE2050,Indonesia,geothermal,2065,0.164753
+EJ,NZE2050,Indonesia,geothermal,2070,0.164748
+EJ,NZE2050,Indonesia,geothermal,2075,0.164755
+EJ,NZE2050,Indonesia,geothermal,2080,0.164745
+EJ,NZE2050,Indonesia,geothermal,2085,0.164752
+EJ,NZE2050,Indonesia,geothermal,2090,0.164745
+EJ,NZE2050,Indonesia,geothermal,2095,0.164739
+EJ,NZE2050,Indonesia,geothermal,2100,0.164746
+EJ,NZE2050,Indonesia,hydro,1990,0.0205488
+EJ,NZE2050,Indonesia,hydro,2005,0.03861
+EJ,NZE2050,Indonesia,hydro,2010,0.0628416
+EJ,NZE2050,Indonesia,hydro,2015,0.0494676
+EJ,NZE2050,Indonesia,hydro,2021,0.0889092
+EJ,NZE2050,Indonesia,hydro,2025,0.0895579
+EJ,NZE2050,Indonesia,hydro,2030,0.0903687
+EJ,NZE2050,Indonesia,hydro,2035,0.0911795
+EJ,NZE2050,Indonesia,hydro,2040,0.0919903
+EJ,NZE2050,Indonesia,hydro,2045,0.0928012
+EJ,NZE2050,Indonesia,hydro,2050,0.093612
+EJ,NZE2050,Indonesia,hydro,2055,0.0944228
+EJ,NZE2050,Indonesia,hydro,2060,0.0952336
+EJ,NZE2050,Indonesia,hydro,2065,0.0960445
+EJ,NZE2050,Indonesia,hydro,2070,0.0968553
+EJ,NZE2050,Indonesia,hydro,2075,0.0976661
+EJ,NZE2050,Indonesia,hydro,2080,0.0984769
+EJ,NZE2050,Indonesia,hydro,2085,0.0992877
+EJ,NZE2050,Indonesia,hydro,2090,0.100099
+EJ,NZE2050,Indonesia,hydro,2095,0.100909
+EJ,NZE2050,Indonesia,hydro,2100,0.10172
+EJ,NZE2050,Indonesia,nuclear,2030,0.004636694
+EJ,NZE2050,Indonesia,nuclear,2035,0.0335904
+EJ,NZE2050,Indonesia,nuclear,2040,0.08664050000000001
+EJ,NZE2050,Indonesia,nuclear,2045,0.1597094
+EJ,NZE2050,Indonesia,nuclear,2050,0.251455
+EJ,NZE2050,Indonesia,nuclear,2055,0.31299299999999997
+EJ,NZE2050,Indonesia,nuclear,2060,0.433133
+EJ,NZE2050,Indonesia,nuclear,2065,0.587484
+EJ,NZE2050,Indonesia,nuclear,2070,0.720107
+EJ,NZE2050,Indonesia,nuclear,2075,0.845111
+EJ,NZE2050,Indonesia,nuclear,2080,0.9690719999999999
+EJ,NZE2050,Indonesia,nuclear,2085,1.065863
+EJ,NZE2050,Indonesia,nuclear,2090,1.187929
+EJ,NZE2050,Indonesia,nuclear,2095,1.3048220000000001
+EJ,NZE2050,Indonesia,nuclear,2100,1.39145
+EJ,NZE2050,Indonesia,refined liquids,1990,0.0551931
+EJ,NZE2050,Indonesia,refined liquids,2005,0.141477
+EJ,NZE2050,Indonesia,refined liquids,2010,0.122941
+EJ,NZE2050,Indonesia,refined liquids,2015,0.0730909
+EJ,NZE2050,Indonesia,refined liquids,2021,0.0402186
+EJ,NZE2050,Indonesia,refined liquids,2025,0.04391546
+EJ,NZE2050,Indonesia,refined liquids,2030,0.053379
+EJ,NZE2050,Indonesia,refined liquids,2035,0.08029549
+EJ,NZE2050,Indonesia,refined liquids,2040,0.11356676
+EJ,NZE2050,Indonesia,refined liquids,2045,0.1260527
+EJ,NZE2050,Indonesia,refined liquids,2050,0.11565909
+EJ,NZE2050,Indonesia,refined liquids,2055,0.08537398
+EJ,NZE2050,Indonesia,refined liquids,2060,0.08697949999999999
+EJ,NZE2050,Indonesia,refined liquids,2065,0.0879557
+EJ,NZE2050,Indonesia,refined liquids,2070,0.07875552
+EJ,NZE2050,Indonesia,refined liquids,2075,0.07239809999999999
+EJ,NZE2050,Indonesia,refined liquids,2080,0.06593977
+EJ,NZE2050,Indonesia,refined liquids,2085,0.05857601
+EJ,NZE2050,Indonesia,refined liquids,2090,0.05358528
+EJ,NZE2050,Indonesia,refined liquids,2095,0.047628130000000005
+EJ,NZE2050,Indonesia,refined liquids,2100,0.05121092
+EJ,NZE2050,Indonesia,rooftop_pv,2030,0.0118105
+EJ,NZE2050,Indonesia,rooftop_pv,2035,0.00822232
+EJ,NZE2050,Indonesia,rooftop_pv,2040,0.00681768
+EJ,NZE2050,Indonesia,rooftop_pv,2045,0.00832121
+EJ,NZE2050,Indonesia,rooftop_pv,2050,0.0113608
+EJ,NZE2050,Indonesia,rooftop_pv,2055,0.0194442
+EJ,NZE2050,Indonesia,rooftop_pv,2060,0.0253869
+EJ,NZE2050,Indonesia,rooftop_pv,2065,0.0328489
+EJ,NZE2050,Indonesia,rooftop_pv,2070,0.0377075
+EJ,NZE2050,Indonesia,rooftop_pv,2075,0.0443384
+EJ,NZE2050,Indonesia,rooftop_pv,2080,0.0498125
+EJ,NZE2050,Indonesia,rooftop_pv,2085,0.0531982
+EJ,NZE2050,Indonesia,rooftop_pv,2090,0.0607228
+EJ,NZE2050,Indonesia,rooftop_pv,2095,0.0663574
+EJ,NZE2050,Indonesia,rooftop_pv,2100,0.0677028
+EJ,NZE2050,Indonesia,solar,2010,3.60002e-06
+EJ,NZE2050,Indonesia,solar,2015,1.8e-05
+EJ,NZE2050,Indonesia,solar,2021,0.00069479
+EJ,NZE2050,Indonesia,solar,2025,0.00539479
+EJ,NZE2050,Indonesia,solar,2030,0.287835428
+EJ,NZE2050,Indonesia,solar,2035,0.780641668
+EJ,NZE2050,Indonesia,solar,2040,1.178520878
+EJ,NZE2050,Indonesia,solar,2045,1.5923033580000001
+EJ,NZE2050,Indonesia,solar,2050,2.0416853280000002
+EJ,NZE2050,Indonesia,solar,2055,2.323663518
+EJ,NZE2050,Indonesia,solar,2060,2.61428129
+EJ,NZE2050,Indonesia,solar,2065,2.88029194
+EJ,NZE2050,Indonesia,solar,2070,3.13872833
+EJ,NZE2050,Indonesia,solar,2075,3.35805985
+EJ,NZE2050,Indonesia,solar,2080,3.56237649
+EJ,NZE2050,Indonesia,solar,2085,3.76621936
+EJ,NZE2050,Indonesia,solar,2090,3.88001796
+EJ,NZE2050,Indonesia,solar,2095,3.97406586
+EJ,NZE2050,Indonesia,solar,2100,4.10654916
+EJ,NZE2050,Indonesia,wind,2010,1.44001e-05
+EJ,NZE2050,Indonesia,wind,2015,1.44e-05
+EJ,NZE2050,Indonesia,wind,2021,0.00157318
+EJ,NZE2050,Indonesia,wind,2025,0.00157318
+EJ,NZE2050,Indonesia,wind,2030,0.043121025
+EJ,NZE2050,Indonesia,wind,2035,0.140548289
+EJ,NZE2050,Indonesia,wind,2040,0.247337018
+EJ,NZE2050,Indonesia,wind,2045,0.351894191
+EJ,NZE2050,Indonesia,wind,2050,0.451257232
+EJ,NZE2050,Indonesia,wind,2055,0.515015612
+EJ,NZE2050,Indonesia,wind,2060,0.579270647
+EJ,NZE2050,Indonesia,wind,2065,0.636237233
+EJ,NZE2050,Indonesia,wind,2070,0.670201174
+EJ,NZE2050,Indonesia,wind,2075,0.702209281
+EJ,NZE2050,Indonesia,wind,2080,0.74962525
+EJ,NZE2050,Indonesia,wind,2085,0.765160022
+EJ,NZE2050,Indonesia,wind,2090,0.765290962
+EJ,NZE2050,Indonesia,wind,2095,0.775427812
+EJ,NZE2050,Indonesia,wind,2100,0.794395412

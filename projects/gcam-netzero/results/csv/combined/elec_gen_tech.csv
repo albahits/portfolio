@@ -1,0 +1,1174 @@
+Units,scenario,region,sector,subsector,technology,Year,value
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2030,0.0118105
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2035,0.0105466
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2040,0.0115559
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2045,0.0132634
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2050,0.0154384
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2055,0.0172071
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2060,0.0251511
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2065,0.0348572
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2070,0.0410244
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2075,0.0486245
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2080,0.0546115
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2085,0.0554367
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2090,0.0622187
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2095,0.0675378
+EJ,Reference_aligned,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2100,0.072258
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2030,0.0010795
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2035,0.00207943
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2040,0.00317993
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2045,0.00443232
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2050,0.00568312
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2055,0.00685295
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2060,0.00843988
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2065,0.0100209
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2070,0.0115572
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2075,0.0129466
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2080,0.0142533
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2085,0.0157519
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2090,0.0164028
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2095,0.016952
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (IGCC),2100,0.0174046
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2005,7.92002e-05
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2010,0.000342002
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2015,0.0017316
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2021,0.0505325
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2025,0.0610967
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2030,0.0607187
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2035,0.0639512
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2040,0.0793695
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2045,0.0953307
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2050,0.108002
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2055,0.121242
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2060,0.137045
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2065,0.153697
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2070,0.170613
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2075,0.184443
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2080,0.1968
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2085,0.206508
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2090,0.216892
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2095,0.225406
+EJ,Reference_aligned,Indonesia,electricity,biomass,biomass (conv),2100,0.234408
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2030,0.000798405
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2035,0.00155119
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2040,0.00230611
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2045,0.00311016
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2050,0.00389967
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2055,0.00461088
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2060,0.00560785
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2065,0.00659875
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2070,0.00754143
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2075,0.00841418
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2080,0.00925914
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2085,0.0100625
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2090,0.0101241
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2095,0.0101812
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (IGCC),2100,0.0101701
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),1990,0.0351635
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2005,0.186455
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2010,0.246403
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2015,0.469829
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2021,0.682849
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2025,0.848524
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2030,0.937093
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2035,1.01091
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2040,1.09243
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2045,1.19606
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2050,1.31628
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2055,1.41712
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2060,1.60057
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2065,1.79779
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2070,2.00189
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2075,2.20767
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2080,2.38678
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2085,2.43354
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2090,2.56852
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2095,2.69979
+EJ,Reference_aligned,Indonesia,electricity,coal,coal (conv pul),2100,2.79385
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),1990,1.56594e-05
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2005,0.0350214
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2010,0.0251897
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2015,0.0307737
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2021,0.00243289
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2025,0.0118498
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2030,0.0238455
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2035,0.0444742
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2040,0.0785364
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2045,0.129387
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2050,0.200598
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2055,0.27171
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2060,0.374125
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2065,0.467866
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2070,0.546522
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2075,0.629573
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2080,0.713264
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2085,0.79229
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2090,0.873068
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2095,0.938603
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (CC),2100,1.00118
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),1990,0.00262664
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2005,0.0336883
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2010,0.1197
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2015,0.181245
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2021,0.186723
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2025,0.219643
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2030,0.228721
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2035,0.23162
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2040,0.229207
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2045,0.212712
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2050,0.203801
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2055,0.19644
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2060,0.182744
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2065,0.151441
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2070,0.114703
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2075,0.0976338
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2080,0.0826461
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2085,0.0712069
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2090,0.062036
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2095,0.0555975
+EJ,Reference_aligned,Indonesia,electricity,gas,gas (steam/CT),2100,0.0534234
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,1990,0.00404985
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2005,0.0237745
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2010,0.0336854
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2015,0.0361729
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2021,0.0572356
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2025,0.0742469
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2030,0.0870493
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2035,0.0997839
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2040,0.11402
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2045,0.128376
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2050,0.104635
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2055,0.1117
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2060,0.126059
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2065,0.135753
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2070,0.141872
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2075,0.144524
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2080,0.143883
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2085,0.14599
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2090,0.145761
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2095,0.145163
+EJ,Reference_aligned,Indonesia,electricity,geothermal,geothermal,2100,0.144817
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,1990,0.0205488
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2005,0.03861
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2010,0.0628416
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2015,0.0494676
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2021,0.0889092
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2025,0.0895579
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2030,0.0903687
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2035,0.0911795
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2040,0.0919903
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2045,0.0928012
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2050,0.093612
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2055,0.0944228
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2060,0.0952336
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2065,0.0960445
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2070,0.0968553
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2075,0.0976661
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2080,0.0984769
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2085,0.0992877
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2090,0.100099
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2095,0.100909
+EJ,Reference_aligned,Indonesia,electricity,hydro,hydro,2100,0.10172
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2030,0.000949264
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2035,0.00453657
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2040,0.012469
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2045,0.027676
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2050,0.0501952
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2055,0.0704082
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2060,0.098223
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2065,0.125269
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2070,0.15063
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2075,0.174166
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2080,0.19682
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2085,0.218395
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2090,0.240629
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2095,0.259127
+EJ,Reference_aligned,Indonesia,electricity,nuclear,SMR,2100,0.271476
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2030,0.00368743
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2035,0.00992518
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2040,0.0195969
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2045,0.0343939
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2050,0.0562162
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2055,0.075707
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2060,0.102314
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2065,0.128135
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2070,0.152305
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2075,0.174624
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2080,0.196113
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2085,0.216608
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2090,0.234981
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2095,0.249727
+EJ,Reference_aligned,Indonesia,electricity,nuclear,large reactor,2100,0.25936
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2025,0.00870096
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2030,0.0153992
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2035,0.0258374
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2040,0.0446216
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2045,0.0695874
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2050,0.0870834
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2055,0.096934
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2060,0.117907
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2065,0.131056
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2070,0.137088
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2075,0.136217
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2080,0.131814
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2085,0.131054
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2090,0.119917
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2095,0.104513
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (CC),2100,0.0948765
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),1990,0.0551931
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2005,0.141477
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2010,0.122941
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2015,0.0730909
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2021,0.0402186
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2025,0.0352145
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2030,0.0379798
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2035,0.0427045
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2040,0.0512777
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2045,0.0555069
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2050,0.0532701
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2055,0.0519336
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2060,0.049913
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2065,0.0484535
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2070,0.0361792
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2075,0.0274969
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2080,0.0205047
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2085,0.0154631
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2090,0.0109054
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2095,0.00792988
+EJ,Reference_aligned,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2100,0.0065434
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2030,0.00039921
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2035,0.000940148
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2040,0.00202234
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2045,0.00397606
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2050,0.00688528
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2055,0.0103775
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2060,0.0150771
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2065,0.0199266
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2070,0.02446
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2075,0.0280735
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2080,0.0308276
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2085,0.0334879
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2090,0.0352241
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2095,0.0364197
+EJ,Reference_aligned,Indonesia,electricity,solar,CSP_storage,2100,0.0369749
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2010,3.60002e-06
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2015,1.8e-05
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2021,0.00069479
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2025,0.00539479
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2030,0.28730879
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2035,0.62144479
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2040,0.9316807899999999
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2045,1.27746579
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2050,1.655613
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2055,1.946441
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2060,2.134192
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2065,2.305279
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2070,2.494795
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2075,2.641345
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2080,2.770012
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2085,2.937992
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2090,2.998541
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2095,3.0388669999999998
+EJ,Reference_aligned,Indonesia,electricity,solar,PV,2100,3.071977
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2030,0.000127428
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2035,0.00034139399999999996
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2040,0.000834281
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2045,0.001976821
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2050,0.004359371000000001
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2055,0.006790921
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2060,0.009753103
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2065,0.012430757
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2070,0.01464064
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2075,0.01592679
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2080,0.01580709
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2085,0.01564482
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2090,0.01491084
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2095,0.014125849999999999
+EJ,Reference_aligned,Indonesia,electricity,solar,PV_storage,2100,0.01327659
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2010,1.44001e-05
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2015,1.44e-05
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2021,0.00157318
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2025,0.00157318
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2030,0.04127468
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2035,0.07214528
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2040,0.10418468
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2045,0.14075738
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2050,0.17891790000000002
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2055,0.2117464
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2060,0.21755829999999998
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2065,0.2307443
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2070,0.23998609999999998
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2075,0.2419084
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2080,0.2399108
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2085,0.2431083
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2090,0.2376482
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2095,0.2324931
+EJ,Reference_aligned,Indonesia,electricity,wind,wind,2100,0.2275505
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2030,0.00173403
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2035,0.00926341
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2040,0.02037431
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2045,0.03609521
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2050,0.05521731
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2055,0.07099438
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2060,0.0879659
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2065,0.1014559
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2070,0.1096182
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2075,0.1130675
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2080,0.1176801
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2085,0.11478369999999999
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2090,0.1135144
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2095,0.1120359
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_offshore,2100,0.1102342
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2030,0.000112315
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2035,0.00023093
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2040,0.000391251
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2045,0.000633595
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2050,0.000983132
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2055,0.001297771
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2060,0.001625333
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2065,0.001942025
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2070,0.002195448
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2075,0.002339035
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2080,0.002363604
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2085,0.002408229
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2090,0.0023559370000000002
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2095,0.002290458
+EJ,Reference_aligned,Indonesia,electricity,wind,wind_storage,2100,0.00221704
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2030,0.0118105
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2035,0.00918716
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2040,0.00856067
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2045,0.00990869
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2050,0.0124569
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2055,0.0149631
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2060,0.0220397
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2065,0.0334324
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2070,0.037754
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2075,0.0440175
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2080,0.0493402
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2085,0.0533016
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2090,0.0607357
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2095,0.0665168
+EJ,NZE2060,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2100,0.0700211
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2035,0.000485154
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2040,0.00102086
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2045,0.00149701
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2050,0.00196366
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2055,0.00240076
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2060,0.00309109
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2065,0.00414691
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2070,0.00507413
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2075,0.00598036
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2080,0.00691124
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2085,0.00777305
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2090,0.00883552
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2095,0.00950169
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC CCS),2100,0.0101033
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2030,0.0010795
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2035,0.00207317
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2040,0.0024581
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2045,0.00268196
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2050,0.00287788
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2055,0.00303563
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2060,0.0032823
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2065,0.00502227
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2070,0.00749964
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2075,0.00977538
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2080,0.0117882
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2085,0.0135364
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2090,0.014587
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2095,0.0157195
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (IGCC),2100,0.0169835
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2035,0.0282285
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2040,0.136167
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2045,0.293801
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2050,0.46114
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2055,0.623476
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2060,0.843641
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2065,0.908919
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2070,0.934311
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2075,0.971889
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2080,1.02045
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2085,1.06786
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2090,1.1274
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2095,1.17067
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv CCS),2100,1.15892
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2005,7.92002e-05
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2010,0.000342002
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2015,0.0017316
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2021,0.0505325
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2025,0.0610967
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2030,0.0607187
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2035,0.079128
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2040,0.0845016
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2045,0.0800726
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2050,0.0741334
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2055,0.0709339
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2060,0.068037
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2065,0.0888352
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2070,0.119721
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2075,0.147112
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2080,0.170421
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2085,0.174328
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2090,0.188089
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2095,0.203553
+EJ,NZE2060,Indonesia,electricity,biomass,biomass (conv),2100,0.221567
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2035,0.000537791
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2040,0.00148103
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2045,0.00248163
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2050,0.0034386
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2055,0.00429218
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2060,0.00518375
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2065,0.00542124
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2070,0.0053874
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2075,0.00578109
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2080,0.00631998
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2085,0.00695761
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2090,0.00754312
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2095,0.00784784
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC CCS),2100,0.00815508
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2030,0.000798405
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2035,0.00210841
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2040,0.00278544
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2045,0.00309221
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2050,0.00299517
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2055,0.00246537
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2060,0.0022131
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2065,0.00454115
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2070,0.00620168
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2075,0.00694029
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2080,0.00729723
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2085,0.00783535
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2090,0.00840418
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2095,0.00841271
+EJ,NZE2060,Indonesia,electricity,coal,coal (IGCC),2100,0.00774885
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2035,0.025172
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2040,0.0744637
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2045,0.131838
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2050,0.178786
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2055,0.200997
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2060,0.192368
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2065,0.167847
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2070,0.144286
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2075,0.144733
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2080,0.150912
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2085,0.162499
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2090,0.168953
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2095,0.166579
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul CCS),2100,0.163047
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),1990,0.0351635
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2005,0.186455
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2010,0.246403
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2015,0.469829
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2021,0.682849
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2025,0.848524
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2030,0.937093
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2035,0.681042
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2040,0.460147
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2045,0.323446
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2050,0.200902
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2055,0.112342
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2060,0.0600956
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2065,0.116966
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2070,0.141816
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2075,0.139378
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2080,0.128962
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2085,0.103869
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2090,0.0906458
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2095,0.086163
+EJ,NZE2060,Indonesia,electricity,coal,coal (conv pul),2100,0.0754488
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2035,0.0469562
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2040,0.107764
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2045,0.166932
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2050,0.220321
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2055,0.255815
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2060,0.286107
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2065,0.299979
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2070,0.299311
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2075,0.314961
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2080,0.303402
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2085,0.278881
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2090,0.254602
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2095,0.236418
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC CCS),2100,0.236758
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),1990,1.56594e-05
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2005,0.0350214
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2010,0.0251897
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2015,0.0307737
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2021,0.00243289
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2025,0.0118498
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2030,0.0238455
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2035,0.0289157
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2040,0.0329352
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2045,0.037147
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2050,0.0428175
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2055,0.046967
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2060,0.052304
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2065,0.0831903
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2070,0.104483
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2075,0.12361
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2080,0.150176
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2085,0.179406
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2090,0.217072
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2095,0.255859
+EJ,NZE2060,Indonesia,electricity,gas,gas (CC),2100,0.289121
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),1990,0.00262664
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2005,0.0336883
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2010,0.1197
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2015,0.181245
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2021,0.186723
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2025,0.219643
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2030,0.228721
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2035,0.17071
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2040,0.127203
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2045,0.0824208
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2050,0.0542253
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2055,0.0338933
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2060,0.0184467
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2065,0.0198151
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2070,0.0108362
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2075,0.00502321
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2080,0.00432443
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2085,0.00447716
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2090,0.00503849
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2095,0.00553079
+EJ,NZE2060,Indonesia,electricity,gas,gas (steam/CT),2100,0.00578319
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,1990,0.00404985
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2005,0.0237745
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2010,0.0336854
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2015,0.0361729
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2021,0.0572356
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2025,0.0742469
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2030,0.0870493
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2035,0.114647
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2040,0.144411
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2045,0.164507
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2050,0.153369
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2055,0.164759
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2060,0.164779
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2065,0.164767
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2070,0.16476
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2075,0.164763
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2080,0.164746
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2085,0.164742
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2090,0.164739
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2095,0.16474
+EJ,NZE2060,Indonesia,electricity,geothermal,geothermal,2100,0.164748
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,1990,0.0205488
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2005,0.03861
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2010,0.0628416
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2015,0.0494676
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2021,0.0889092
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2025,0.0895579
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2030,0.0903687
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2035,0.0911795
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2040,0.0919903
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2045,0.0928012
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2050,0.093612
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2055,0.0944228
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2060,0.0952336
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2065,0.0960445
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2070,0.0968553
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2075,0.0976661
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2080,0.0984769
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2085,0.0992877
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2090,0.100099
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2095,0.100909
+EJ,NZE2060,Indonesia,electricity,hydro,hydro,2100,0.10172
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2030,0.000949264
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2035,0.00931791
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2040,0.030188
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2045,0.0662693
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2050,0.117024
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2055,0.164041
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2060,0.231195
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2065,0.303249
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2070,0.372782
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2075,0.437372
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2080,0.499567
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2085,0.554663
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2090,0.620008
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2095,0.681818
+EJ,NZE2060,Indonesia,electricity,nuclear,SMR,2100,0.727283
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2030,0.00368743
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2035,0.0181877
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2040,0.0435597
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2045,0.078599
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2050,0.127692
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2055,0.172944
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2060,0.237065
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2065,0.305724
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2070,0.371853
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2075,0.432961
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2080,0.49182
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2085,0.544031
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2090,0.603283
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2095,0.655321
+EJ,NZE2060,Indonesia,electricity,nuclear,large reactor,2100,0.692959
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2035,0.0359367
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2040,0.0682639
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2045,0.0939767
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2050,0.0979199
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2055,0.0940021
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2060,0.0904331
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2065,0.0620946
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2070,0.0525279
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2075,0.0503804
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2080,0.0464199
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2085,0.0423187
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2090,0.0361918
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2095,0.0299877
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2100,0.0290966
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2025,0.00870096
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2030,0.0153992
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2035,0.00970486
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2040,0.0104423
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2045,0.0104976
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2050,0.0103042
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2055,0.0100214
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2060,0.0122069
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2065,0.0202528
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2070,0.0236081
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2075,0.0225266
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2080,0.0213866
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2085,0.0202587
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2090,0.0207023
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2095,0.0193419
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (CC),2100,0.0185371
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),1990,0.0551931
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2005,0.141477
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2010,0.122941
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2015,0.0730909
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2021,0.0402186
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2025,0.0352145
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2030,0.0379798
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2035,0.0260822
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2040,0.0251012
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2045,0.0210672
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2050,0.0159262
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2055,0.0129058
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2060,0.00977365
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2065,0.0100614
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2070,0.00564615
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2075,0.00214108
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2080,0.00164274
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2085,0.00143803
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2090,0.00128957
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2095,0.00113759
+EJ,NZE2060,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2100,0.00108268
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2030,0.00039921
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2035,0.00250918
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2040,0.00822356
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2045,0.0170075
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2050,0.0286369
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2055,0.0423463
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2060,0.0630994
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2065,0.0855012
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2070,0.107488
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2075,0.12729
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2080,0.145446
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2085,0.161011
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2090,0.176327
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2095,0.19099
+EJ,NZE2060,Indonesia,electricity,solar,CSP_storage,2100,0.202426
+EJ,NZE2060,Indonesia,electricity,solar,PV,2010,3.60002e-06
+EJ,NZE2060,Indonesia,electricity,solar,PV,2015,1.8e-05
+EJ,NZE2060,Indonesia,electricity,solar,PV,2021,0.00069479
+EJ,NZE2060,Indonesia,electricity,solar,PV,2025,0.00539479
+EJ,NZE2060,Indonesia,electricity,solar,PV,2030,0.28730879
+EJ,NZE2060,Indonesia,electricity,solar,PV,2035,0.7424127899999999
+EJ,NZE2060,Indonesia,electricity,solar,PV,2040,1.1172407899999999
+EJ,NZE2060,Indonesia,electricity,solar,PV,2045,1.50085679
+EJ,NZE2060,Indonesia,electricity,solar,PV,2050,1.911536
+EJ,NZE2060,Indonesia,electricity,solar,PV,2055,2.246485
+EJ,NZE2060,Indonesia,electricity,solar,PV,2060,2.5201770000000003
+EJ,NZE2060,Indonesia,electricity,solar,PV,2065,2.737152
+EJ,NZE2060,Indonesia,electricity,solar,PV,2070,2.992152
+EJ,NZE2060,Indonesia,electricity,solar,PV,2075,3.1951
+EJ,NZE2060,Indonesia,electricity,solar,PV,2080,3.36998
+EJ,NZE2060,Indonesia,electricity,solar,PV,2085,3.536396
+EJ,NZE2060,Indonesia,electricity,solar,PV,2090,3.63209
+EJ,NZE2060,Indonesia,electricity,solar,PV,2095,3.710927
+EJ,NZE2060,Indonesia,electricity,solar,PV,2100,3.800826
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2030,0.000127428
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2035,0.000960002
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2040,0.003557002
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2045,0.008685772
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2050,0.018197512
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2055,0.027730312
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2060,0.040403284
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2065,0.05270111
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2070,0.06341591
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2075,0.07073624
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2080,0.0731052
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2085,0.0743504
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2090,0.0740967
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2095,0.0734765
+EJ,NZE2060,Indonesia,electricity,solar,PV_storage,2100,0.071902
+EJ,NZE2060,Indonesia,electricity,wind,wind,2010,1.44001e-05
+EJ,NZE2060,Indonesia,electricity,wind,wind,2015,1.44e-05
+EJ,NZE2060,Indonesia,electricity,wind,wind,2021,0.00157318
+EJ,NZE2060,Indonesia,electricity,wind,wind,2025,0.00157318
+EJ,NZE2060,Indonesia,electricity,wind,wind,2030,0.04127468
+EJ,NZE2060,Indonesia,electricity,wind,wind,2035,0.10273978
+EJ,NZE2060,Indonesia,electricity,wind,wind,2040,0.16887308
+EJ,NZE2060,Indonesia,electricity,wind,wind,2045,0.23517208
+EJ,NZE2060,Indonesia,electricity,wind,wind,2050,0.3011332
+EJ,NZE2060,Indonesia,electricity,wind,wind,2055,0.3584172
+EJ,NZE2060,Indonesia,electricity,wind,wind,2060,0.3984911
+EJ,NZE2060,Indonesia,electricity,wind,wind,2065,0.42292850000000004
+EJ,NZE2060,Indonesia,electricity,wind,wind,2070,0.4401079
+EJ,NZE2060,Indonesia,electricity,wind,wind,2075,0.4513889
+EJ,NZE2060,Indonesia,electricity,wind,wind,2080,0.4595505
+EJ,NZE2060,Indonesia,electricity,wind,wind,2085,0.4692333
+EJ,NZE2060,Indonesia,electricity,wind,wind,2090,0.4721704
+EJ,NZE2060,Indonesia,electricity,wind,wind,2095,0.47509219999999996
+EJ,NZE2060,Indonesia,electricity,wind,wind,2100,0.47678129999999996
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2030,0.00173403
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2035,0.02000093
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2040,0.04974923
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2045,0.08649803
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2050,0.12784873
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2055,0.16457549999999999
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2060,0.2021246
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2065,0.2334997
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2070,0.2572208
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2075,0.2728983
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2080,0.2901753
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2085,0.2855536
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2090,0.2867922
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2095,0.2928559
+EJ,NZE2060,Indonesia,electricity,wind,wind_offshore,2100,0.29918
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2030,0.000112315
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2035,0.000403039
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2040,0.000857543
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2045,0.001480077
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2050,0.002332691
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2055,0.003127697
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2060,0.004171292
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2065,0.0051416280000000005
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2070,0.005919354
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2075,0.00644612
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2080,0.006707956
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2085,0.006903986
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2090,0.0069421959999999994
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2095,0.006946526
+EJ,NZE2060,Indonesia,electricity,wind,wind_storage,2100,0.006913516
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2030,0.0118105
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2035,0.00822232
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2040,0.00681768
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2045,0.00832121
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2050,0.0113608
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2055,0.0194442
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2060,0.0253869
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2065,0.0328489
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2070,0.0377075
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2075,0.0443384
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2080,0.0498125
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2085,0.0531982
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2090,0.0607228
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2095,0.0663574
+EJ,NZE2050,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,2100,0.0677028
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2035,0.000634837
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2040,0.00107544
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2045,0.00138547
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2050,0.00163076
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2055,0.00206353
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2060,0.00284191
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2065,0.00377689
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2070,0.00463487
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2075,0.0055467
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2080,0.00652098
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2085,0.00730672
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2090,0.00832411
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2095,0.00891478
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC CCS),2100,0.00970097
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2030,0.0010795
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2035,0.00181546
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2040,0.00194609
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2045,0.00198027
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2050,0.00197123
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2055,0.00251451
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2060,0.00452209
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2065,0.00760111
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2070,0.010239
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2075,0.0124823
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2080,0.0144305
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2085,0.0159688
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2090,0.0171079
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2095,0.0186724
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (IGCC),2100,0.0199102
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2035,0.0667811
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2040,0.288681
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2045,0.580777
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2050,0.883875
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2055,0.923403
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2060,0.941535
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2065,0.951735
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2070,0.981812
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2075,1.03288
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2080,1.0914
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2085,1.13639
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2090,1.18323
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2095,1.19414
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv CCS),2100,1.11274
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2005,7.92002e-05
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2010,0.000342002
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2015,0.0017316
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2021,0.0505325
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2025,0.0610967
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2030,0.0607187
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2035,0.077872
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2040,0.0740586
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2045,0.0631533
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2050,0.0526911
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2055,0.0610987
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2060,0.0842636
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2065,0.121611
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2070,0.152817
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2075,0.179023
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2080,0.20106
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2085,0.2027
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2090,0.217474
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2095,0.23846
+EJ,NZE2050,Indonesia,electricity,biomass,biomass (conv),2100,0.256735
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2035,0.000901653
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2040,0.00222008
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2045,0.00343942
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2050,0.00426714
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2055,0.00444917
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2060,0.00446257
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2065,0.00439955
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2070,0.00481148
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2075,0.00531407
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2080,0.00582615
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2085,0.00645328
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2090,0.00702365
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2095,0.00723476
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC CCS),2100,0.00761202
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2030,0.000798405
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2035,0.00202963
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2040,0.00204586
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2045,0.00152497
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2050,0.000962041
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2055,0.0024289
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2060,0.00450431
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2065,0.00629843
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2070,0.0073121
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2075,0.00760572
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2080,0.0075404
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2085,0.00803826
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2090,0.00927403
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2095,0.00917092
+EJ,NZE2050,Indonesia,electricity,coal,coal (IGCC),2100,0.00732332
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2035,0.0394565
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2040,0.10088
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2045,0.151748
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2050,0.164923
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2055,0.156741
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2060,0.132687
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2065,0.109849
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2070,0.112819
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2075,0.11843
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2080,0.123303
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2085,0.135071
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2090,0.14259
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2095,0.138763
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul CCS),2100,0.136858
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),1990,0.0351635
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2005,0.186455
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2010,0.246403
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2015,0.469829
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2021,0.682849
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2025,0.848524
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2030,0.937093
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2035,0.537559
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2040,0.251567
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2045,0.106808
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2050,0.038232
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2055,0.12304
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2060,0.162396
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2065,0.161788
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2070,0.161653
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2075,0.144952
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2080,0.125044
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2085,0.10286
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2090,0.0994887
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2095,0.0950635
+EJ,NZE2050,Indonesia,electricity,coal,coal (conv pul),2100,0.0701986
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2035,0.0620627
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2040,0.131241
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2045,0.185636
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2050,0.220307
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2055,0.238628
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2060,0.255041
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2065,0.262226
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2070,0.267399
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2075,0.283337
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2080,0.258914
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2085,0.225069
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2090,0.202012
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2095,0.196138
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC CCS),2100,0.221378
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),1990,1.56594e-05
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2005,0.0350214
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2010,0.0251897
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2015,0.0307737
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2021,0.00243289
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2025,0.0118498
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2030,0.0238455
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2035,0.0275015
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2040,0.0288363
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2045,0.0279064
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2050,0.0247716
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2055,0.0399243
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2060,0.0695374
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2065,0.106437
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2070,0.125771
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2075,0.142715
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2080,0.167982
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2085,0.195983
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2090,0.240083
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2095,0.285843
+EJ,NZE2050,Indonesia,electricity,gas,gas (CC),2100,0.309472
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),1990,0.00262664
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2005,0.0336883
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2010,0.1197
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2015,0.181245
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2021,0.186723
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2025,0.219643
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2030,0.228721
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2035,0.157513
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2040,0.0923895
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2045,0.0411172
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2050,0.0175221
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2055,0.0370447
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2060,0.0363565
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2065,0.0241835
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2070,0.0113995
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2075,0.00474896
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2080,0.00416881
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2085,0.00449157
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2090,0.00561356
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2095,0.00636787
+EJ,NZE2050,Indonesia,electricity,gas,gas (steam/CT),2100,0.0059929
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,1990,0.00404985
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2005,0.0237745
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2010,0.0336854
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2015,0.0361729
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2021,0.0572356
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2025,0.0742469
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2030,0.0870493
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2035,0.120351
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2040,0.151531
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2045,0.164535
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2050,0.153932
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2055,0.161388
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2060,0.16477
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2065,0.164753
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2070,0.164748
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2075,0.164755
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2080,0.164745
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2085,0.164752
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2090,0.164745
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2095,0.164739
+EJ,NZE2050,Indonesia,electricity,geothermal,geothermal,2100,0.164746
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,1990,0.0205488
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2005,0.03861
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2010,0.0628416
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2015,0.0494676
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2021,0.0889092
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2025,0.0895579
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2030,0.0903687
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2035,0.0911795
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2040,0.0919903
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2045,0.0928012
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2050,0.093612
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2055,0.0944228
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2060,0.0952336
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2065,0.0960445
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2070,0.0968553
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2075,0.0976661
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2080,0.0984769
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2085,0.0992877
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2090,0.100099
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2095,0.100909
+EJ,NZE2050,Indonesia,electricity,hydro,hydro,2100,0.10172
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2030,0.000949264
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2035,0.011546
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2040,0.0354794
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2045,0.0725293
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2050,0.119127
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2055,0.150479
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2060,0.211941
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2065,0.290983
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2070,0.358962
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2075,0.423197
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2080,0.486887
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2085,0.536586
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2090,0.600634
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2095,0.664903
+EJ,NZE2050,Indonesia,electricity,nuclear,SMR,2100,0.712605
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2030,0.00368743
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2035,0.0220444
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2040,0.0511611
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2045,0.0871801
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2050,0.132328
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2055,0.162514
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2060,0.221192
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2065,0.296501
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2070,0.361145
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2075,0.421914
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2080,0.482185
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2085,0.529277
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2090,0.587295
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2095,0.639919
+EJ,NZE2050,Indonesia,electricity,nuclear,large reactor,2100,0.678845
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2035,0.0463537
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2040,0.0850351
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2045,0.105169
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2050,0.100928
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2055,0.0642408
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2060,0.0555747
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2065,0.0497227
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2070,0.0471373
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2075,0.0466984
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2080,0.0422604
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2085,0.0367209
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2090,0.0299421
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2095,0.0249445
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC CCS),2100,0.0298432
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2025,0.00870096
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2030,0.0153992
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2035,0.00896949
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2040,0.00785226
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2045,0.006399
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2050,0.00538825
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2055,0.00896588
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2060,0.019183
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2065,0.0270359
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2070,0.0259041
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2075,0.0236866
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2080,0.0221135
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2085,0.0204128
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2090,0.0222397
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2095,0.0213798
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (CC),2100,0.0201222
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),1990,0.0551931
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2005,0.141477
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2010,0.122941
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2015,0.0730909
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2021,0.0402186
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2025,0.0352145
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2030,0.0379798
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2035,0.0249723
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2040,0.0206794
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2045,0.0144847
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2050,0.00934284
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2055,0.0121673
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2060,0.0122218
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2065,0.0111971
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2070,0.00571412
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2075,0.0020131
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2080,0.00156587
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2085,0.00144231
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2090,0.00140348
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2095,0.00130383
+EJ,NZE2050,Indonesia,electricity,refined liquids,refined liquids (steam/CT),2100,0.00124552
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2030,0.00039921
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2035,0.0035101
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2040,0.0106354
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2045,0.0195306
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2050,0.0291854
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2055,0.0372443
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2060,0.0553739
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2065,0.0796711
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2070,0.0996221
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2075,0.118875
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2080,0.139348
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2085,0.157778
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2090,0.174997
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2095,0.189487
+EJ,NZE2050,Indonesia,electricity,solar,CSP_storage,2100,0.206252
+EJ,NZE2050,Indonesia,electricity,solar,PV,2010,3.60002e-06
+EJ,NZE2050,Indonesia,electricity,solar,PV,2015,1.8e-05
+EJ,NZE2050,Indonesia,electricity,solar,PV,2021,0.00069479
+EJ,NZE2050,Indonesia,electricity,solar,PV,2025,0.00539479
+EJ,NZE2050,Indonesia,electricity,solar,PV,2030,0.28730879
+EJ,NZE2050,Indonesia,electricity,solar,PV,2035,0.77577679
+EJ,NZE2050,Indonesia,electricity,solar,PV,2040,1.16329079
+EJ,NZE2050,Indonesia,electricity,solar,PV,2045,1.56297979
+EJ,NZE2050,Indonesia,electricity,solar,PV,2050,1.994801
+EJ,NZE2050,Indonesia,electricity,solar,PV,2055,2.263115
+EJ,NZE2050,Indonesia,electricity,solar,PV,2060,2.5245189999999997
+EJ,NZE2050,Indonesia,electricity,solar,PV,2065,2.7527790000000003
+EJ,NZE2050,Indonesia,electricity,solar,PV,2070,2.981494
+EJ,NZE2050,Indonesia,electricity,solar,PV,2075,3.174513
+EJ,NZE2050,Indonesia,electricity,solar,PV,2080,3.354246
+EJ,NZE2050,Indonesia,electricity,solar,PV,2085,3.535512
+EJ,NZE2050,Indonesia,electricity,solar,PV,2090,3.631005
+EJ,NZE2050,Indonesia,electricity,solar,PV,2095,3.7118640000000003
+EJ,NZE2050,Indonesia,electricity,solar,PV,2100,3.827445
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2030,0.000127428
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2035,0.001354778
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2040,0.0045946879999999996
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2045,0.009792967999999999
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2050,0.017698928
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2055,0.023304217999999998
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2060,0.034388390000000005
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2065,0.04784184
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2070,0.05761223
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2075,0.06467185
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2080,0.06878249
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2085,0.07292936
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2090,0.07401596
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2095,0.07271486
+EJ,NZE2050,Indonesia,electricity,solar,PV_storage,2100,0.07285216
+EJ,NZE2050,Indonesia,electricity,wind,wind,2010,1.44001e-05
+EJ,NZE2050,Indonesia,electricity,wind,wind,2015,1.44e-05
+EJ,NZE2050,Indonesia,electricity,wind,wind,2021,0.00157318
+EJ,NZE2050,Indonesia,electricity,wind,wind,2025,0.00157318
+EJ,NZE2050,Indonesia,electricity,wind,wind,2030,0.04127468
+EJ,NZE2050,Indonesia,electricity,wind,wind,2035,0.11503327999999999
+EJ,NZE2050,Indonesia,electricity,wind,wind,2040,0.18734678
+EJ,NZE2050,Indonesia,electricity,wind,wind,2045,0.25378898
+EJ,NZE2050,Indonesia,electricity,wind,wind,2050,0.3144724
+EJ,NZE2050,Indonesia,electricity,wind,wind,2055,0.3535002
+EJ,NZE2050,Indonesia,electricity,wind,wind,2060,0.3879436
+EJ,NZE2050,Indonesia,electricity,wind,wind,2065,0.40997880000000003
+EJ,NZE2050,Indonesia,electricity,wind,wind,2070,0.4210782
+EJ,NZE2050,Indonesia,electricity,wind,wind,2075,0.4335353
+EJ,NZE2050,Indonesia,electricity,wind,wind,2080,0.4499721
+EJ,NZE2050,Indonesia,electricity,wind,wind,2085,0.4711809
+EJ,NZE2050,Indonesia,electricity,wind,wind,2090,0.477348
+EJ,NZE2050,Indonesia,electricity,wind,wind,2095,0.4761434
+EJ,NZE2050,Indonesia,electricity,wind,wind,2100,0.483726
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2030,0.00173403
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2035,0.02502713
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2040,0.05897193
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2045,0.09644343
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2050,0.13434493
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2055,0.15855219999999998
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2060,0.18743169999999998
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2065,0.22136709999999998
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2070,0.24356719999999998
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2075,0.2626252
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2080,0.2932407
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2085,0.2871951
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2090,0.2810345
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2095,0.2923977
+EJ,NZE2050,Indonesia,electricity,wind,wind_offshore,2100,0.3036793
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2030,0.000112315
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2035,0.000487879
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2040,0.0010183079999999999
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2045,0.001661781
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2050,0.002439902
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2055,0.002963212
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2060,0.003895347
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2065,0.0048913329999999994
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2070,0.005555774
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2075,0.006048781
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2080,0.00641245
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2085,0.006784022
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2090,0.006908462
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2095,0.006886712
+EJ,NZE2050,Indonesia,electricity,wind,wind_storage,2100,0.006990112

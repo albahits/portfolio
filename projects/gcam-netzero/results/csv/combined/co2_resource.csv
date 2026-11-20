@@ -1,0 +1,199 @@
+Units,scenario,region,resource,subresource,GHG,Year,value
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,1975,0.000278552
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,1990,0.012650198999999999
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2005,0.20220742319999999
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2010,0.4209741
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2015,0.72144
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2021,1.086143
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2025,1.0600186
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2030,1.0865116
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2035,1.1080867
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2040,1.1022503000000001
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2045,1.0584881
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2050,1.0054854
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2055,0.9613047
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2060,0.9492242
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2065,0.9248799999999999
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2070,0.90038767
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2075,0.87392631
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2080,0.83085974
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2085,0.76688712
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2090,0.7115095300000001
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2095,0.65999299
+MTC,Reference_aligned,Indonesia,coal,coal,CO2,2100,0.61448701
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,1975,2.34164
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,1990,1.971527
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2005,0.776014
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2010,0.5051824
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2015,0.643816
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2021,0.3980977
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2025,0.3691692
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2030,0.3613912
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2035,0.3695744
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2040,0.38334270000000004
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2045,0.4064074
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2050,0.4247356
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2055,0.43469080000000004
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2060,0.4463657
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2065,0.4909871
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2070,0.5505265
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2075,0.6049979999999999
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2080,0.6475674
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2085,0.6946719100000001
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2090,0.74958675
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2095,0.7998990100000001
+MTC,Reference_aligned,Indonesia,crude oil,crude oil,CO2,2100,0.84920627
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,1975,0.0214833
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,1990,1.0964316
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2005,0.945269
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2010,0.763603
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2015,1.008252
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2021,0.5619379999999999
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2025,0.6230562
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2030,0.6780644
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2035,0.738925
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2040,0.8049758
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2045,0.8278941
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2050,0.8849672
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2055,0.95737135
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2060,1.0242814
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2065,1.0530848
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2070,1.0568691
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2075,1.0814267
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2080,1.1114591
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2085,1.1534484
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2090,1.231875
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2095,1.3025769999999999
+MTC,Reference_aligned,Indonesia,natural gas,natural gas,CO2,2100,1.38181737
+MTC,NZE2060,Indonesia,coal,coal,CO2,1975,0.000278552
+MTC,NZE2060,Indonesia,coal,coal,CO2,1990,0.012650198999999999
+MTC,NZE2060,Indonesia,coal,coal,CO2,2005,0.20220742319999999
+MTC,NZE2060,Indonesia,coal,coal,CO2,2010,0.4209741
+MTC,NZE2060,Indonesia,coal,coal,CO2,2015,0.72144
+MTC,NZE2060,Indonesia,coal,coal,CO2,2021,1.086143
+MTC,NZE2060,Indonesia,coal,coal,CO2,2025,1.0600186
+MTC,NZE2060,Indonesia,coal,coal,CO2,2030,1.0865116
+MTC,NZE2060,Indonesia,coal,coal,CO2,2035,1.0837191
+MTC,NZE2060,Indonesia,coal,coal,CO2,2040,1.0534051
+MTC,NZE2060,Indonesia,coal,coal,CO2,2045,0.9905733999999999
+MTC,NZE2060,Indonesia,coal,coal,CO2,2050,0.9205390999999999
+MTC,NZE2060,Indonesia,coal,coal,CO2,2055,0.8644313
+MTC,NZE2060,Indonesia,coal,coal,CO2,2060,0.8411667
+MTC,NZE2060,Indonesia,coal,coal,CO2,2065,0.8323716
+MTC,NZE2060,Indonesia,coal,coal,CO2,2070,0.80791247
+MTC,NZE2060,Indonesia,coal,coal,CO2,2075,0.78582708
+MTC,NZE2060,Indonesia,coal,coal,CO2,2080,0.74900002
+MTC,NZE2060,Indonesia,coal,coal,CO2,2085,0.6944165
+MTC,NZE2060,Indonesia,coal,coal,CO2,2090,0.64351264
+MTC,NZE2060,Indonesia,coal,coal,CO2,2095,0.59349627
+MTC,NZE2060,Indonesia,coal,coal,CO2,2100,0.54706706
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,1975,2.34164
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,1990,1.971527
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2005,0.776014
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2010,0.5051824
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2015,0.643816
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2021,0.3980977
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2025,0.3691692
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2030,0.3613912
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2035,0.3666994
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2040,0.3760842
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2045,0.3918522
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2050,0.39865839999999997
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2055,0.3930138
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2060,0.37478690000000003
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2065,0.39257849999999994
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2070,0.44265489999999996
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2075,0.493211
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2080,0.5332317
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2085,0.57790019
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2090,0.63525743
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2095,0.6863890500000001
+MTC,NZE2060,Indonesia,crude oil,crude oil,CO2,2100,0.7292192
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,1975,0.0214833
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,1990,1.0964316
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2005,0.945269
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2010,0.763603
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2015,1.008252
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2021,0.5619379999999999
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2025,0.6230562
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2030,0.6780644
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2035,0.690368
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2040,0.7344535
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2045,0.7490444
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2050,0.7935116999999999
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2055,0.84232052
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2060,0.8777731
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2065,0.9223674
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2070,0.9215212
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2075,0.9372125
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2080,0.9697805
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2085,1.0090187
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2090,1.085145
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2095,1.1582599999999998
+MTC,NZE2060,Indonesia,natural gas,natural gas,CO2,2100,1.2591149499999998
+MTC,NZE2050,Indonesia,coal,coal,CO2,1975,0.000278552
+MTC,NZE2050,Indonesia,coal,coal,CO2,1990,0.012650198999999999
+MTC,NZE2050,Indonesia,coal,coal,CO2,2005,0.20220742319999999
+MTC,NZE2050,Indonesia,coal,coal,CO2,2010,0.4209741
+MTC,NZE2050,Indonesia,coal,coal,CO2,2015,0.72144
+MTC,NZE2050,Indonesia,coal,coal,CO2,2021,1.086143
+MTC,NZE2050,Indonesia,coal,coal,CO2,2025,1.0600186
+MTC,NZE2050,Indonesia,coal,coal,CO2,2030,1.0865116
+MTC,NZE2050,Indonesia,coal,coal,CO2,2035,1.0717328
+MTC,NZE2050,Indonesia,coal,coal,CO2,2040,1.0354567
+MTC,NZE2050,Indonesia,coal,coal,CO2,2045,0.9702178
+MTC,NZE2050,Indonesia,coal,coal,CO2,2050,0.9002619000000001
+MTC,NZE2050,Indonesia,coal,coal,CO2,2055,0.8593032
+MTC,NZE2050,Indonesia,coal,coal,CO2,2060,0.8441339
+MTC,NZE2050,Indonesia,coal,coal,CO2,2065,0.8327289999999999
+MTC,NZE2050,Indonesia,coal,coal,CO2,2070,0.8117421499999999
+MTC,NZE2050,Indonesia,coal,coal,CO2,2075,0.79246947
+MTC,NZE2050,Indonesia,coal,coal,CO2,2080,0.75709543
+MTC,NZE2050,Indonesia,coal,coal,CO2,2085,0.70270018
+MTC,NZE2050,Indonesia,coal,coal,CO2,2090,0.64897728
+MTC,NZE2050,Indonesia,coal,coal,CO2,2095,0.59537968
+MTC,NZE2050,Indonesia,coal,coal,CO2,2100,0.54685653
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,1975,2.34164
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,1990,1.971527
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2005,0.776014
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2010,0.5051824
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2015,0.643816
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2021,0.3980977
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2025,0.3691692
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2030,0.3613912
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2035,0.3663036
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2040,0.3727961
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2045,0.3832593
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2050,0.3809414
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2055,0.3844639
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2060,0.3748415
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2065,0.3928536
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2070,0.4448594
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2075,0.4992743
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2080,0.5431534
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2085,0.58806532
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2090,0.64341388
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2095,0.6912180800000001
+MTC,NZE2050,Indonesia,crude oil,crude oil,CO2,2100,0.72766836
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,1975,0.0214833
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,1990,1.0964316
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2005,0.945269
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2010,0.763603
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2015,1.008252
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2021,0.5619379999999999
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2025,0.6230562
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2030,0.6780644
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2035,0.681922
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2040,0.7101036000000001
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2045,0.7124271
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2050,0.7433548999999999
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2055,0.83802255
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2060,0.9090608
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2065,0.9422028
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2070,0.9444304
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2075,0.9589246
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2080,0.9851135
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2085,1.0184018
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2090,1.091609
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2095,1.162129
+MTC,NZE2050,Indonesia,natural gas,natural gas,CO2,2100,1.25605532

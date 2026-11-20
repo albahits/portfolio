@@ -1,0 +1,12 @@
+subsector,heesi_on_grid,heesi_all,gcam_2025
+biomass,6.7,28.03,14.02
+coal,232.63,334.35,222.58
+gas,56.78,70.15,59.7
+geothermal,17.74,17.74,19.55
+hydro,24.45,30.74,24.88
+nuclear,0.0,0.0,0.89
+refined liquids,10.69,11.44,9.13
+rooftop_pv,0.0,0.0,2.37
+solar,0.51,1.52,30.67
+wind,0.38,0.38,5.74
+TOTAL,349.88,494.35,389.53

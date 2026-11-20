@@ -1,0 +1,13 @@
+cd "D:\Project\Portfolio Website\projects\gcam-netzero"
+@"
+# local Python environment and caches
+.venv/
+__pycache__/
+
+# exploration scripts, kept locally only
+scripts/_scratch/
+
+# per-database extracts: keep only the combined results
+results/csv/*/
+!results/csv/combined/
+"@ | Set-Content -Encoding ascii .gitignore

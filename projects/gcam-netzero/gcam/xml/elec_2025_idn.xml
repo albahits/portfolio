@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Indonesia">
+
+      <supplysector name="electricity">
+        <subsector name="solar">
+          <stub-technology name="PV">
+            <period year="2025"><fixedOutput>0.0047</fixedOutput><share-weight>0</share-weight></period>
+          </stub-technology>
+          <stub-technology name="PV_storage"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+          <stub-technology name="CSP"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+          <stub-technology name="CSP_storage"><period year="2025"><fixedOutput>0</fixedOutput><share-weight>0</share-weight></period></stub-technology>
+        </subsector>
+
+        <subsector name="wind">
+          <stub-technology name="wind">
+            <period year="2025"><fixedOutput>0</fixedOutput><share-weight>0</share-weight></period>
+          </stub-technology>
+          <stub-technology name="wind_storage"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+          <stub-technology name="wind_offshore"><period year="2025"><fixedOutput>0</fixedOutput><share-weight>0</share-weight></period></stub-technology>
+        </subsector>
+
+        <subsector name="nuclear">
+          <stub-technology name="Gen_II_LWR"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+          <stub-technology name="large reactor"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+          <stub-technology name="SMR"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+        </subsector>
+      </supplysector>
+
+      <supplysector name="elect_td_bld">
+        <subsector name="rooftop_pv">
+          <stub-technology name="rooftop_pv"><period year="2025"><share-weight>0</share-weight></period></stub-technology>
+        </subsector>
+      </supplysector>
+
+    </region>
+  </world>
+</scenario>
