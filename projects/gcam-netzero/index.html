@@ -284,7 +284,7 @@ cookieconsent.run({
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>In the model’s baseline, without new policy, Indonesia’s energy and industry CO<sub>2</sub> keeps rising, from about 680 MtCO<sub>2</sub> in 2025 to about 1,000 MtCO<sub>2</sub> by 2060.</li>
+<li>In the model’s baseline, without new policy, Indonesia’s energy and industry CO<sub>2</sub> keeps rising, by almost half (about 46%) between 2025 and 2060.</li>
 <li>Net zero is reachable in the model under both targets, but “net” carries weight: about 250 MtCO<sub>2</sub> is still emitted in the target year, offset almost entirely by bioenergy with carbon capture (BECCS).</li>
 <li>Reaching net zero in 2050 instead of 2060 requires carbon prices 26–38% higher through 2035–2050; both paths peak near US$200 per tonne of CO<sub>2</sub>.</li>
 <li>For electricity users, net zero adds about 3 US cents per kWh compared with the baseline in 2040–2060: a price decrease foregone rather than a price shock.</li>
@@ -380,8 +380,35 @@ Figure&nbsp;3: 2025 electricity generation: HEESI range, unadjusted model and ca
 </section>
 <section id="two-pathways-to-net-zero" class="level2">
 <h2 class="anchored" data-anchor-id="two-pathways-to-net-zero">Two pathways to net zero</h2>
-<p>Before going further: what exactly is net zero? <a href="https://netzeroclimate.org/what-is-net-zero/">Oxford Net Zero</a> at the University of Oxford defines it as “a state in which the greenhouse gases going into the atmosphere are balanced by removal out of the atmosphere.”</p>
-<p>As the same source puts it, “the term net zero is important because – for CO<sub>2</sub> at least – this is the state at which global warming stops.” In the model’s baseline, without new policy, emissions keep rising: from about 680 MtCO<sub>2</sub> in 2025 to about 1,000 MtCO<sub>2</sub> by 2060.</p>
+<p>Before going further: what exactly is net zero? <a href="https://netzeroclimate.org/what-is-net-zero/">Oxford Net Zero</a> at the University of Oxford defines it as “a state in which the greenhouse gases going into the atmosphere are balanced by removal out of the atmosphere.” As the same source puts it, “the term net zero is important because – for CO2 at least – this is the state at which global warming stops.”</p>
+<p>In the model’s baseline, without new policy, emissions keep rising: from about 680 MtCO<sub>2</sub> in 2025 to about 1,000 MtCO<sub>2</sub> by 2060. The model’s 2025 level sits about 17% below the 822 MtCO<sub>2</sub> estimate above, mainly because coal plants serving industry are under-represented, so the task shown here is, if anything, understated.</p>
+<p>Both targets bend this path from a 2030 peak of about 730 MtCO<sub>2</sub>. By 2060, NZE 2060 avoids 987 MtCO<sub>2</sub> relative to the baseline. The power sector delivers about two-thirds of that cut, largely because bioenergy with carbon capture turns its emissions negative (<a href="#fig-headline" class="quarto-xref">Figure&nbsp;4</a>).</p>
+<p>Each target enters the model as one more add-on file: a CO<sub>2</sub> cap for Indonesia with its own carbon market, so GCAM solves for the carbon price that holds emissions at each year’s cap. The caps start in 2035, after the 2030 peak, and are set in million tonnes of carbon (MtC; multiply by 3.67 for MtCO<sub>2</sub>).</p>
+<p>The NZE 2060 policy file looks like this:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>idn_nze2060.xml</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="idn_nze2060.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">region</span> <span class="ot">name=</span><span class="st">"Indonesia"</span>&gt;</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">ghgpolicy</span> <span class="ot">name=</span><span class="st">"CO2"</span>&gt;</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">market</span>&gt;Indonesia&lt;/<span class="kw">market</span>&gt;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2035"</span>&gt;165.23&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2040"</span>&gt;132.19&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2045"</span>&gt;99.14&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2050"</span>&gt;66.09&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2055"</span>&gt;33.05&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">constraint</span> <span class="ot">year=</span><span class="st">"2060"</span>&gt;0.00&lt;/<span class="kw">constraint</span>&gt;</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    ...                                   <span class="co">&lt;!-- zero through 2100 --&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">ghgpolicy</span>&gt;</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">region</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>configuration file (inside ScenarioComponents)</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="configuration file (inside ScenarioComponents)"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">Value</span> <span class="ot">name=</span><span class="st">"nze_idn"</span>&gt;Disk:/GCAM/idn-runs/xml/idn_nze2060.xml&lt;/<span class="kw">Value</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>NZE 2050 uses the same structure, with the cap reaching zero in 2050 instead.</p>
 <p>Both targets bend this path from a 2030 peak of about 730 MtCO<sub>2</sub>. By 2060, NZE 2060 avoids 987 MtCO<sub>2</sub> relative to the baseline. The power sector delivers about two-thirds of that cut, largely because bioenergy with carbon capture turns its emissions negative (<a href="#fig-headline" class="quarto-xref">Figure&nbsp;4</a>).</p>
 <div id="fig-headline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Line chart: history rises to about 730 MtCO2 in 2030, then the baseline climbs past 1,000 MtCO2 while both net-zero paths fall to near zero. A stacked bar splits the 2060 reduction of 987 MtCO2: power 629, industry 190, transport 96, fuel supply 56, buildings 16.">
 <figure class="quarto-float quarto-float-fig figure">
