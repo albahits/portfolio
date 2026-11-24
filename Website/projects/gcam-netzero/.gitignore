@@ -1,0 +1,14 @@
+# Quarto build output and cache
+/.quarto/
+/_site/
+
+# local Python environment and caches
+.venv/
+__pycache__/
+
+# exploration scripts, kept locally only
+scripts/_scratch/
+
+# per-database extracts: keep only the combined results
+results/csv/*/
+!results/csv/combined/

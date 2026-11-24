@@ -31,7 +31,8 @@ format:
     theme: cosmo
     css: styles.css
     include-in-header:
-      text: '<link rel="apple-touch-icon" href="/portfolio/img/web-logo/apple-touch-icon.png">'
-
+      text: |
+        <link rel="apple-touch-icon" href="/portfolio/img/web-logo/apple-touch-icon.png">
+        <meta name="google-site-verification" content="UGK7eM9pLaGFZeP2dTsk3eLV6EXLl1e0vDGeFzKc1ho" />
 
 

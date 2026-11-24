@@ -11,8 +11,8 @@ page-layout: custom
       <img src="img/profile.jpeg" alt="Al Bahits Annef">
       <div class="pc-name">
         <h1>Al Bahits Annef</h1>
-        <p>Practitioner-Researcher in Economic Development</p>
-        <span class="pc-badge">Open to Work</span>
+        <p>Research and Project Management | Economic Development</p>
+        <span class="pc-badge">Open for collaboration</span>
       </div>
     </div>
 
@@ -67,6 +67,15 @@ page-layout: custom
     <span class="outlet">Nagoya University</span>
     <h3>Indonesian Students Lead Children’s Rights Seminar at Nagoya University</h3>
     <p>Coverage of PPIJ Nagoya organizing student-led seminar. ↗</p>
+  </div>
+</a>
+
+    <a class="feat-card" href="https://www.upnvj.ac.id/en/berita/2026/03/through-the-upnvj-webinar-encourage-students-to-seize-the-opportunity-to-study-in-Japan" target="_blank" rel="noopener">
+  <img src="https://www.upnvj.ac.id/en/files/thumb_parallax/4c9e48a8081034d06691e16988a7f516/extra-big.html" alt="Universitas Pembangunan Nasional Veteran Jakarta's feature" loading="lazy">
+  <div class="feat-body">
+    <span class="outlet">UPNVJ</span>
+    <h3>Webinar to encourage students to continue pursuing study in Japan</h3>
+    <p>Coverage of webinar-based event in UPNVJ. ↗</p>
   </div>
 </a>
 
